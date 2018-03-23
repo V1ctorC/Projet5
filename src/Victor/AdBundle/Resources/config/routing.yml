@@ -1,3 +1,23 @@
-hello_the_world:
-    path:     /hello
+victor_ad_index:
+    path:     /
     defaults: { _controller: VictorAdBundle:Advert:index}
+
+victor_ad_home:
+    path: /{departement}
+    defaults: { _controller: VictorAdBundle:Advert:home}
+    requirements:
+        departement:    \d{2}
+
+victor_ad_view:
+    path: /{departement}/{id}
+    defaults: { _controller: VictorAdBundle:Advert:view}
+    requirements:
+        departement:    \d{2}
+
+victor_ad_add:
+    path: /add
+    defaults: { _controller: VictorAdBundle:Advert:add}
+
+victor_ad_delete:
+    path: /delete/{id}
+    defaults: { _controller: VictorAdBundle:Advert:delete}

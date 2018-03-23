@@ -3,13 +3,15 @@ victor_ad_index:
     defaults: { _controller: VictorAdBundle:Advert:index}
 
 victor_ad_home:
-    path: /{departement}
+    path: /{departement}/{page}
     defaults: { _controller: VictorAdBundle:Advert:home}
     requirements:
         departement:    \d{2}
+        page:    '\d+'
+
 
 victor_ad_view:
-    path: /{departement}/{id}
+    path: /{departement}/advert/{id}
     defaults: { _controller: VictorAdBundle:Advert:view}
     requirements:
         departement:    \d{2}

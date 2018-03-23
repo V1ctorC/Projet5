@@ -1,0 +1,3 @@
+victor_ad_homepage:
+    path:     /
+    defaults: { _controller: VictorAdBundle:Default:index }

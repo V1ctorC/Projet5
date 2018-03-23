@@ -1,0 +1,7 @@
+victor_ad:
+    resource: "@VictorAdBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

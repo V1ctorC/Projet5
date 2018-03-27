@@ -11,7 +11,7 @@ victor_ad_home:
 
 
 victor_ad_view:
-    path: /{departement}/advert/{id}
+    path: /advert/{id}
     defaults: { _controller: VictorAdBundle:Advert:view}
     requirements:
         departement:    \d{2}

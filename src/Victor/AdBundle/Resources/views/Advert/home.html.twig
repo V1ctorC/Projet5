@@ -2,8 +2,16 @@
 
 {% block victorad_body %}
 
-    <p>Nous voici ici sur la page contenant normalement les annonces pour le departement numéro {{ departement }}</p>
+    <ul>
+        {% for advert in listAdverts %}
+            <li>
+                <a href="{{ path('victor_ad_view', {'id': advert.id}) }}">{{ advert.title }}</a>
+                le {{ advert.date|date('d/m/Y') }}
+            </li>
+        {% else %}
+            <li>Il n'y a aucune annonce à afficher</li>
+        {% endfor %}
 
-    <p>Il s'agit de la page numéro {{ page }}</p>
+    </ul>
 
 {% endblock %}

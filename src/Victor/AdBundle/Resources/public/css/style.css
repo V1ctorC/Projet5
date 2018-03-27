@@ -1,0 +1,158 @@
+footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+.navbar
+{
+    background-color: #2C98F0;
+}
+
+.navbar a
+{
+    color: white;
+}
+
+.navigation
+{
+    color: #0000F0;
+}
+
+.link-menu
+{
+    color: white;
+}
+
+#menu a
+{
+    color: white;
+}
+
+.footer-links
+{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links:hover {
+    color: white;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.fa-facebook:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    text-decoration: none;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-twitter:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+/* Instagram */
+.fa-instagram
+{
+    background: #417399;
+    color: white;
+}
+
+.fa-instagram:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+/* YouTube */
+.fa-youtube
+{
+    background: #B90711;
+    color: white;
+}
+
+.fa-youtube:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+.fa-google
+{
+    background: #DB4C3F;
+    color: white;
+}
+
+.fa-google:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-default {
+    background-color: #2C98F0;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: white;
+}
+
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #E7E7E7;
+}
+
+
+.navbar-default .navbar-toggle {
+    border-color: #237AC0;
+    background-color: #237AC0;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus{
+    background-color: #237AC0;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}

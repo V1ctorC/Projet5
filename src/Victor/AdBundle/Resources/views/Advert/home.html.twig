@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Bienvenue sur la page d'accueil</title>
-</head>
-<body>
-<h1> Departement : {{ departement }}, page {{ page }} !</h1>
+{% extends "@VictorAd/layout.html.twig" %}
 
-<p>
-    Le Hello World est un grand classique en programmation.
-    Il signifie énormément, car cela veut dire que vous avez
-    réussi à exécuter le programme pour accomplir une tâche simple :
-    afficher ce hello world !
-</p>
-</body>
-</html>
+{% block victorad_body %}
+
+    <p>Nous voici ici sur la page contenant normalement les annonces pour le departement numéro {{ departement }}</p>
+
+    <p>Il s'agit de la page numéro {{ page }}</p>
+
+{% endblock %}

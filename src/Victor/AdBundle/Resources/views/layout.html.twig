@@ -1,12 +1,20 @@
 {% block stylesheet %}
-<link rel="stylesheet" href="../public/style.css">
+
 {% endblock %}
 
-{% extends "::layout.html.twig" %}
+{% extends "::base.html.twig" %}
 
 {% block title %}Voisin'aide !{% endblock %}
 
 
 {% block body %}
+
+    <h1>Liste des Annonces</h1>
+
+    <hr>
+
+    {% block victorad_body %}
+
+    {% endblock %}
 
 {% endblock %}

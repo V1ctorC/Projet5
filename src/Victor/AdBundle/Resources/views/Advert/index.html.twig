@@ -1,11 +1,14 @@
 {%  extends "@VictorAd/layout.html.twig" %}
 
-{% block body %}
-<p>
-    Le Hello World est un grand classique en programmation.
-    Il signifie énormément, car cela veut dire que vous avez
-    réussi à exécuter le programme pour accomplir une tâche simple :
-    afficher ce hello world !
-</p>
+{% block victorad_body %}
+    <p>
+        Vous vous trouvez sur la page qui contiendra la carte.
+        Celle-ci permettra de choisir le departement sur lequel on se trouve pour trouver les services les plus proches de chez soit.
+    </p>
 
-{% endblock body %}
+    <br />
+
+    <p>Pour l'exemple nous allons dire que nous somme du 77. Vous pouvez y acceder <a href="{{ path('victor_ad_home', {'departement': 77, 'page': 1}) }}">Ici</a></p>
+
+
+{% endblock %}

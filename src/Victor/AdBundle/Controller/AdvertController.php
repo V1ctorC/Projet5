@@ -11,7 +11,7 @@ class AdvertController extends Controller
 {
     public function indexAction()
     {
-        $content = $this->render('VictorAdBundle:Advert:index.html.twig', array('nom' => 'Ici carte de la France'));
+        $content = $this->render('VictorAdBundle:Advert:index.html.twig', array('nom' => ''));
 
         return new Response($content);
 

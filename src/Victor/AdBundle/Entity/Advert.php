@@ -49,6 +49,11 @@ class Advert
      */
     private $color;
 
+    /**
+     * @ORM\OneToOne(targetEntity="Victor\AdBundle\Entity\Image", cascade={"persist"})
+     */
+    private $image;
+
 
     /**
      * Get id
@@ -155,5 +160,28 @@ class Advert
     {
         return $this->color;
     }
-}
 
+    /**
+     * Set image
+     *
+     * @param \Victor\AdBundle\Entity\Image $image
+     *
+     * @return Advert
+     */
+    public function setImage(\Victor\AdBundle\Entity\Image $image = null)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return \Victor\AdBundle\Entity\Image
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+}

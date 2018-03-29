@@ -1,7 +1,7 @@
 {%  extends "@VictorAd/layout.html.twig" %}
 
 {% block victorad_body %}
-    <select class="selectpicker col-md-8 col-sm-push-2">
+    <!--<select class="selectpicker col-md-8 col-sm-push-2">
         <optgroup label="Apple">
             <option>iPhone 6</option>
             <option>iPhone 6 Plus</option>
@@ -22,12 +22,16 @@
             <option>Galaxy S8+</option>
             <option>Galaxy Note 8</option>
         </optgroup>
-    </select>
+    </select>-->
 
 
 
+    <p>Il va falloir faire un choix si vous souhaitez : <br />
 
-    <p>Pour l'exemple nous allons dire que nous somme du 77. Vous pouvez y acceder <a href="{{ path('victor_ad_home', {'departement': 77, 'page': 1}) }}">Ici</a></p>
+        <a href="{{ path('victor_ad_buy') }}"><input type="button" class="btn btn-primary" value="Acheter"></a>
 
+        <a href="{{ path('victor_ad_sell') }}"><input type="button" class="btn btn-primary" value="Vendre"></a>
+
+    </p>
 
 {% endblock %}

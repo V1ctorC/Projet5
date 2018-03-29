@@ -17,6 +17,20 @@ class AdvertController extends Controller
 
     }
 
+    public function sellAction()
+    {
+        $content = $this->render('@VictorAd/Advert/sell.html.twig');
+
+        return new Response($content);
+    }
+
+    public function buyAction()
+    {
+        $content = $this->render('@VictorAd/Advert/buy.html.twig');
+
+        return new Response($content);
+    }
+
     public function homeAction($departement, $page)
     {
         if ($page < 1)
@@ -45,7 +59,7 @@ class AdvertController extends Controller
                 'date'    => new \Datetime())
         );
 
-        return $this->render('VictorAdBundle:Advert:home.html.twig', array('listAdverts'=>$listAdverts));
+        return $this->render('@VictorAd/Advert/buy.html.twig', array('listAdverts'=>$listAdverts));
     }
 
     public function viewAction($id)

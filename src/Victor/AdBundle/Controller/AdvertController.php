@@ -31,6 +31,13 @@ class AdvertController extends Controller
         return new Response($content);
     }
 
+    public function choiceAction()
+    {
+        $content = $this->render('@VictorAd/Advert/choice.html.twig');
+
+        return new Response($content);
+    }
+
     public function homeAction($departement, $page)
     {
         if ($page < 1)

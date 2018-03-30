@@ -38,6 +38,20 @@ class AdvertController extends Controller
         return new Response($content);
     }
 
+    public function buyviewAction()
+    {
+        $content = $this->render('@VictorAd/Advert/buyview.html.twig');
+
+        return new Response($content);
+    }
+
+    public function sellviewAction()
+    {
+        $content = $this->render('@VictorAd/Advert/sellview.html.twig');
+
+        return new Response($content);
+    }
+
     public function homeAction($departement, $page)
     {
         if ($page < 1)

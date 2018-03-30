@@ -1,26 +1,26 @@
 victor_ad_index:
     path:     /
-    defaults: { _controller: VictorAdBundle:Advert:index}
+    defaults: { _controller: VictorAdBundle:Phone:index}
 
 victor_ad_sell:
     path: /sell
-    defaults: { _controller: VictorAdBundle:Advert:sell}
+    defaults: { _controller: VictorAdBundle:Phone:sell}
 
 victor_ad_buy:
     path: /buy
-    defaults: { _controller: VictorAdBundle:Advert:buy}
+    defaults: { _controller: VictorAdBundle:Phone:buy}
 
 
 victor_ad_view:
     path: /advert/{id}
-    defaults: { _controller: VictorAdBundle:Advert:view}
+    defaults: { _controller: VictorAdBundle:Phone:view}
     requirements:
         departement:    \d{2}
 
 victor_ad_add:
     path: /add
-    defaults: { _controller: VictorAdBundle:Advert:add}
+    defaults: { _controller: VictorAdBundle:Phone:add}
 
 victor_ad_delete:
     path: /delete/{id}
-    defaults: { _controller: VictorAdBundle:Advert:delete}
+    defaults: { _controller: VictorAdBundle:Phone:delete}

@@ -5,12 +5,12 @@ namespace Victor\AdBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Advert
+ * Phone
  *
  * @ORM\Table(name="advert")
- * @ORM\Entity(repositoryClass="Victor\AdBundle\Repository\AdvertRepository")
+ * @ORM\Entity(repositoryClass="PhoneRepository")
  */
-class Advert
+class Phone
 {
     /**
      * @var int
@@ -70,7 +70,7 @@ class Advert
      *
      * @param string $brand
      *
-     * @return Advert
+     * @return Phone
      */
     public function setBrand($brand)
     {
@@ -94,7 +94,7 @@ class Advert
      *
      * @param string $model
      *
-     * @return Advert
+     * @return Phone
      */
     public function setModel($model)
     {
@@ -118,7 +118,7 @@ class Advert
      *
      * @param integer $capacity
      *
-     * @return Advert
+     * @return Phone
      */
     public function setCapacity($capacity)
     {
@@ -142,7 +142,7 @@ class Advert
      *
      * @param string $color
      *
-     * @return Advert
+     * @return Phone
      */
     public function setColor($color)
     {
@@ -166,7 +166,7 @@ class Advert
      *
      * @param \Victor\AdBundle\Entity\Image $image
      *
-     * @return Advert
+     * @return Phone
      */
     public function setImage(\Victor\AdBundle\Entity\Image $image = null)
     {

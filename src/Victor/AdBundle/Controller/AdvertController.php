@@ -6,6 +6,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Victor\AdBundle\Entity\Image;
+use Victor\AdBundle\Entity\Phone;
+use Victor\AdBundle\Repository\PhoneRepository;
 
 class AdvertController extends Controller
 {
@@ -47,9 +50,21 @@ class AdvertController extends Controller
 
     public function sellviewAction()
     {
-        $content = $this->render('@VictorAd/Advert/sellview.html.twig');
+        $repository = $this->getDoctrine()->getManager()->getRepository('VictorAdBundle:Phone');
 
-        return new Response($content);
+        $listPhones = $repository->findBy(
+            array('capacity' => '64'),
+            array('id' => 'desc'),
+            5,
+            0
+
+        );
+
+
+        return $this->render('@VictorAd/Advert/sellview.html.twig', array('listPhones'=>$listPhones));
+
+
+
     }
 
     public function homeAction($departement, $page)
@@ -96,6 +111,26 @@ class AdvertController extends Controller
 
     public function addAction(Request $request)
     {
+        $phone = new Phone();
+        $phone->setBrand('Apple');
+        $phone->setModel('iPhone 6');
+        $phone->setCapacity('128');
+        $phone->setColor('Or');
+
+        $image = new Image();
+        $image->setAlt('iPhone 6');
+        $image->setUrl('https://d1eh9yux7w8iql.cloudfront.net/product_images/1522077255.5.jpg');
+
+        $phone->setImage($image);
+
+        $em = $this->getDoctrine()->getManager();
+
+        $em->persist($phone);
+
+        $em->flush();
+
+
+
         $session = $request->getSession();
 
         // Bien sûr, cette méthode devra réellement ajouter l'annonce

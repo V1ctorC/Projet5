@@ -5,12 +5,17 @@
     <p>Vous avez choisi ce modèle de telephone.</p>
 
     <ul>
-        <li>Marque</li>
-        <li>Modele</li>
-        <li>Capacité</li>
-        <li>Couleur</li>
-        <li>Image</li>
-        <li>Prix</li>
+        {% for phone in listPhones %}
+        <div class="phoneSelect">
+
+                {{ phone.brand }}
+                {{ phone.model }}
+                {{ phone.color }}
+                {{ phone.capacity }}
+                <!--<img src="{{ phone.image.url }}">-->
+                <hr />
+        </div>
+        {% endfor %}
     </ul>
 
 

@@ -156,7 +156,8 @@ footer
 .navbar-default .navbar-toggle .icon-bar {
     background-color: white;
 }
-#phoneSelect
-{
 
+.phoneSelect
+{
+    border: 2px solid red;
 }

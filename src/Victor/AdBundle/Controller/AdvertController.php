@@ -34,13 +34,6 @@ class AdvertController extends Controller
         return new Response($content);
     }
 
-    public function choiceAction()
-    {
-        $content = $this->render('@VictorAd/Advert/choice.html.twig');
-
-        return new Response($content);
-    }
-
     public function buyviewAction($phone)
     {
         $repository = $this->getDoctrine()->getManager()->getRepository('VictorAdBundle:Phone');
@@ -50,6 +43,15 @@ class AdvertController extends Controller
         );
 
         return $this->render('@VictorAd/Advert/buyview.html.twig', array('listPhones'=>$listPhones));
+    }
+
+    public function  buyviewphoneAction($id)
+    {
+        $repository = $this->getDoctrine()->getManager()->getRepository('VictorAdBundle:Phone');
+
+        $phone = $repository->find($id);
+
+        return $this->render('@VictorAd/Advert/buyviewphone.html.twig', array('phone'=>$phone));
     }
 
     public function sellviewAction($phone)

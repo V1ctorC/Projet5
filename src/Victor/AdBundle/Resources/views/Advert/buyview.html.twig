@@ -13,7 +13,7 @@
                 {{ phone.color }}
                 {{ phone.capacity }}
                 <!--<img src="{{ phone.image.url }}">-->
-                <a href="{{ path('victor_ad_sellviewphone', {'phone': phone.model, 'id': phone.id}) }}">Voir les offres</a>
+                <a href="{{ path('victor_ad_buyviewphone', {'phone': phone.model, 'id': phone.id}) }}">Voir les offres</a>
                 <hr />
             </div>
         {% endfor %}

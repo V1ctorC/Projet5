@@ -22,6 +22,10 @@ victor_ad_buyview:
     path: /buy/{phone}
     defaults: { _controller: VictorAdBundle:Advert:buyview}
 
+victor_ad_buyviewphone:
+    path: /buy/{phone}/{id}
+    defaults: { _controller: VictorAdBundle:Advert:sellviewphone}
+
 victor_ad_view:
     path: /advert/{id}
     defaults: { _controller: VictorAdBundle:Advert:view}

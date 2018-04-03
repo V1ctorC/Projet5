@@ -4,13 +4,19 @@
 
     <p>Vous avez choisi ce modèle de telephone.</p>
 
-    <ul>
-        <li>Marque</li>
-        <li>Modele</li>
-        <li>Capacité</li>
-        <li>Couleur</li>
-        <li>Image</li>
-        <li>Prix</li>
-    </ul>
+    <div id="listPhone">
+        {% for phone in listPhones %}
+            <div class="phoneSelect">
+
+                {{ phone.brand }}
+                {{ phone.model }}
+                {{ phone.color }}
+                {{ phone.capacity }}
+                <!--<img src="{{ phone.image.url }}">-->
+                <a href="{{ path('victor_ad_sellviewphone', {'phone': phone.model, 'id': phone.id}) }}">Voir les offres</a>
+                <hr />
+            </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}

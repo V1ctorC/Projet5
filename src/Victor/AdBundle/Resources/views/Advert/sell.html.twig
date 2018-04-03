@@ -4,6 +4,16 @@
 
     <p>Ici se trouvera la section avec une liste pour selectionner le telephone a vendre.</p>
 
-    {{ include('VictorAdBundle:Advert:choice.html.twig') }}
+    <h4>Je choisi mon modèle d'iPhone</h4>
+    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 6'}) }}>iPhone 6</a> <br />
+    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 6 Plus'}) }}>iPhone 6 Plus</a> <br />
+    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 6s'}) }}>iPhone 6s</a> <br />
+    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 6s Plus'}) }}>iPhone 6s Plus</a> <br />
+    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone SE'}) }}>iPhone SE</a> <br />
+    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 7'}) }}>iPhone 7</a> <br />
+    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 7 Plus'}) }}>iPhone 7 Plus</a> <br />
+    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 8'}) }}>iPhone 8</a> <br />
+    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 8 Plus'}) }}>iPhone 8 Plus</a> <br />
+    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone X'}) }}>iPhone X</a>
 
 {% endblock %}

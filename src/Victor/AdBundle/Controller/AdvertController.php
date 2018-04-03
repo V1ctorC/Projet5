@@ -41,11 +41,15 @@ class AdvertController extends Controller
         return new Response($content);
     }
 
-    public function buyviewAction()
+    public function buyviewAction($phone)
     {
-        $content = $this->render('@VictorAd/Advert/buyview.html.twig');
+        $repository = $this->getDoctrine()->getManager()->getRepository('VictorAdBundle:Phone');
 
-        return new Response($content);
+        $listPhones = $repository->findBy(
+            array('model' => $phone)
+        );
+
+        return $this->render('@VictorAd/Advert/buyview.html.twig', array('listPhones'=>$listPhones));
     }
 
     public function sellviewAction($phone)
@@ -127,9 +131,9 @@ class AdvertController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-        $em->persist($phone);
+        //$em->persist($phone);
 
-        $em->flush();
+        //$em->flush();
 
 
 

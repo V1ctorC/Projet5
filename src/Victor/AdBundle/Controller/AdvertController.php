@@ -48,23 +48,26 @@ class AdvertController extends Controller
         return new Response($content);
     }
 
-    public function sellviewAction()
+    public function sellviewAction($phone)
     {
         $repository = $this->getDoctrine()->getManager()->getRepository('VictorAdBundle:Phone');
 
         $listPhones = $repository->findBy(
-            array('capacity' => '64'),
-            array('id' => 'desc'),
-            5,
-            0
-
+            array('model' => $phone)
         );
 
 
         return $this->render('@VictorAd/Advert/sellview.html.twig', array('listPhones'=>$listPhones));
 
+    }
 
+    public function sellviewphoneAction($id)
+    {
+        $repository = $this->getDoctrine()->getManager()->getRepository('VictorAdBundle:Phone');
 
+        $phone = $repository->find($id);
+
+        return $this->render('@VictorAd/Advert/sellviewphone.html.twig', array('phone'=>$phone));
     }
 
     public function homeAction($departement, $page)
@@ -113,14 +116,13 @@ class AdvertController extends Controller
     {
         $phone = new Phone();
         $phone->setBrand('Apple');
-        $phone->setModel('iPhone 6');
-        $phone->setCapacity('128');
-        $phone->setColor('Or');
+        $phone->setModel('iPhone X');
+        $phone->setCapacity('256');
+        $phone->setColor('Argent');
 
         $image = new Image();
-        $image->setAlt('iPhone 6');
-        $image->setUrl('https://d1eh9yux7w8iql.cloudfront.net/product_images/1522077255.5.jpg');
-
+        $image->setAlt('iPhone X');
+        $image->setUrl('https://store.storeimages.cdn-apple.com/4662/as-images.apple.com/is/image/AppleInc/aos/published/images/i/ph/iphone/x/iphone-x-select-2017?wid=378&hei=752&fmt=png-alpha&qlt=80&.v=1504378258086');
         $phone->setImage($image);
 
         $em = $this->getDoctrine()->getManager();

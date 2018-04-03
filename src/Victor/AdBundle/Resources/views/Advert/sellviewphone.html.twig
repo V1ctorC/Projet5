@@ -1,0 +1,16 @@
+{% extends 'VictorAdBundle::layout.html.twig' %}
+
+{% block victorad_body %}
+
+Le model choisi est un telephone dont les caractéristiques sont les suivantes :
+
+    <ul>
+        <li>Marque : {{ phone.brand }}</li>
+        <li>Modèle : {{ phone.model }}</li>
+        <li>Capacité : {{ phone.capacity }} Go</li>
+        <li>Couleur : {{ phone.color }}</li>
+    </ul>
+
+    <div id="phoneImage"><img src="{{ phone.image.url }}"></div>
+
+{% endblock %}

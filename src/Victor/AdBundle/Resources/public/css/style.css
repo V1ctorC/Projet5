@@ -160,4 +160,13 @@ footer
 .phoneSelect
 {
     border: 2px solid red;
+    width: 25%;
+}
+
+#listPhone
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }

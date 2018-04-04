@@ -168,7 +168,8 @@ footer
     border-radius: 20px;
     width: 30%;
     min-width: 250px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
     background-color: #FFFFFF;
     padding-left: 10px;
 }
@@ -194,4 +195,9 @@ footer
 #model
 {
     font-size: 1.2em;
+}
+
+.phoneChoice
+{
+    display: flex;
 }

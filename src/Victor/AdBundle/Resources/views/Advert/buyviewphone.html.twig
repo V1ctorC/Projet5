@@ -13,4 +13,23 @@
 
     <div id="phoneImage"><img src="{{ phone.image.url }}"></div>
 
+    <hr />
+
+    <h4>Offres</h4>
+
+    {% for offer in listOffers %}
+
+        <ul>
+            <li>{{ offer.price }}</li>
+        </ul>
+
+    {% endfor %}
+
+    {% if listOffers == null %}
+
+    <p>Il n'y a actuellement aucune offre concernant ce produit</p>
+
+    {% endif %}
+
+
 {% endblock %}

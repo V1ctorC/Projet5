@@ -8,13 +8,13 @@
         {% for phone in listPhones %}
             <div class="phoneSelect">
 
-                {{ phone.brand }}
-                {{ phone.model }}
-                {{ phone.color }}
-                {{ phone.capacity }}
-                <!--<img src="{{ phone.image.url }}">-->
-                <a href="{{ path('victor_ad_buyviewphone', {'phone': phone.model, 'id': phone.id}) }}">Voir les offres</a>
+                <span id="brand">{{ phone.brand }} </span><br />
+                <span id="model">{{ phone.model }} </span><br />
+                Couleur : {{ phone.color }} <br />
+                Capacité : {{ phone.capacity }} Go
+                <img src="{{ phone.image.url }}" class="imgPhone">
                 <hr />
+                <a href="{{ path('victor_ad_buyviewphone', {'phone': phone.model, 'id': phone.id}) }}">Voir les offres</a>
             </div>
         {% endfor %}
     </div>

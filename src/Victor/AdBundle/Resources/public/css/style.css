@@ -1,6 +1,11 @@
+body
+{
+    background-color: #E9EBEE;
+}
+
 footer
 {
-    position: absolute;
+
     bottom: 0;
     width: 100%;
     color: white;
@@ -159,14 +164,34 @@ footer
 
 .phoneSelect
 {
-    border: 2px solid red;
-    width: 25%;
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 30%;
+    min-width: 250px;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+    padding-left: 10px;
 }
 
 #listPhone
 {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.imgPhone
+{
+    margin-left: 25%;
+    width: 50%;
+}
+
+#brand
+{
+    font-size: 2em;
+}
+
+#model
+{
+    font-size: 1.2em;
 }

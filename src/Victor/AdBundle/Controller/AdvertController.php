@@ -52,6 +52,10 @@ class AdvertController extends Controller
 
         $phone = $em->getRepository('VictorAdBundle:Phone')->find($id);
 
+        if (null === $phone) {
+            throw new NotFoundHttpException("Le téléphone que vous cherchez n'existe pas");
+        }
+
         $listOffers = $em
             ->getRepository('VictorAdBundle:Offer')
             ->findBy(
@@ -82,6 +86,10 @@ class AdvertController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $phone = $em->getRepository('VictorAdBundle:Phone')->find($id);
+
+        if (null === $phone) {
+            throw new NotFoundHttpException("Le téléphone que vous cherchez n'existe pas");
+        }
 
         $listOffers = $em
             ->getRepository('VictorAdBundle:Offer')

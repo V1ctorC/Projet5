@@ -201,3 +201,27 @@ footer
 {
     display: flex;
 }
+
+#deskImage
+{
+    margin: 0;
+    width: 100%;
+}
+
+#banner
+{
+    width: 100%;
+    position: relative;
+}
+
+#choiceHomePage
+{
+    position: absolute;
+    border: 2px solid red;
+    text-align: center;
+    font-size: 4vw;
+    color: white;
+    font-weight: bold;
+    top: 50%; left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+}

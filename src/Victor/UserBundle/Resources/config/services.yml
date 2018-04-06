@@ -1,0 +1,4 @@
+services:
+#    victor_user.example:
+#        class: Victor\UserBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

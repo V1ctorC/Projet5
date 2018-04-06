@@ -1,3 +1,7 @@
+victor_user:
+    resource: "@VictorUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 victor_ad:
     resource: "@VictorAdBundle/Resources/config/routing.yml"
     prefix:   /

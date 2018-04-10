@@ -17,6 +17,8 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Victor\AdBundle\VictorAdBundle(),
             new Victor\UserBundle\VictorUserBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new Victor\CoreBundle\VictorCoreBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

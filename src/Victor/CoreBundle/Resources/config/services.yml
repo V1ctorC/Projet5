@@ -1,0 +1,4 @@
+services:
+#    victor_core.example:
+#        class: Victor\CoreBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

@@ -67,3 +67,12 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+fos_user:
+    db_driver:     orm
+    firewall_name: main
+    user_class:    Victor\UserBundle\Entity\User
+
+    from_email:
+            address: "test@test.com"
+            sender_name: "No Reply"

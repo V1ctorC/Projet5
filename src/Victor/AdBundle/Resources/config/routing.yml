@@ -1,7 +1,3 @@
-victor_ad_index:
-    path:     /
-    defaults: { _controller: VictorAdBundle:Advert:index}
-
 victor_ad_sell:
     path: /sell
     defaults: { _controller: VictorAdBundle:Advert:sell}

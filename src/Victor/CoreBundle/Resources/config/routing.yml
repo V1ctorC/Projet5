@@ -1,3 +1,7 @@
-victor_core_homepage:
-    path:     /
-    defaults: { _controller: VictorCoreBundle:Default:index }
+victor_core_home:
+    path:    /
+    defaults: { _controller: VictorCoreBundle:Core:index }
+
+victor_core_contact:
+    path:    /contact
+    defaults: { _controller: VictorCoreBundle:Core:contact }

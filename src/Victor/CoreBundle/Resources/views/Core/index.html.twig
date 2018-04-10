@@ -1,0 +1,12 @@
+{# On utilise ici le layout général, qui se situe dans ce même CoreBundle maintenant #}
+{% extends "VictorCoreBundle::layout.html.twig" %}
+
+
+{% block body %}
+
+    <h1>Test d'annonces</h1>
+
+    {{ render(controller("VictorAdBundle:Advert:index")) }}
+
+
+{% endblock %}

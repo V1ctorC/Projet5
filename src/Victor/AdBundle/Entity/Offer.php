@@ -43,6 +43,7 @@ class Offer
 
 
 
+
     public function __construct()
     {
         $this->date = new \Datetime();

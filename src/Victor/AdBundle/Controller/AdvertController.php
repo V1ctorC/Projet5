@@ -194,4 +194,9 @@ class AdvertController extends Controller
     {
         return $this->redirectToRoute('victor_ad_index');
     }
+
+    public function adminAction()
+    {
+        return $this->redirectToRoute('victor_core_home');
+    }
 }

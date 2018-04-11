@@ -35,3 +35,7 @@ victor_ad_add:
 victor_ad_delete:
     path: /delete/{id}
     defaults: { _controller: VictorAdBundle:Advert:delete}
+
+victor_ad_admin:
+    path: /admin
+    defaults: { _controller: VictorAdBundle:Advert:admin}

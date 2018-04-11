@@ -1,0 +1,25 @@
+{% extends 'VictorAdBundle::layout.html.twig' %}
+
+{% block body %}
+
+<h2>Bienvenue sur votre compte {{ app.user.username }} !</h2>
+
+    <h3>Opérations courantes</h3>
+        <ul>
+            <li><a href="{{ path('victor_ad_data') }}">Modifier mes informations</a></li>
+            <li><a href="#">Changer mon mot de passe</a> </li>
+        </ul>
+
+    <h3>Mes achats</h3>
+
+        <a href="#">Mes commandes</a>
+
+    <h3>Mes ventes</h3>
+
+        <a href="#">Mes ventes</a>
+
+    <h3>Un problème ?</h3>
+
+        <a href="#">Contactez-nous ! :)</a>
+
+{% endblock %}

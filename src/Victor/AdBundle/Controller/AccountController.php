@@ -6,8 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class AccountController extends Controller
 {
-    public function indexAction($name)
+    public function accountAction()
     {
-        return $this->render('', array('name' => $name));
+        return $this->render('@VictorAd/Account/account.html.twig');
+    }
+
+    public function dataAction()
+    {
+        return $this->render('@VictorAd/Account/data.html.twig');
     }
 }

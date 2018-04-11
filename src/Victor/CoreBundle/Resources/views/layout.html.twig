@@ -36,7 +36,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <!--<li><a href="#" class="navigation">Mon compte</a></li>-->
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    <li><a href="#">Connecté en tant que {{ app.user.username }}</a></li>
+                    <li><a href="{{ path('victor_ad_account') }}">Connecté en tant que {{ app.user.username }}</a></li>
                     <li><a href="{{ path('fos_user_security_logout') }}">Déconnexion</a></li>
                 {% else %}
                     <li><a href="{{ path('fos_user_registration_register') }}">Inscription</a></li>

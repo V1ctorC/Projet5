@@ -35,6 +35,9 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <!--<li><a href="#" class="navigation">Mon compte</a></li>-->
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li><a href="{{ path('victor_ad_admin') }}">Administration du site</a></li>
+                {% endif %}
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                     <li><a href="{{ path('victor_ad_account') }}">Connecté en tant que {{ app.user.username }}</a></li>
                     <li><a href="{{ path('fos_user_security_logout') }}">Déconnexion</a></li>

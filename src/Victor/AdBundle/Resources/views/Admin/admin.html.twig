@@ -1,0 +1,33 @@
+{% extends '@VictorAd/layout.html.twig' %}
+
+{% block body %}
+
+    <h2>Bienvue sur la page d'administration du site !</h2>
+
+    <h3>Liste des membres du site : </h3>
+
+    <div id="listMember">
+
+        <table>
+        <tr>
+            <th>Pseudo</th>
+            <th>Adresse mail</th>
+        </tr>
+            {% for user in users %}
+
+                <tr>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                </tr>
+
+
+
+            {% endfor %}
+
+        </table>
+
+
+
+    </div>
+
+{% endblock %}

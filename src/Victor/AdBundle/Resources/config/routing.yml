@@ -48,6 +48,14 @@ victor_ad_deactivateuser:
     path: /admin/deactivate/{user}
     defaults: { _controller: VictorAdBundle:Admin:deactivate}
 
+victor_ad_promoteuser:
+    path: /admin/promote/{user}
+    defaults: { _controller: VictorAdBundle:Admin:promote}
+
+victor_ad_demoteuser:
+    path: /admin/demote/{user}
+    defaults: { _controller: VictorAdBundle:Admin:demote}
+
 victor_ad_account:
     path: /account
     defaults: { _controller: VictorAdBundle:Account:account}

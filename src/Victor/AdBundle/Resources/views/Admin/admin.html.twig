@@ -12,15 +12,25 @@
         <tr>
             <th>Pseudo</th>
             <th>Adresse mail</th>
+            <th>Rôle</th>
             <th>Status</th>
             <th>Supprimer</th>
             <th>Activer / Desactiver</th>
+            <th>Promouvoir</th>
+            <th>Rétrograder</th>
         </tr>
             {% for user in users %}
 
                 <tr>
                     <td>{{ user.username }}</td>
                     <td>{{ user.email }}</td>
+                    <td>
+                        {% for role in user.roles %}
+                            {% if role == 'ROLE_ADMIN' %}
+                                Administrateur
+                            {% endif %}
+                        {% endfor %}
+                    </td>
                     <td>
                         {% if user.enabled == 0 %}
                             Désactivé
@@ -32,6 +42,8 @@
                     </td>
                     <td><a href="{{ path('victor_ad_deleteuser', {'user': user.id}) }}"><input type="button" class="btn btn-primary center-block" value="Supprimer"></a></td>
                     <td><a href="{{ path('victor_ad_deactivateuser', {'user': user.id}) }}"><input type="button" class="btn btn-primary center-block" value="{{ status }}"></a></td>
+                    <td><a href="{{ path('victor_ad_promoteuser', {'user': user.id}) }}"><input type="button" class="btn btn-primary center-block" value="Promouvoir"></a></td>
+                    <td><a href="{{ path('victor_ad_demoteuser', {'user': user.id}) }}"><input type="button" class="btn btn-primary center-block" value="Retrograder"></a></td>
                 </tr>
 
             {% endfor %}

@@ -47,4 +47,26 @@ class AdminController extends Controller
 
         return $this->redirectToRoute('victor_ad_admin');
     }
+
+    public function promoteAction($user)
+    {
+        $userManager = $this->get('fos_user.user_manager');
+        $user = $userManager->findUserBy(array('id'=>$user));
+
+        $user->addRole('ROLE_ADMIN');
+        $userManager->updateUser($user);
+
+        return $this->redirectToRoute('victor_ad_admin');
+    }
+
+    public function demoteAction($user)
+    {
+        $userManager = $this->get('fos_user.user_manager');
+        $user = $userManager->findUserBy(array('id'=>$user));
+
+        $user->removeRole('ROLE_ADMIN');
+        $userManager->updateUser($user);
+
+        return $this->redirectToRoute('victor_ad_admin');
+    }
 }

@@ -19,6 +19,32 @@ class AdminController extends Controller
     {
         $userManager = $this->get('fos_user.user_manager');
 
+        $user = $userManager->findUserBy(array('id'=>$user));
+
         $userManager->deleteUser($user);
+
+        return $this->redirectToRoute('victor_ad_admin');
+    }
+
+    public function deactivateAction($user)
+    {
+        $userManager = $this->get('fos_user.user_manager');
+        $user = $userManager->findUserBy(array('id'=>$user));
+
+        if ($user->isEnabled() == true)
+        {
+            $user->setEnabled(false);
+
+            $userManager->updateUser($user);
+        }
+        else
+        {
+            $user->setEnabled(true);
+
+            $userManager->updateUser($user);
+        }
+
+
+        return $this->redirectToRoute('victor_ad_admin');
     }
 }

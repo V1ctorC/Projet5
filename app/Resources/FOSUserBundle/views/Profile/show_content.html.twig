@@ -1,0 +1,17 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="fos_user_user_show">
+    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+    <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+    <p>Sexe : {{ user.gender }}</p>
+    <p>Prénom : {{ user.firstname }}</p>
+    <p>Nom : {{ user.lastname }}</p>
+    <p>Adresse : {{ user.address }}</p>
+    <p>Code postal : {{ user.zipcode }}</p>
+    <p>Ville : {{ user.city }}</p>
+    <p>Pays : {{ user.country }}</p>
+    <p>Téléphone : {{ user.phone }}</p>
+
+    <a href="{{ path('fos_user_profile_edit') }}">Modifier mes infos</a>
+
+</div>

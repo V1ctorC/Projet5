@@ -60,10 +60,12 @@ victor_ad_account:
     path: /account
     defaults: { _controller: VictorAdBundle:Account:account}
 
-victor_ad_data:
-    path: /account/data
-    defaults: { _controller: VictorAdBundle:Account:data}
+victor_ad_deleteconfirm:
+    path: /account/delete
+    defaults: { _controller: VictorAdBundle:Account:delete}
 
-victor_ad_editprofile:
-    path: /account/data/edit
-    defaults: { _controller: VictorAdBundle:Account:editprofile}
+victor_ad_deletehimself:
+    path: /account/delete/himself
+    defaults: { _controller: VictorAdBundle:Account:deletehimself}
+
+

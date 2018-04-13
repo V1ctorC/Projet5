@@ -63,3 +63,7 @@ victor_ad_account:
 victor_ad_data:
     path: /account/data
     defaults: { _controller: VictorAdBundle:Account:data}
+
+victor_ad_editprofile:
+    path: /account/data/edit
+    defaults: { _controller: VictorAdBundle:Account:editprofile}

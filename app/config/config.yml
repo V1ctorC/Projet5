@@ -80,3 +80,7 @@ fos_user:
     registration:
         form:
             type: Victor\UserBundle\Form\RegistrationType
+
+    profile:
+        form:
+            type: Victor\UserBundle\Form\ProfileType

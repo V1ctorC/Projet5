@@ -33,4 +33,16 @@
 
     {% endif %}
 
+    <h4>Faire une offre</h4>
+
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+        <p>Vous pensez faire mieux ? Faite votre proposition <a href="{{ path('victor_ad_selloffer', {'phone': phone.model, 'id': phone.id}) }}">ici</a></p>
+
+    {% else %}
+
+        <p>Si vous souhaitez faire une offre ... <a href="{{ path('fos_user_security_login') }}">Connectez-vous</a></p>
+
+    {% endif %}
+
 {% endblock %}

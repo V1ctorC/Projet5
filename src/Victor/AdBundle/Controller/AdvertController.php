@@ -195,5 +195,14 @@ class AdvertController extends Controller
         return $this->redirectToRoute('victor_ad_index');
     }
 
+    public function addofferAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $phone = $em->getRepository('VictorAdBundle:Phone')->find($id);
+
+        return $this->render('@VictorAd/Advert/selloffer.html.twig', array('phone'=>$phone));
+    }
+
 
 }

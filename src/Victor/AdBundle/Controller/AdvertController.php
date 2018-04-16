@@ -3,13 +3,15 @@
 namespace Victor\AdBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\FormType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Victor\AdBundle\Entity\Image;
 use Victor\AdBundle\Entity\Offer;
 use Victor\AdBundle\Entity\Phone;
-use Victor\AdBundle\Repository\PhoneRepository;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 
 class AdvertController extends Controller
 {
@@ -195,13 +197,53 @@ class AdvertController extends Controller
         return $this->redirectToRoute('victor_ad_index');
     }
 
-    public function addofferAction($id)
+    public function sellofferAction($id, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
         $phone = $em->getRepository('VictorAdBundle:Phone')->find($id);
 
-        return $this->render('@VictorAd/Advert/selloffer.html.twig', array('phone'=>$phone));
+
+        $offer = new Offer();
+
+        $offer->setPhone($phone);
+
+        $formBuilder = $this->get('form.factory')->createBuilder(FormType::class, $offer);
+
+        $formBuilder
+            ->add('price',    IntegerType::class)
+            ->add('save',   SubmitType::class);
+
+        $form = $formBuilder->getForm();
+
+        if ($request->isMethod('POST'))
+        {
+            $form->handleRequest($request);
+
+            if ($form->isValid())
+            {
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($offer);
+                $em->flush();
+
+                return $this->redirectToRoute('victor_core_home');
+            }
+        }
+
+
+        return $this->render('@VictorAd/Advert/selloffer.html.twig', array('phone'=>$phone, 'form' => $form->createView()));
+    }
+
+    public function addofferAction()
+    {
+        $offer = new Offer();
+
+        $formBuilder = $this->get('form.factory')->createBuilder(FormType::class, $offer);
+
+        $formBuilder
+            ->add('price',    IntegerType::class);
+
+        $form = $formBuilder->getForm();
     }
 
 

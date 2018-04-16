@@ -12,7 +12,7 @@ victor_ad_sellviewphone:
 
 victor_ad_selloffer:
     path: /sell/{phone}/{id}/offer
-    defaults: { _controller: VictorAdBundle:Advert:addoffer}
+    defaults: { _controller: VictorAdBundle:Advert:selloffer}
 
 victor_ad_buy:
     path: /buy

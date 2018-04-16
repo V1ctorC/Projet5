@@ -41,6 +41,11 @@ class Offer
      */
     private $phone;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Victor\UserBundle\Entity\User")
+     */
+    private $user;
+
 
 
 
@@ -129,5 +134,30 @@ class Offer
     public function getPhone()
     {
         return $this->phone;
+    }
+
+
+    /**
+     * Set user
+     *
+     * @param \Victor\UserBundle\Entity\User $user
+     *
+     * @return Offer
+     */
+    public function setUser(\Victor\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \Victor\UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

@@ -41,6 +41,18 @@ class Offer
      */
     private $phone;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Victor\UserBundle\Entity\User")
+     */
+    private $user;
+
+
+
+
+    public function __construct()
+    {
+        $this->date = new \Datetime();
+    }
 
     /**
      * Get id
@@ -99,5 +111,29 @@ class Offer
     {
         return $this->date;
     }
-}
 
+    /**
+     * Set phone
+     *
+     * @param \Victor\AdBundle\Entity\Phone $phone
+     *
+     * @return Offer
+     */
+    public function setPhone(\Victor\AdBundle\Entity\Phone $phone)
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Get phone
+     *
+     * @return \Victor\AdBundle\Entity\Phone
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+}

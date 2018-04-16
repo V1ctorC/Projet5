@@ -203,10 +203,13 @@ class AdvertController extends Controller
 
         $phone = $em->getRepository('VictorAdBundle:Phone')->find($id);
 
+        $user = $this->getUser();
+
 
         $offer = new Offer();
 
         $offer->setPhone($phone);
+        $offer->setUser($user);
 
         $formBuilder = $this->get('form.factory')->createBuilder(FormType::class, $offer);
 

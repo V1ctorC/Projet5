@@ -22,7 +22,7 @@
     {% for offer in listOffers %}
 
         <ul>
-            <li>{{ offer.price }}€ <a href="#">Choisir cette offre</a></li>
+            <li>{{ offer.price }}€ <a href="{{ path('victor_ad_summarybuy',{'phone': phone.model, 'id': phone.id, 'offerid': offer.id}) }}">Choisir cette offre</a></li>
         </ul>
 
     {% endfor %}

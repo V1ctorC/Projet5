@@ -3,15 +3,12 @@
 namespace Victor\AdBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Form\Extension\Core\Type\FormType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Victor\AdBundle\Entity\Image;
 use Victor\AdBundle\Entity\Offer;
 use Victor\AdBundle\Entity\Phone;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Victor\AdBundle\Form\OfferType;
 
 class AdvertController extends Controller
@@ -46,6 +43,11 @@ class AdvertController extends Controller
             array('model' => $phone)
         );
 
+        if (empty($listPhones))
+        {
+            throw new NotFoundHttpException("Le téléphone que vous cherchez n'existe pas");
+        }
+
         return $this->render('@VictorAd/Advert/buyview.html.twig', array('listPhones'=>$listPhones));
     }
 
@@ -64,7 +66,7 @@ class AdvertController extends Controller
             ->findBy(
                 array('phone' => $phone),
                 array('price' => 'asc'),
-                5,
+                10,
                 0
             );
 
@@ -78,6 +80,11 @@ class AdvertController extends Controller
         $listPhones = $repository->findBy(
             array('model' => $phone)
         );
+
+        if (empty($listPhones))
+        {
+            throw new NotFoundHttpException("Le téléphone que vous cherchez n'existe pas");
+        }
 
 
         return $this->render('@VictorAd/Advert/sellview.html.twig', array('listPhones'=>$listPhones));
@@ -227,6 +234,19 @@ class AdvertController extends Controller
 
 
         return $this->render('@VictorAd/Advert/selloffer.html.twig', array('phone'=>$phone, 'form' => $form->createView()));
+    }
+
+
+    public function summarybuyAction($id, $offerid)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $phone = $em->getRepository('VictorAdBundle:Phone')->find($id);
+
+        $offer = $em->getRepository('VictorAdBundle:Offer')->find($offerid);
+
+
+
+        return $this->render('@VictorAd/Advert/summarybuy.html.twig', array('phone'=>$phone, 'offer'=>$offer));
     }
 
 }

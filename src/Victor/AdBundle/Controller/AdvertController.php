@@ -12,6 +12,7 @@ use Victor\AdBundle\Entity\Image;
 use Victor\AdBundle\Entity\Offer;
 use Victor\AdBundle\Entity\Phone;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Victor\AdBundle\Form\OfferType;
 
 class AdvertController extends Controller
 {
@@ -211,43 +212,21 @@ class AdvertController extends Controller
         $offer->setPhone($phone);
         $offer->setUser($user);
 
-        $formBuilder = $this->get('form.factory')->createBuilder(FormType::class, $offer);
+        $form = $this->get('form.factory')->create(OfferType::class, $offer);
 
-        $formBuilder
-            ->add('price',    IntegerType::class)
-            ->add('save',   SubmitType::class);
+        if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
 
-        $form = $formBuilder->getForm();
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($offer);
+            $em->flush();
 
-        if ($request->isMethod('POST'))
-        {
-            $form->handleRequest($request);
 
-            if ($form->isValid())
-            {
-                $em = $this->getDoctrine()->getManager();
-                $em->persist($offer);
-                $em->flush();
+            return $this->redirectToRoute('victor_core_home');
 
-                return $this->redirectToRoute('victor_core_home');
-            }
         }
 
 
         return $this->render('@VictorAd/Advert/selloffer.html.twig', array('phone'=>$phone, 'form' => $form->createView()));
     }
-
-    public function addofferAction()
-    {
-        $offer = new Offer();
-
-        $formBuilder = $this->get('form.factory')->createBuilder(FormType::class, $offer);
-
-        $formBuilder
-            ->add('price',    IntegerType::class);
-
-        $form = $formBuilder->getForm();
-    }
-
 
 }

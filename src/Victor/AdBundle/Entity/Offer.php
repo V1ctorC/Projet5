@@ -49,9 +49,16 @@ class Offer
     /**
      * @var string
      *
-     * @ORM\Column(name="condition", type="string", length=255)
+     * @ORM\Column(name="status", type="string", length=255)
      */
-    private $condition;
+    private $status;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=255)
+     */
+    private $description;
 
 
 
@@ -168,27 +175,52 @@ class Offer
         return $this->user;
     }
 
+
     /**
-     * Set condition
+     * Set status
      *
-     * @param string $condition
+     * @param string $status
      *
      * @return Offer
      */
-    public function setCondition($condition)
+    public function setStatus($status)
     {
-        $this->condition = $condition;
+        $this->status = $status;
 
         return $this;
     }
 
     /**
-     * Get condition
+     * Get status
      *
      * @return string
      */
-    public function getCondition()
+    public function getStatus()
     {
-        return $this->condition;
+        return $this->status;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Offer
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 }

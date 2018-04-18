@@ -46,6 +46,13 @@ class Offer
      */
     private $user;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="condition", type="string", length=255)
+     */
+    private $condition;
+
 
 
 
@@ -136,4 +143,28 @@ class Offer
         return $this->phone;
     }
 
+
+    /**
+     * Set user
+     *
+     * @param \Victor\UserBundle\Entity\User $user
+     *
+     * @return Offer
+     */
+    public function setUser(\Victor\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \Victor\UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 }

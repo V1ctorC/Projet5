@@ -46,6 +46,13 @@ class Offer
      */
     private $user;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="condition", type="string", length=255)
+     */
+    private $condition;
+
 
 
 
@@ -159,5 +166,29 @@ class Offer
     public function getUser()
     {
         return $this->user;
+    }
+
+    /**
+     * Set condition
+     *
+     * @param string $condition
+     *
+     * @return Offer
+     */
+    public function setCondition($condition)
+    {
+        $this->condition = $condition;
+
+        return $this;
+    }
+
+    /**
+     * Get condition
+     *
+     * @return string
+     */
+    public function getCondition()
+    {
+        return $this->condition;
     }
 }

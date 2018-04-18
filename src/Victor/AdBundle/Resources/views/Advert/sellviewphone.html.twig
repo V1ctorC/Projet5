@@ -19,13 +19,28 @@
 
     <h4>Offres</h4>
 
+    <table>
+        <tr>
+            <th>Etat du téléphone</th>
+            <th>Prix</th>
+            <th>Description</th>
+        </tr>
+
     {% for offer in listOffers %}
 
-        <ul>
-            <li>{{ offer.price }}</li>
-        </ul>
+
+
+        <tr>
+            <td>{{ offer.status }}</td>
+            <td>{{ offer.price }}</td>
+            <td>{{ offer.description }}</td>
+        </tr>
+
+
 
     {% endfor %}
+
+    </table>
 
     {% if listOffers == null %}
 

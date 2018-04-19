@@ -70,4 +70,8 @@ victor_ad_deletehimself:
     path: /account/delete/himself
     defaults: { _controller: VictorAdBundle:Account:deletehimself}
 
+victor_ad_paiement:
+    path: /paiement
+    defaults: { _controller: VictorAdBundle:Advert:paiement}
+
 

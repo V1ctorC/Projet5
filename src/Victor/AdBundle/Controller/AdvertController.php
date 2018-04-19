@@ -249,4 +249,9 @@ class AdvertController extends Controller
         return $this->render('@VictorAd/Advert/summarybuy.html.twig', array('phone'=>$phone, 'offer'=>$offer));
     }
 
+    public function paiementAction()
+    {
+        return $this->render('@VictorAd/Advert/paiement.html.twig');
+    }
+
 }

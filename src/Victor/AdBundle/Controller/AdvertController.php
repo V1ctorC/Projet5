@@ -254,4 +254,20 @@ class AdvertController extends Controller
         return $this->render('@VictorAd/Advert/paiement.html.twig');
     }
 
+    public function checkoutAction()
+    {
+        \Stripe\Stripe::setApiKey("sk_test_rAGQCR0jx66px1wmcyb3me6U");
+
+// Token is created using Checkout or Elements!
+// Get the payment token ID submitted by the form:
+        $token = $_POST['stripeToken'];
+
+        $charge = \Stripe\Charge::create([
+            'amount' => 999,
+            'currency' => 'usd',
+            'description' => 'Example charge',
+            'source' => $token,
+        ]);
+    }
+
 }

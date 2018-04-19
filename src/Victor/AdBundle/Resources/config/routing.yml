@@ -74,4 +74,8 @@ victor_ad_paiement:
     path: /paiement
     defaults: { _controller: VictorAdBundle:Advert:paiement}
 
+victor_ad_ordercheckout:
+    path: /checkout
+    defaults: { _controller: VictorAdBundle:Advert:checkout}
+
 

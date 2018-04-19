@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<form action="your-server-side-code" method="POST">
+<form action="{{ path('victor_ad_ordercheckout') }}" method="POST">
     <script
             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="pk_test_9y2iO8ZCIEg06ONKLxjJ9qvb"
@@ -11,6 +11,7 @@
             data-description="Example charge"
             data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
             data-locale="auto"
+            data-zip-code="true"
             data-currency="eur">
     </script>
 </form>

@@ -34,7 +34,8 @@
         "symfony/symfony": "3.3.*",
         "twig/twig": "^1.0||^2.0",
         "doctrine/doctrine-fixtures-bundle": "^2.0",
-        "friendsofsymfony/user-bundle": "^2.0"
+        "friendsofsymfony/user-bundle": "^2.0",
+        "stripe/stripe-php": "6.*"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

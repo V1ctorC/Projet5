@@ -263,11 +263,13 @@ class AdvertController extends Controller
         $token = $_POST['stripeToken'];
 
         $charge = \Stripe\Charge::create([
-            'amount' => 999,
-            'currency' => 'usd',
-            'description' => 'Example charge',
+            'amount' => 1000,
+            'currency' => 'eur',
+            'description' => 'Deuxieme exemple',
             'source' => $token,
         ]);
+
+        return $this->render('@VictorAd/Advert/index.html.twig');
     }
 
 }

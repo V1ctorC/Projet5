@@ -243,6 +243,7 @@ class AdvertController extends Controller
         $offer = $em->getRepository('VictorAdBundle:Offer')->find($offerid);
         $buyer = $this->getUser();
         $offer->setBuyer($buyer);
+        $offer->setSold(true);
         $em->persist($offer);
         $em->flush();
         $price = $offer->getPrice() * 100;

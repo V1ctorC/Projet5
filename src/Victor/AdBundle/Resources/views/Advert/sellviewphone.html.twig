@@ -28,7 +28,7 @@
 
     {% for offer in listOffers %}
 
-
+        {% if offer.sold == 0 %}
 
         <tr>
             <td>{{ offer.status }}</td>
@@ -36,7 +36,11 @@
             <td>{{ offer.description }}</td>
         </tr>
 
+        {% else %}
 
+            <p>Toutes les offres ont déjà trouvé preneur</p>
+
+        {% endif %}
 
     {% endfor %}
 

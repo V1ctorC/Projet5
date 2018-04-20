@@ -60,6 +60,11 @@ class Offer
      */
     private $description;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Victor\UserBundle\Entity\User")
+     */
+    private $buyer;
+
 
 
 
@@ -198,5 +203,29 @@ class Offer
     public function getStatus()
     {
         return $this->status;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Offer
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 }

@@ -241,6 +241,10 @@ class AdvertController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $offer = $em->getRepository('VictorAdBundle:Offer')->find($offerid);
+        $buyer = $this->getUser();
+        $offer->setBuyer($buyer);
+        $em->persist($offer);
+        $em->flush();
         $price = $offer->getPrice() * 100;
 
         \Stripe\Stripe::setApiKey("sk_test_rAGQCR0jx66px1wmcyb3me6U");
@@ -255,6 +259,9 @@ class AdvertController extends Controller
             'description' => 'Deuxieme exemple',
             'source' => $token,
         ]);
+
+        $em->persist($offer);
+        $em->flush();
 
         return $this->redirectToRoute('victor_core_home');
     }

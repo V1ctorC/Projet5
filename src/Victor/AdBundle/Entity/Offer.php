@@ -60,6 +60,11 @@ class Offer
      */
     private $description;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Victor\UserBundle\Entity\User")
+     */
+    private $buyer;
+
 
 
 
@@ -222,5 +227,29 @@ class Offer
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set buyer
+     *
+     * @param \Victor\UserBundle\Entity\User $buyer
+     *
+     * @return Offer
+     */
+    public function setBuyer(\Victor\UserBundle\Entity\User $buyer = null)
+    {
+        $this->buyer = $buyer;
+
+        return $this;
+    }
+
+    /**
+     * Get buyer
+     *
+     * @return \Victor\UserBundle\Entity\User
+     */
+    public function getBuyer()
+    {
+        return $this->buyer;
     }
 }

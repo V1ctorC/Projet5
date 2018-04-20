@@ -76,6 +76,7 @@ class Offer
     public function __construct()
     {
         $this->date = new \Datetime();
+        $this->sold = 0;
     }
 
     /**

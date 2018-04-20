@@ -35,7 +35,11 @@
                     <td>{{ offer.status }}</td>
                     <td>{{ offer.price }}</td>
                     <td>{{ offer.description }}</td>
-                    <td><a href="{{ path('victor_ad_summarybuy',{'phone': phone.model, 'id': phone.id, 'offerid': offer.id}) }}">Choisir cette offre</a></td>
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <td><a href="{{ path('victor_ad_summarybuy',{'phone': phone.model, 'id': phone.id, 'offerid': offer.id}) }}">Choisir cette offre</a></td>
+                    {% else %}
+                        <td>Pour accepter cette offre<a href="{{ path('fos_user_security_login') }}"> connectez-vous</a></td>
+                    {% endif %}
                 </tr>
 
             {% else %}

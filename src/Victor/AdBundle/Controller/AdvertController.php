@@ -10,6 +10,7 @@ use Victor\AdBundle\Entity\Image;
 use Victor\AdBundle\Entity\Offer;
 use Victor\AdBundle\Entity\Phone;
 use Victor\AdBundle\Form\OfferType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class AdvertController extends Controller
 {
@@ -185,6 +186,9 @@ class AdvertController extends Controller
         return $this->redirectToRoute('victor_ad_index');
     }
 
+    /**
+     * @Security("has_role('ROLE_USER')")
+     */
     public function sellofferAction($id, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -216,7 +220,9 @@ class AdvertController extends Controller
         return $this->render('@VictorAd/Advert/selloffer.html.twig', array('phone'=>$phone, 'form' => $form->createView()));
     }
 
-
+    /**
+     * @Security("has_role('ROLE_USER')")
+     */
     public function summarybuyAction($id, $offerid)
     {
         $em = $this->getDoctrine()->getManager();
@@ -229,6 +235,9 @@ class AdvertController extends Controller
         return $this->render('@VictorAd/Advert/summarybuy.html.twig', array('phone'=>$phone, 'offer'=>$offer));
     }
 
+    /**
+     * @Security("has_role('ROLE_USER')")
+     */
     public function paiementAction($offerid)
     {
         $em = $this->getDoctrine()->getManager();
@@ -237,6 +246,9 @@ class AdvertController extends Controller
         return $this->render('@VictorAd/Advert/paiement.html.twig', array('offer'=>$offer));
     }
 
+    /**
+     * @Security("has_role('ROLE_USER')")
+     */
     public function checkoutAction($offerid)
     {
         $em = $this->getDoctrine()->getManager();

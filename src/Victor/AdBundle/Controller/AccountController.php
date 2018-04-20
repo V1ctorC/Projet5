@@ -3,6 +3,7 @@
 namespace Victor\AdBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class AccountController extends Controller
 {
@@ -25,5 +26,22 @@ class AccountController extends Controller
         $userManager->deleteUser($user);
 
         return $this->redirectToRoute('victor_core_home');
+    }
+
+    public function purchasesAction()
+    {
+        $repository = $this->getDoctrine()->getManager()->getRepository('VictorAdBundle:Offer');
+        $user = $this->getUser();
+
+        $listPurchases = $repository->findBy(
+            array('buyer' => $user)
+        );
+
+        if (empty($listPurchases))
+        {
+            throw new NotFoundHttpException("Probleme de requete");
+        }
+
+        return $this->render('@VictorAd/Account/purchases.html.twig', array('listPurchases'=>$listPurchases));
     }
 }

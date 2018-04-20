@@ -70,6 +70,10 @@ victor_ad_deletehimself:
     path: /account/delete/himself
     defaults: { _controller: VictorAdBundle:Account:deletehimself}
 
+victor_ad_purchases:
+    path: /account/purchases
+    defaults: { _controller: VictorAdBundle:Account:purchases}
+
 victor_ad_paiement:
     path: /paiement/{offerid}
     defaults: { _controller: VictorAdBundle:Advert:paiement}

@@ -74,6 +74,10 @@ victor_ad_purchases:
     path: /account/purchases
     defaults: { _controller: VictorAdBundle:Account:purchases}
 
+victor_ad_sales:
+    path: /account/sales
+    defaults: { _controller: VictorAdBundle:Account:sales}
+
 victor_ad_paiement:
     path: /paiement/{offerid}
     defaults: { _controller: VictorAdBundle:Advert:paiement}

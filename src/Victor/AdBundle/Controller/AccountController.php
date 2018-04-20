@@ -34,14 +34,31 @@ class AccountController extends Controller
         $user = $this->getUser();
 
         $listPurchases = $repository->findBy(
-            array('buyer' => $user)
+            array('buyer' => $user, 'sold' => 1)
         );
 
         if (empty($listPurchases))
         {
-            throw new NotFoundHttpException("Probleme de requete");
+            throw new NotFoundHttpException("Aucun achat");
         }
 
         return $this->render('@VictorAd/Account/purchases.html.twig', array('listPurchases'=>$listPurchases));
+    }
+
+    public function salesAction()
+    {
+        $repository = $this->getDoctrine()->getManager()->getRepository('VictorAdBundle:Offer');
+        $user = $this->getUser();
+
+        $listSales = $repository->findBy(
+            array('user' => $user, 'sold' => 1)
+        );
+
+        if (empty($listSales))
+        {
+            throw new NotFoundHttpException("Vous n'avez rien vendu");
+        }
+
+        return $this->render('@VictorAd/Account/sales.html.twig', array('listSales'=>$listSales));
     }
 }

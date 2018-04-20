@@ -1,0 +1,23 @@
+{% extends '@VictorCore/layout.html.twig' %}
+
+{% block body %}
+
+    {% for sale in listSales %}
+
+        Vos ventes :
+
+        {{ sale.phone.brand }} <br />
+        {{ sale.phone.model }} <br />
+        {{ sale.phone.capacity }} <br />
+        {{ sale.phone.color }} <br />
+
+        Au prix de : <br />
+
+        {{ sale.price }}
+
+        <hr>
+
+
+    {% endfor %}
+
+{% endblock %}

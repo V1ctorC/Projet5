@@ -256,7 +256,7 @@ class AdvertController extends Controller
             'source' => $token,
         ]);
 
-        return $this->render('@VictorAd/Advert/index.html.twig');
+        return $this->redirectToRoute('victor_core_home');
     }
 
 }

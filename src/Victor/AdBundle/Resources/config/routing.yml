@@ -71,7 +71,7 @@ victor_ad_deletehimself:
     defaults: { _controller: VictorAdBundle:Account:deletehimself}
 
 victor_ad_paiement:
-    path: /paiement
+    path: /paiement/{offerid}
     defaults: { _controller: VictorAdBundle:Advert:paiement}
 
 victor_ad_ordercheckout:

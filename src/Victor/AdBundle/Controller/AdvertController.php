@@ -113,27 +113,7 @@ class AdvertController extends Controller
         return $this->render('@VictorAd/Advert/sellviewphone.html.twig', array('phone'=>$phone, 'listOffers'=>$listOffers));
     }
 
-    public function homeAction($departement, $page)
-    {
-        if ($page < 1)
-        {
-            throw new NotFoundHttpException('La page ' . $page . ' n\'existe pas.');
-        }
 
-
-        return $this->render('@VictorAd/Advert/buy.html.twig', array('listAdverts'=>$listAdverts));
-    }
-
-    public function viewAction($id)
-    {
-        $advert = array(
-            'title'   => 'Recherche développpeur Symfony',
-            'id'      => 1,
-            'author'  => 'Alexandre',
-            'content' => 'Nous recherchons un développeur Symfony débutant sur Lyon. Blabla…',
-            'date'    => new \Datetime());
-        return $this->render('VictorAdBundle:Advert:view.html.twig', array('advert' => $advert));
-    }
 
     public function addAction(Request $request)
     {
@@ -249,9 +229,12 @@ class AdvertController extends Controller
         return $this->render('@VictorAd/Advert/summarybuy.html.twig', array('phone'=>$phone, 'offer'=>$offer));
     }
 
-    public function paiementAction()
+    public function paiementAction($offerid)
     {
-        return $this->render('@VictorAd/Advert/paiement.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $offer = $em->getRepository('VictorAdBundle:Offer')->find($offerid);
+
+        return $this->render('@VictorAd/Advert/paiement.html.twig', array('offer'=>$offer));
     }
 
     public function checkoutAction()
@@ -263,7 +246,7 @@ class AdvertController extends Controller
         $token = $_POST['stripeToken'];
 
         $charge = \Stripe\Charge::create([
-            'amount' => 1000,
+            'amount' => $charge->getAmount(),
             'currency' => 'eur',
             'description' => 'Deuxieme exemple',
             'source' => $token,

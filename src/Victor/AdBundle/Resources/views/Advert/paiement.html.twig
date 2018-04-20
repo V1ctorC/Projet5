@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<form action="{{ path('victor_ad_ordercheckout') }}" method="POST">
+<form action="{{ path('victor_ad_ordercheckout',{'offerid': offer.id} ) }}" method="POST">
     <script
             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="pk_test_9y2iO8ZCIEg06ONKLxjJ9qvb"

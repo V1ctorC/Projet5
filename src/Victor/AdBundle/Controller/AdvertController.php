@@ -237,8 +237,12 @@ class AdvertController extends Controller
         return $this->render('@VictorAd/Advert/paiement.html.twig', array('offer'=>$offer));
     }
 
-    public function checkoutAction()
+    public function checkoutAction($offerid)
     {
+        $em = $this->getDoctrine()->getManager();
+        $offer = $em->getRepository('VictorAdBundle:Offer')->find($offerid);
+        $price = $offer->getPrice() * 100;
+
         \Stripe\Stripe::setApiKey("sk_test_rAGQCR0jx66px1wmcyb3me6U");
 
 // Token is created using Checkout or Elements!
@@ -246,7 +250,7 @@ class AdvertController extends Controller
         $token = $_POST['stripeToken'];
 
         $charge = \Stripe\Charge::create([
-            'amount' => $charge->getAmount(),
+            'amount' => $price,
             'currency' => 'eur',
             'description' => 'Deuxieme exemple',
             'source' => $token,

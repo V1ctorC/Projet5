@@ -61,4 +61,21 @@ class AccountController extends Controller
 
         return $this->render('@VictorAd/Account/sales.html.twig', array('listSales'=>$listSales));
     }
+
+    public function currentofferAction()
+    {
+        $repository = $this->getDoctrine()->getManager()->getRepository('VictorAdBundle:Offer');
+        $user = $this->getUser();
+
+        $listCurrentoffer = $repository->findBy(
+            array('user' => $user, 'sold' => 0)
+        );
+
+        if (empty($listCurrentoffer))
+        {
+            throw new NotFoundHttpException("Vous n'avez aucune vente en cours");
+        }
+
+        return $this->render('@VictorAd/Account/currentoffer.html.twig', array('listCurrentoffer'=>$listCurrentoffer));
+    }
 }

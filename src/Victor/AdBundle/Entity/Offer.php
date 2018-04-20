@@ -65,7 +65,12 @@ class Offer
      */
     private $buyer;
 
-
+    /**
+     * @var
+     *
+     * @ORM\Column(name="sold", type="boolean")
+     */
+    private $sold;
 
 
     public function __construct()
@@ -251,5 +256,29 @@ class Offer
     public function getBuyer()
     {
         return $this->buyer;
+    }
+
+    /**
+     * Set sold
+     *
+     * @param boolean $sold
+     *
+     * @return Offer
+     */
+    public function setSold($sold)
+    {
+        $this->sold = $sold;
+
+        return $this;
+    }
+
+    /**
+     * Get sold
+     *
+     * @return boolean
+     */
+    public function getSold()
+    {
+        return $this->sold;
     }
 }

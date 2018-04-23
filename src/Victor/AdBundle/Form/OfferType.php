@@ -3,6 +3,7 @@
 namespace Victor\AdBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -18,7 +19,14 @@ class OfferType extends AbstractType
     {
         $builder
             ->add('price',    IntegerType::class)
-            ->add('status', TextType::class)
+            ->add('status',  ChoiceType::class, array(
+                'choices' => array(
+                    'Comme neuf' => 'Comme neuf',
+                    'Très bon état' => 'Très bon état',
+                    'Bon état' => 'Bon état',
+                    'Correct' => 'Correct',
+                )
+            ))
             ->add('description', TextType::class)
             ->add('save',   SubmitType::class);
     }/**

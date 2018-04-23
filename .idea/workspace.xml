@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af6761b9-47cf-4f15-8481-960258f01b61" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/UserBundle/Form/ProfileType.php" afterPath="$PROJECT_DIR$/src/Victor/UserBundle/Form/ProfileType.php" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/UserBundle/Form/RegistrationType.php" afterPath="$PROJECT_DIR$/src/Victor/UserBundle/Form/RegistrationType.php" />
+      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Form/OfferType.php" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Form/OfferType.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,11 +37,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProfileType.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProfileType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Victor/UserBundle/Form/ProfileType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+            <state relative-caret-position="-138">
+              <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OfferType.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Form/OfferType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -143,7 +152,6 @@
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdminController.php" />
         <option value="$PROJECT_DIR$/web/bundles/victorad/css/style.css" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Entity/Phone.php" />
-        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Form/OfferType.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/summarybuy.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/paiement.html.twig" />
@@ -162,6 +170,7 @@
         <option value="$PROJECT_DIR$/src/Victor/UserBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Victor/UserBundle/Form/RegistrationType.php" />
         <option value="$PROJECT_DIR$/src/Victor/UserBundle/Form/ProfileType.php" />
+        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Form/OfferType.php" />
       </list>
     </option>
   </component>
@@ -522,12 +531,12 @@
       <workItem from="1524139338462" duration="4389000" />
       <workItem from="1524209651546" duration="16093000" />
       <workItem from="1524474714731" duration="4007000" />
-      <workItem from="1524501205953" duration="2041000" />
+      <workItem from="1524501205953" duration="2937000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177994000" />
+    <option name="totallyTimeSpent" value="178890000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -709,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Form/OfferType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/admin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -888,6 +890,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Victor/UserBundle/Form/ProfileType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-138">
+          <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/UserBundle/Form/RegistrationType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -896,10 +906,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/UserBundle/Form/ProfileType.php">
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Form/OfferType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        <state relative-caret-position="199">
+          <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
           <folding />
         </state>
       </provider>

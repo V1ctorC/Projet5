@@ -4,6 +4,7 @@ namespace Victor\UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * User
@@ -52,6 +53,8 @@ class User extends BaseUser
      * @var int
      *
      * @ORM\Column(name="zipcode", type="integer")
+     *
+     * @Assert\Regex(" /^[0-9]{5,5}$/ ")
      */
     private $zipcode;
 
@@ -72,7 +75,9 @@ class User extends BaseUser
     /**
      * @var string
      *
-     * @ORM\Column(name="phone", type="string", length=255)
+     * @ORM\Column(name="phone", type="string", length=15)
+     *
+     * @Assert\Regex("/^(06|07)[0-9]{8}$/")
      */
     private $phone;
 

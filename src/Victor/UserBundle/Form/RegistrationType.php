@@ -28,7 +28,11 @@ class RegistrationType extends AbstractType
         $builder->add('address');
         $builder->add('zipcode');
         $builder->add('city');
-        $builder->add('country');
+        $builder->add('country', ChoiceType::class, array(
+            'choices' => array(
+                'France' => 'France',
+            )
+        ));
         $builder->add('phone');
 
     }

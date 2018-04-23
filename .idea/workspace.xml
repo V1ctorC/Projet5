@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af6761b9-47cf-4f15-8481-960258f01b61" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Form/OfferType.php" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Form/OfferType.php" />
+      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Form/PhoneType.php" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Form/PhoneType.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PhoneType.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PhoneType.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Form/PhoneType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+            <state relative-caret-position="295">
+              <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -47,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OfferType.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OfferType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Form/OfferType.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="199">
@@ -166,11 +166,11 @@
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Entity/Offer.php" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdvertController.php" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Form/ImageType.php" />
-        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Form/PhoneType.php" />
         <option value="$PROJECT_DIR$/src/Victor/UserBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/Victor/UserBundle/Form/RegistrationType.php" />
         <option value="$PROJECT_DIR$/src/Victor/UserBundle/Form/ProfileType.php" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Form/OfferType.php" />
+        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Form/PhoneType.php" />
       </list>
     </option>
   </component>
@@ -531,12 +531,12 @@
       <workItem from="1524139338462" duration="4389000" />
       <workItem from="1524209651546" duration="16093000" />
       <workItem from="1524474714731" duration="4007000" />
-      <workItem from="1524501205953" duration="2937000" />
+      <workItem from="1524501205953" duration="3873000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178890000" />
+    <option name="totallyTimeSpent" value="179826000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -750,6 +750,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -864,14 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Form/PhoneType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/UserBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1030">
@@ -910,6 +903,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Form/PhoneType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
           <folding />
         </state>
       </provider>

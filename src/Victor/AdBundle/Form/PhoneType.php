@@ -3,6 +3,7 @@
 namespace Victor\AdBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -17,13 +18,26 @@ class PhoneType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('brand',    TextType::class)
+            ->add('brand',    ChoiceType::class, array(
+                'choices' => array(
+                    'Apple' => 'Apple',
+                )
+            ))
             ->add('model',    TextType::class)
-            ->add('capacity', IntegerType::class)
+            ->add('capacity', ChoiceType::class, array(
+                'choices' => array(
+                    '64 Go' => '64',
+                    '128 Go' => '128',
+                    '256 Go' => '256',
+                    '512 Go' => '512',
+                )
+            ))
             ->add('color',    TextType::class)
             ->add('image', ImageType::class)
             ->add('save', SubmitType::class);
-    }/**
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)

@@ -21,6 +21,7 @@ class PhoneType extends AbstractType
             ->add('model',    TextType::class)
             ->add('capacity', IntegerType::class)
             ->add('color',    TextType::class)
+            ->add('image', ImageType::class)
             ->add('save', SubmitType::class);
     }/**
      * {@inheritdoc}

@@ -93,10 +93,10 @@ fos_user:
 
 
     resetting:
-            email:
-                from_email:
-                    address:        vetudes.noreply@gmail.com
-                    sender_name:    Demo Resetting
+        email:
+            from_email:
+                address:        vetudes.noreply@gmail.com
+                sender_name:    Demo Resetting
 
     profile:
         form:

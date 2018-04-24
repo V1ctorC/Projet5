@@ -76,12 +76,24 @@ fos_user:
     user_class:    Victor\UserBundle\Entity\User
 
     from_email:
-            address: "test@test.com"
-            sender_name: "No Reply"
+        address: vetudes.noreply@gmail.com
+        sender_name: No Reply
 
+    service:
+        mailer: fos_user.mailer.twig_swift
     registration:
+        confirmation:
+            enabled: true
+            template:   FOSUserBundle:Registration:email.txt.twig
         form:
             type: Victor\UserBundle\Form\RegistrationType
+
+
+    resetting:
+            email:
+                from_email:
+                    address:        vetudes.noreply@gmail.com
+                    sender_name:    Demo Resetting
 
     profile:
         form:

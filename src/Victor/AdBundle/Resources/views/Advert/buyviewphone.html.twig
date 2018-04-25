@@ -19,46 +19,42 @@
 
     <h4>Offres</h4>
 
-    <table>
-        <tr>
-            <th>Etat du téléphone</th>
-            <th>Prix</th>
-            <th>Description</th>
-            <th>Accepter offre</th>
-        </tr>
-
-        {% for offer in listOffers %}
-
-            {% if offer.sold == 0 %}
-
-                <tr>
-                    <td>{{ offer.status }}</td>
-                    <td>{{ offer.price }}</td>
-                    <td>{{ offer.description }}</td>
-                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                        <td><a href="{{ path('victor_ad_summarybuy',{'phone': phone.model, 'id': phone.id, 'offerid': offer.id}) }}">Choisir cette offre</a></td>
-                    {% else %}
-                        <td>Pour accepter cette offre<a href="{{ path('fos_user_security_login') }}"> connectez-vous</a></td>
-                    {% endif %}
-                </tr>
-
-            {% else %}
-
-                <p>Toutes les offres ont déjà trouvé preneur</p>
-
-            {% endif %}
-
-
-
-        {% endfor %}
-
-    </table>
-
-
-
     {% if listOffers == null %}
 
-    <p>Il n'y a actuellement aucune offre concernant ce produit</p>
+        <p>Il n'y a actuellement aucune offre concernant ce produit</p>
+
+    {% else %}
+
+        <table>
+            <tr>
+                <th>Etat du téléphone</th>
+                <th>Prix</th>
+                <th>Description</th>
+                <th>Accepter offre</th>
+            </tr>
+
+            {% for offer in listOffers %}
+
+                {% if offer.sold == 0 %}
+
+                    <tr>
+                        <td>{{ offer.status }}</td>
+                        <td>{{ offer.price }}</td>
+                        <td>{{ offer.description }}</td>
+                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                            <td><a href="{{ path('victor_ad_summarybuy',{'phone': phone.model, 'id': phone.id, 'offerid': offer.id}) }}">Choisir cette offre</a></td>
+                        {% else %}
+                            <td>Pour accepter cette offre<a href="{{ path('fos_user_security_login') }}"> connectez-vous</a></td>
+                        {% endif %}
+                    </tr>
+
+                {% endif %}
+
+
+
+            {% endfor %}
+
+        </table>
 
     {% endif %}
 

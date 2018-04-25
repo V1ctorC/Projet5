@@ -41,17 +41,90 @@
                             {% set status = "Desactiver" %}
                         {% endif %}
                     </td>
-                    <td><a href="{{ path('victor_ad_deleteuser', {'user': user.id}) }}"><input type="button" class="btn btn-primary center-block" value="Supprimer"></a></td>
-                    <td><a href="{{ path('victor_ad_deactivateuser', {'user': user.id}) }}"><input type="button" class="btn btn-primary center-block" value="{{ status }}"></a></td>
-                    <td><a href="{{ path('victor_ad_promoteuser', {'user': user.id}) }}"><input type="button" class="btn btn-primary center-block" value="Promouvoir"></a></td>
-                    <td><a href="{{ path('victor_ad_demoteuser', {'user': user.id}) }}"><input type="button" class="btn btn-primary center-block" value="Retrograder"></a></td>
+                    <td><a data-toggle="modal" href="#delete{{ user.id }}" class="btn btn-primary center-block">Supprimer</a></td>
+                    <td><a data-toggle="modal" href="#deactivate{{ user.id }}" class="btn btn-primary center-block">Désactiver</a></td>
+                    <td><a data-toggle="modal" href="#promote{{ user.id }}" class="btn btn-primary center-block">Promouvoir</a></td>
+                    <td><a data-toggle="modal" href="#demote{{ user.id }}" class="btn btn-primary center-block">Rétrograder</a></td>
                 </tr>
+
+                <div class="modal fade" id="delete{{ user.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <a href="{{ path('victor_ad_deleteuser', {'user': user.id}) }}"><input type="button" class="btn btn-primary" value="Retrograder"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="deactivate{{ user.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <a href="{{ path('victor_ad_deactivateuser', {'user': user.id}) }}"><input type="button" class="btn btn-primary center-block" value="Retrograder"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="promote{{ user.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <a href="{{ path('victor_ad_promoteuser', {'user': user.id}) }}"><input type="button" class="btn btn-primary center-block" value="Retrograder"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="demote{{ user.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <a href="{{ path('victor_ad_demoteuser', {'user': user.id}) }}"><input type="button" class="btn btn-primary center-block" value="Retrograder"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             {% endfor %}
 
         </table>
 
     </div>
+
 
     <h3>Ajouter un nouveau mobile</h3>
 

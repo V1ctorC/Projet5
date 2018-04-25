@@ -5,9 +5,15 @@
 
     <h2>Bienvue sur la page d'administration du site !</h2>
 
-    <h3>Liste des membres du site : </h3>
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="{{ path('victor_ad_admin') }}">Liste des membres</a></li>
+        <li role="presentation"><a href="{{ path('victor_ad_addphone') }}">Ajouter un téléphone</a></li>
+        <li role="presentation"><a href="#">Soon</a></li>
+    </ul>
 
     <div id="listMember">
+
+        <h3>Liste des membres du site : </h3>
 
         <table>
         <tr>
@@ -124,10 +130,5 @@
         </table>
 
     </div>
-
-
-    <h3>Ajouter un nouveau mobile</h3>
-
-        {{ form(form) }}
 
 {% endblock %}

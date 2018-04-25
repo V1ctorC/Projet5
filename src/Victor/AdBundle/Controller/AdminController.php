@@ -9,26 +9,14 @@ use Victor\AdBundle\Form\PhoneType;
 
 class AdminController extends Controller
 {
-    public function adminAction(Request $request)
+    public function adminAction()
     {
         $userManager = $this->get('fos_user.user_manager');
 
         $users = $userManager->findUsers();
 
-        $phone = new Phone();
 
-        $form = $this->get('form.factory')->create(PhoneType::class, $phone);
-
-        if ($request->isMethod('POST') && $form->handleRequest($request)->isValid())
-        {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($phone);
-            $em->flush();
-
-            return $this->redirectToRoute('victor_core_home');
-        }
-
-        return $this->render('@VictorAd/Admin/admin.html.twig', array('users'=>$users, 'form' => $form->createView()));
+        return $this->render('@VictorAd/Admin/admin.html.twig', array('users'=>$users));
 
     }
 
@@ -85,5 +73,23 @@ class AdminController extends Controller
         $userManager->updateUser($user);
 
         return $this->redirectToRoute('victor_ad_admin');
+    }
+
+    public function addphoneAction(Request $request)
+    {
+        $phone = new Phone();
+
+        $form = $this->get('form.factory')->create(PhoneType::class, $phone);
+
+        if ($request->isMethod('POST') && $form->handleRequest($request)->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($phone);
+            $em->flush();
+
+            return $this->redirectToRoute('victor_ad_admin');
+        }
+
+        return $this->render('@VictorAd/Admin/addPhone.html.twig', array('form' => $form->createView()));
     }
 }

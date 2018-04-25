@@ -58,6 +58,10 @@ victor_ad_demoteuser:
     path: /admin/demote/{user}
     defaults: { _controller: VictorAdBundle:Admin:demote}
 
+victor_ad_addphone:
+    path: /admin/addphone
+    defaults: { _controller: VictorAdBundle:Admin:addphone}
+
 victor_ad_account:
     path: /account
     defaults: { _controller: VictorAdBundle:Account:account}

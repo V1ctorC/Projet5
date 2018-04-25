@@ -1,0 +1,19 @@
+{% extends '@VictorCore/layout.html.twig' %}
+
+{% block body %}
+
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="{{ path('victor_ad_admin') }}">Liste des membres</a></li>
+        <li role="presentation" class="active"><a href="{{ path('victor_ad_addphone') }}">Ajouter un téléphone</a></li>
+        <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+
+    <div id="addPhone">
+
+        <h3>Ajouter un nouveau mobile</h3>
+
+        {{ form(form) }}
+
+    </div>
+
+{% endblock %}

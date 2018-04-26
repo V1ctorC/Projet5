@@ -1,4 +1,11 @@
 services:
+    victor_ad.ordertracking:
+        class: Victor\AdBundle\Tracking\OrderTracking
+        arguments:
+            - "@security.token_storage"
+
 #    victor_ad.example:
 #        class: Victor\AdBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+

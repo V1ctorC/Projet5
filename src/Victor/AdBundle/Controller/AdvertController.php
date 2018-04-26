@@ -116,69 +116,16 @@ class AdvertController extends Controller
 
 
 
-    public function addAction(Request $request)
+    public function addAction()
     {
-        $brand = 'Apple';
-        $model = 'iPhone X';
-        $color = 'Argent';
-        $url = 'https://static.yes-yes.com/phones/iphone-x-argent-35.png';
-        $alt = 'iPhone X';
+        $order = $this->container->get('victor_ad.ordertracking');
 
-        $phone = new Phone();
-        $phone->setBrand($brand);
-        $phone->setModel($model);
-        $phone->setCapacity('64');
-        $phone->setColor($color);
-
-        $image = new Image();
-        $image->setUrl($url);
-        $image->setAlt($alt);
-
-        $phone2 = new Phone();
-        $phone2->setBrand($brand);
-        $phone2->setModel($model);
-        $phone2->setCapacity('256');
-        $phone2->setColor($color);
-
-        $image2 = new Image();
-        $image2->setUrl($url);
-        $image2->setAlt($alt);
+        // Je pars du principe que $text contient le texte d'un message quelconque
+        $infos = $order->getpayinfos();
 
 
+        return $this->render('@VictorAd/Advert/add.html.twig', array('infos'=>$infos));
 
-
-        $phone->setImage($image);
-        $phone2->setImage($image2);
-
-
-
-
-        $em = $this->getDoctrine()->getManager();
-
-        /*
-        $em->persist($phone);
-
-        $em->persist($phone2);
-
-
-
-        $em->flush(); */
-
-
-
-        $session = $request->getSession();
-
-        // Bien sûr, cette méthode devra réellement ajouter l'annonce
-
-        // Mais faisons comme si c'était le cas
-        $session->getFlashBag()->add('info', 'Annonce bien enregistrée');
-
-        // Le « flashBag » est ce qui contient les messages flash dans la session
-        // Il peut bien sûr contenir plusieurs messages :
-        $session->getFlashBag()->add('info', 'Oui oui, elle est bien enregistrée !');
-
-        // Puis on redirige vers la page de visualisation de cette annonce
-        return $this->redirectToRoute('victor_ad_view', array('id' => 5, 'departement' => 77));
     }
 
     public function deleteAction()

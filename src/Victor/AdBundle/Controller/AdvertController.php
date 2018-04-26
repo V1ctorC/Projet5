@@ -121,10 +121,11 @@ class AdvertController extends Controller
         $order = $this->container->get('victor_ad.ordertracking');
 
         // Je pars du principe que $text contient le texte d'un message quelconque
-        $infos = $order->getpayinfos();
+        $infos = $order->getorderinfos(2);
+        $progress = $order->getprogressinfos(2);
 
 
-        return $this->render('@VictorAd/Advert/add.html.twig', array('infos'=>$infos));
+        return $this->render('@VictorAd/Advert/add.html.twig', array('progress'=>$progress));
 
     }
 

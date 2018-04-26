@@ -116,16 +116,22 @@ class AdvertController extends Controller
 
 
 
-    public function addAction()
+    public function ordertrackingAction($id)
     {
         $order = $this->container->get('victor_ad.ordertracking');
 
+        $em = $this->getDoctrine()->getManager();
+        $purchase = $em->getRepository('VictorAdBundle:Offer')->find($id);
+
+        $step = $purchase->getStep();
+
         // Je pars du principe que $text contient le texte d'un message quelconque
-        $infos = $order->getorderinfos(2);
-        $progress = $order->getprogressinfos(2);
+        $infos = $order->getorderinfos($step);
+        $progress = $step * 25;
+        //$progress = $order->getprogressinfos(1);
 
 
-        return $this->render('@VictorAd/Advert/add.html.twig', array('progress'=>$progress));
+        return $this->render('@VictorAd/Advert/add.html.twig', array('progress'=>$progress, 'infos'=>$infos));
 
     }
 

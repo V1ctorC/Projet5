@@ -9,6 +9,7 @@
 namespace Victor\AdBundle\Tracking;
 
 
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 class OrderTracking
@@ -26,54 +27,29 @@ class OrderTracking
     }
 
 
-    public function getorderinfos($state)
+    public function getorderinfos($step)
     {
-        if ($state == 1)
+        if ($step == 1)
         {
-            $messages = "test tableaux";
-            return array($messages);
+            $messages = "Le vendeur va nous envoyer le produit";
+            return $messages;
         }
-        elseif ($state == 2)
+        elseif ($step == 2)
         {
-            return $messages = "Nous avons bien reçu le téléphone";
+            $messages = "Nous avons bien reçu le téléphone";
+            return $messages;
         }
-        elseif ($state == 3)
+        elseif ($step == 3)
         {
             return $messages = "Le téléphone est conforme";
         }
-        elseif ($state == 4)
+        elseif ($step == 4)
         {
             return $messages = "Nous avons envoyé le téléphone vers l'acheteur";
         }
         else
         {
-            throw new \Exception("Erreur dans le suivi de la commande");
-        }
-    }
-
-    public function getprogressinfos($state)
-    {
-        if ($state == 1)
-        {
-            $progress = 25;
-            return $progress;
-        }
-        elseif ($state == 2)
-        {
-            $progress = 50;
-            return $progress;
-        }
-        elseif ($state == 3)
-        {
-            return $messages = "Le téléphone est conforme";
-        }
-        elseif ($state == 4)
-        {
-            return $messages = "Nous avons envoyé le téléphone vers l'acheteur";
-        }
-        else
-        {
-            throw new \Exception("Erreur dans le suivi de la commande");
+            throw new NotFoundHttpException("Erreur dans le suivi de la commande");
         }
     }
 

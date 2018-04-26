@@ -72,10 +72,18 @@ class Offer
      */
     private $sold;
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="step", type="integer")
+     */
+    private $step;
+
 
     public function __construct()
     {
         $this->date = new \Datetime();
+        $this->sold = 0;
     }
 
     /**
@@ -256,5 +264,29 @@ class Offer
     public function getBuyer()
     {
         return $this->buyer;
+    }
+
+    /**
+     * Set sold
+     *
+     * @param boolean $sold
+     *
+     * @return Offer
+     */
+    public function setSold($sold)
+    {
+        $this->sold = $sold;
+
+        return $this;
+    }
+
+    /**
+     * Get sold
+     *
+     * @return boolean
+     */
+    public function getSold()
+    {
+        return $this->sold;
     }
 }

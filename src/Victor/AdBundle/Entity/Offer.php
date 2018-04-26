@@ -72,6 +72,13 @@ class Offer
      */
     private $sold;
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="step", type="integer")
+     */
+    private $step;
+
 
     public function __construct()
     {
@@ -281,5 +288,29 @@ class Offer
     public function getSold()
     {
         return $this->sold;
+    }
+
+    /**
+     * Set step
+     *
+     * @param integer $step
+     *
+     * @return Offer
+     */
+    public function setStep($step)
+    {
+        $this->step = $step;
+
+        return $this;
+    }
+
+    /**
+     * Get step
+     *
+     * @return integer
+     */
+    public function getStep()
+    {
+        return $this->step;
     }
 }

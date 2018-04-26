@@ -30,10 +30,6 @@ victor_ad_summarybuy:
     path: /buy/{phone}/{id}/summary/{offerid}
     defaults: { _controller: VictorAdBundle:Advert:summarybuy}
 
-victor_ad_add:
-    path: /add
-    defaults: { _controller: VictorAdBundle:Advert:add}
-
 victor_ad_delete:
     path: /delete/{id}
     defaults: { _controller: VictorAdBundle:Advert:delete}
@@ -85,6 +81,10 @@ victor_ad_sales:
 victor_ad_currentoffer:
     path: /account/currentoffer
     defaults: { _controller: VictorAdBundle:Account:currentoffer}
+
+victor_ad_ordertracking:
+    path: /account/purchases/{id}
+    defaults: { _controller: VictorAdBundle:Advert:ordertracking}
 
 victor_ad_paiement:
     path: /paiement/{offerid}

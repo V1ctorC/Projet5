@@ -3,6 +3,7 @@
 namespace Victor\AdBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Victor\AdBundle\Entity\Phone;
 use Symfony\Component\HttpFoundation\Request;
 use Victor\AdBundle\Form\PhoneType;
@@ -99,10 +100,13 @@ class AdminController extends Controller
         $order = $em->getRepository('VictorAdBundle:Offer');
 
         $order1 = $order->findBy(array('step' => 1));
+        $order2 = $order->findBy(array('step' => 2));
+        $order3 = $order->findBy(array('step' => 3));
+        $order4 = $order->findBy(array('step' => 4));
 
 
 
-        return $this->render('@VictorAd/Admin/order.html.twig', array('order1'=>$order1));
+        return $this->render('@VictorAd/Admin/order.html.twig', array('order1'=>$order1, 'order2'=>$order2, 'order3'=>$order3, 'order4'=>$order4, ));
     }
 
     public function increaseAction($id)
@@ -111,11 +115,19 @@ class AdminController extends Controller
         $order = $em->getRepository('VictorAdBundle:Offer');
 
         $currentOrder = $order->find($id);
-        $currentStep = $currentOrder->getStep() + 1;
-        $currentOrder->setStep($currentStep);
 
-        $em->persist($currentOrder);
-        $em->flush();
+        if ($currentOrder->getStep() <= 3)
+        {
+            $currentStep = $currentOrder->getStep() + 1;
+            $currentOrder->setStep($currentStep);
+
+            $em->persist($currentOrder);
+            $em->flush();
+        }
+        else
+        {
+            throw new NotFoundHttpException("Impossible de changer le statut de la commande");
+        }
 
         return $this->redirectToRoute('victor_ad_order');
     }

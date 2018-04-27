@@ -10,13 +10,106 @@
         <li role="presentation" class="active"><a href="{{ path('victor_ad_order') }}">Commandes clients</a></li>
     </ul>
 
+    <h3>Commande en attente du téléphone</h3>
     {% for order in order1 %}
 
         Commande n°{{ order.id }} <br />
         Acheteur : {{ order.buyer.email }}
         Vendeur : {{ order.user.email }}
         Produit : {{ order.phone.model }} {{ order.phone.capacity }}Go <br />
-        <a href="{{ path('victor_ad_increase', {'id': order.id}) }}">Produit reçu</a>
+        <a data-toggle="modal" href="#increase{{ order.id }}" class="btn btn-primary">Produit reçu</a>
+
+        <div class="modal fade" id="increase{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Réception</h4>
+                    </div>
+                    <div class="modal-body">
+                        Avons nous bien reçu le téléphone concernant la commande <b>{{ order.id }}</b> ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                        <a href="{{ path('victor_ad_increase', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Produit reçu"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+    {% endfor %}
+
+    <h3>Commande téléphone en cours de vérification</h3>
+    {% for order in order2 %}
+
+        Commande n°{{ order.id }} <br />
+        Acheteur : {{ order.buyer.email }}
+        Vendeur : {{ order.user.email }}
+        Produit : {{ order.phone.model }} {{ order.phone.capacity }}Go <br />
+        <a data-toggle="modal" href="#increase{{ order.id }}" class="btn btn-primary">Produit conforme</a>
+
+        <div class="modal fade" id="increase{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Conformité</h4>
+                    </div>
+                    <div class="modal-body">
+                        Le téléphone ({{ order.phone.model }}) concernant la commande <b>{{ order.id }}</b> est-il bien conforme ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                        <a href="{{ path('victor_ad_increase', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Conforme"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+    {% endfor %}
+
+    <h3>Commande téléphone en attente d'envoi</h3>
+    {% for order in order3 %}
+
+        Commande n°{{ order.id }} <br />
+        Acheteur : {{ order.buyer.email }}
+        Vendeur : {{ order.user.email }}
+        Produit : {{ order.phone.model }} {{ order.phone.capacity }}Go <br />
+        <a data-toggle="modal" href="#increase{{ order.id }}" class="btn btn-primary">Produit envoyé</a>
+
+        <div class="modal fade" id="increase{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Envoi</h4>
+                    </div>
+                    <div class="modal-body">
+                        Le téléphone ({{ order.phone.model }}) concernant la commande <b>{{ order.id }}</b> a-t-il été expédié ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                        <a href="{{ path('victor_ad_increase', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Envoyé"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+    {% endfor %}
+
+    <h3>Commande en route / Reçue</h3>
+    {% for order in order4 %}
+
+        Commande n°{{ order.id }} <br />
+        Acheteur : {{ order.buyer.email }}
+        Vendeur : {{ order.user.email }}
+        Produit : {{ order.phone.model }} {{ order.phone.capacity }}Go <br />
 
         <hr />
 

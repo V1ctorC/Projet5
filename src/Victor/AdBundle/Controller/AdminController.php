@@ -113,6 +113,11 @@ class AdminController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $order = $em->getRepository('VictorAdBundle:Offer');
+        $mail = $this->get('victor_ad.mailer');
+        $from = "vetudes.noreply@gmail.com";
+        $to = "victor.du.77@hotmail.fr";
+        $subject = "test sujet";
+        $body = "test body";
 
         $currentOrder = $order->find($id);
 
@@ -123,6 +128,7 @@ class AdminController extends Controller
 
             $em->persist($currentOrder);
             $em->flush();
+            $mail->sendPayMail($from,$to,$subject,$body);
         }
         else
         {

@@ -8,4 +8,9 @@ services:
 #        class: Victor\AdBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
 
+    victor_ad.mailer:
+        class: Victor\AdBundle\Mailer\Mailer
+        arguments:
+            - "@mailer"
+
 

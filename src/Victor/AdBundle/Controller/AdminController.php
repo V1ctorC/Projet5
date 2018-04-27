@@ -92,4 +92,9 @@ class AdminController extends Controller
 
         return $this->render('@VictorAd/Admin/addPhone.html.twig', array('form' => $form->createView()));
     }
+
+    public function orderAction()
+    {
+        return $this->render('@VictorAd/Admin/order.html.twig');
+    }
 }

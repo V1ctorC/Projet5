@@ -2,10 +2,12 @@
 
 {% block body %}
 
+    <h2>Administration du site</h2>
+
     <ul class="nav nav-tabs">
         <li role="presentation"><a href="{{ path('victor_ad_admin') }}">Liste des membres</a></li>
         <li role="presentation" class="active"><a href="{{ path('victor_ad_addphone') }}">Ajouter un téléphone</a></li>
-        <li role="presentation"><a href="#">Messages</a></li>
+        <li role="presentation"><a href="{{ path('victor_ad_order') }}">Commandes clients</a></li>
     </ul>
 
     <div id="addPhone">

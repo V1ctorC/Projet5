@@ -58,6 +58,10 @@ victor_ad_addphone:
     path: /admin/addphone
     defaults: { _controller: VictorAdBundle:Admin:addphone}
 
+victor_ad_order:
+    path: /admin/order
+    defaults: { _controller: VictorAdBundle:Admin:order}
+
 victor_ad_account:
     path: /account
     defaults: { _controller: VictorAdBundle:Account:account}
@@ -84,7 +88,7 @@ victor_ad_currentoffer:
 
 victor_ad_ordertracking:
     path: /account/purchases/{id}
-    defaults: { _controller: VictorAdBundle:Advert:ordertracking}
+    defaults: { _controller: VictorAdBundle:Account:ordertracking}
 
 victor_ad_paiement:
     path: /paiement/{offerid}
@@ -93,5 +97,3 @@ victor_ad_paiement:
 victor_ad_ordercheckout:
     path: /checkout/{offerid}
     defaults: { _controller: VictorAdBundle:Advert:checkout}
-
-

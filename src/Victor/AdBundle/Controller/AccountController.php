@@ -78,4 +78,31 @@ class AccountController extends Controller
 
         return $this->render('@VictorAd/Account/currentoffer.html.twig', array('listCurrentoffer'=>$listCurrentoffer));
     }
+
+    public function ordertrackingAction($id)
+    {
+        $order = $this->container->get('victor_ad.ordertracking');
+
+        $currentuser = $this->getUser();
+
+        $em = $this->getDoctrine()->getManager();
+        $purchase = $em->getRepository('VictorAdBundle:Offer')->find($id);
+
+        $buyer = $purchase->getBuyer();
+
+        if ($buyer == $currentuser)
+        {
+            $step = $purchase->getStep();
+
+            $infos = $order->getorderinfos($step);
+            $progress = $step * 25;
+
+            return $this->render('@VictorAd/Account/ordertracking.html.twig', array('progress'=>$progress, 'infos'=>$infos));
+        }
+        else
+        {
+            throw new NotFoundHttpException("Il n'y aucune commande portant ce numéro");
+        }
+
+    }
 }

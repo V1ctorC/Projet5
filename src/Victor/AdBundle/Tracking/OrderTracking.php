@@ -31,21 +31,21 @@ class OrderTracking
     {
         if ($step == 1)
         {
-            $messages = "Le vendeur va nous envoyer le produit";
+            $messages = "Nous avons reçu le paiement, le vendeur va nous envoyer le produit";
             return $messages;
         }
         elseif ($step == 2)
         {
-            $messages = "Nous avons bien reçu le téléphone";
+            $messages = "Nous avons bien reçu le téléphone, nous allons le contrôler";
             return $messages;
         }
         elseif ($step == 3)
         {
-            return $messages = "Le téléphone est conforme";
+            return $messages = "Le téléphone est conforme, nous allons donc vous l'envoyer ! :)";
         }
         elseif ($step == 4)
         {
-            return $messages = "Nous avons envoyé le téléphone vers l'acheteur";
+            return $messages = "Le téléphone est parti vers chez vous ;)";
         }
         else
         {

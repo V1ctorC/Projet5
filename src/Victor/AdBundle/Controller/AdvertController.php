@@ -114,35 +114,6 @@ class AdvertController extends Controller
         return $this->render('@VictorAd/Advert/sellviewphone.html.twig', array('phone'=>$phone, 'listOffers'=>$listOffers));
     }
 
-
-
-    public function ordertrackingAction($id)
-    {
-        $order = $this->container->get('victor_ad.ordertracking');
-
-        $currentuser = $this->getUser();
-
-        $em = $this->getDoctrine()->getManager();
-        $purchase = $em->getRepository('VictorAdBundle:Offer')->find($id);
-
-        $buyer = $purchase->getBuyer();
-
-        if ($buyer == $currentuser)
-        {
-            $step = $purchase->getStep();
-
-            $infos = $order->getorderinfos($step);
-            $progress = $step * 25;
-
-            return $this->render('@VictorAd/Advert/add.html.twig', array('progress'=>$progress, 'infos'=>$infos));
-        }
-        else
-        {
-            throw new NotFoundHttpException("Il n'y aucune commande portant ce numéro");
-        }
-
-    }
-
     public function deleteAction()
     {
         return $this->redirectToRoute('victor_ad_index');

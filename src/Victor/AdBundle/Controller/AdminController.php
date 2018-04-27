@@ -125,7 +125,7 @@ class AdminController extends Controller
 
             $em->persist($currentOrder);
             $em->flush();
-            $mail->sendPayMail($to);
+            $mail->sendPostMail($to);
         }
         else
         {

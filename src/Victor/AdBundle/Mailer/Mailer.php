@@ -39,7 +39,31 @@ class Mailer
 
     public function sendPayMail($to)
     {
-        $subject = ("Votre commande a bougé !");
+        $subject = "Nous avons bien reçu votre paiement !";
+        $body = $this->templating->render('@VictorAd/Mail/test.html.twig');
+
+        $this->sendMessage($to, $subject, $body);
+    }
+
+    public function sendRecieveMail($to)
+    {
+        $subject = "Nous avons reçu le téléphone";
+        $body = $this->templating->render('@VictorAd/Mail/test.html.twig');
+
+        $this->sendMessage($to, $subject, $body);
+    }
+
+    public function sendConformMail($to)
+    {
+        $subject = "Le téléphone est conforme";
+        $body = $this->templating->render('@VictorAd/Mail/test.html.twig');
+
+        $this->sendMessage($to, $subject, $body);
+    }
+
+    public function sendPostMail($to)
+    {
+        $subject = "Le téléphone est en route pour chez vous :)";
         $body = $this->templating->render('@VictorAd/Mail/test.html.twig');
 
         $this->sendMessage($to, $subject, $body);

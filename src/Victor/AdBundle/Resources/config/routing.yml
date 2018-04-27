@@ -97,3 +97,7 @@ victor_ad_paiement:
 victor_ad_ordercheckout:
     path: /checkout/{offerid}
     defaults: { _controller: VictorAdBundle:Advert:checkout}
+
+victor_ad_increase:
+    path: /admin/order/{id}
+    defaults: { _controller: VictorAdBundle:Admin:increase}

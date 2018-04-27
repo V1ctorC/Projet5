@@ -10,4 +10,16 @@
         <li role="presentation" class="active"><a href="{{ path('victor_ad_order') }}">Commandes clients</a></li>
     </ul>
 
+    {% for order in order1 %}
+
+        Commande n°{{ order.id }} <br />
+        Acheteur : {{ order.buyer.email }}
+        Vendeur : {{ order.user.email }}
+        Produit : {{ order.phone.model }} {{ order.phone.capacity }}Go <br />
+        <a href="{{ path('victor_ad_increase', {'id': order.id}) }}">Produit reçu</a>
+
+        <hr />
+
+    {% endfor %}
+
 {% endblock %}

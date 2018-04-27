@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af6761b9-47cf-4f15-8481-960258f01b61" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/ordertracking.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdvertController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdvertController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/purchases.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/purchases.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/addPhone.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/addPhone.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/add.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Tracking/OrderTracking.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Tracking/OrderTracking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +21,7 @@
       <file leaf-file-name="OrderTracking.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Tracking/OrderTracking.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
+            <state relative-caret-position="400">
               <caret line="47" column="72" selection-start-line="47" selection-start-column="72" selection-end-line="47" selection-end-column="72" />
               <folding>
                 <element signature="e#6#97#0#PHP" expanded="true" />
@@ -44,8 +34,21 @@
       <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="62" column="56" selection-start-line="62" selection-start-column="56" selection-end-line="62" selection-end-column="56" />
+            <state relative-caret-position="431">
+              <caret line="102" column="58" selection-start-line="102" selection-start-column="58" selection-end-line="102" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+              <folding>
+                <element signature="e#12#40#0#Twig" expanded="true" />
+                <element signature="e#720#738#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,8 +56,8 @@
       <file leaf-file-name="AdvertController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdvertController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+            <state relative-caret-position="2516">
+              <caret line="184" column="20" selection-start-line="184" selection-start-column="20" selection-end-line="184" selection-end-column="20" />
               <folding>
                 <element signature="e#582#621#0#PHP" expanded="true" />
                 <element signature="e#764#797#1#PHP" expanded="true" />
@@ -69,50 +72,29 @@
                 <element signature="e#2803#2825#1#PHP" expanded="true" />
                 <element signature="e#3028#3050#1#PHP" expanded="true" />
                 <element signature="e#3239#3281#0#PHP" expanded="true" />
-                <element signature="e#4650#4672#1#PHP" expanded="true" />
-                <element signature="e#5209#5247#0#PHP" expanded="true" />
-                <element signature="e#5514#5536#1#PHP" expanded="true" />
-                <element signature="e#5587#5609#1#PHP" expanded="true" />
-                <element signature="e#5660#5699#0#PHP" expanded="true" />
-                <element signature="e#5945#5967#1#PHP" expanded="true" />
-                <element signature="e#6016#6053#0#PHP" expanded="true" />
-                <element signature="e#6282#6304#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="purchases.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/purchases.html.twig">
+      <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="100" selection-start-line="18" selection-start-column="100" selection-end-line="18" selection-end-column="100" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+            <state relative-caret-position="458">
+              <caret line="119" column="57" selection-start-line="119" selection-start-column="57" selection-end-line="119" selection-end-column="57" />
               <folding>
-                <element signature="e#2180#2222#0#PHP" expanded="true" />
-                <element signature="e#2532#2554#1#PHP" expanded="true" />
-                <element signature="e#2820#2863#0#PHP" expanded="true" />
+                <element signature="e#2618#2640#1#PHP" expanded="true" />
+                <element signature="e#2921#2943#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order.html.twig">
+      <file leaf-file-name="buyviewphone.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/buyviewphone.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="104" selection-start-line="9" selection-start-column="104" selection-end-line="9" selection-end-column="104" />
-              <folding>
-                <element signature="e#12#40#0#Twig" expanded="true" />
-              </folding>
+            <state relative-caret-position="62">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -183,12 +165,12 @@
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/ordertracking.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Tracking/OrderTracking.php" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/purchases.html.twig" />
-        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdvertController.php" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php" />
-        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdminController.php" />
-        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/admin.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/addPhone.html.twig" />
+        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdvertController.php" />
+        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdminController.php" />
+        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order.html.twig" />
       </list>
     </option>
@@ -506,12 +488,12 @@
       <workItem from="1524742604945" duration="90000" />
       <workItem from="1524742714367" duration="144000" />
       <workItem from="1524742881184" duration="12180000" />
-      <workItem from="1524816315697" duration="3516000" />
+      <workItem from="1524816315697" duration="5788000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211465000" />
+    <option name="totallyTimeSpent" value="213737000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -603,14 +585,6 @@
             <element signature="e#2803#2825#1#PHP" expanded="true" />
             <element signature="e#3028#3050#1#PHP" expanded="true" />
             <element signature="e#3239#3281#0#PHP" expanded="true" />
-            <element signature="e#4650#4672#1#PHP" expanded="true" />
-            <element signature="e#5209#5247#0#PHP" expanded="true" />
-            <element signature="e#5514#5536#1#PHP" expanded="true" />
-            <element signature="e#5587#5609#1#PHP" expanded="true" />
-            <element signature="e#5660#5699#0#PHP" expanded="true" />
-            <element signature="e#5945#5967#1#PHP" expanded="true" />
-            <element signature="e#6016#6053#0#PHP" expanded="true" />
-            <element signature="e#6282#6304#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -844,13 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/buyviewphone.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Entity/Offer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -869,73 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="69" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Tracking/OrderTracking.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="47" column="72" selection-start-line="47" selection-start-column="72" selection-end-line="47" selection-end-column="72" />
-          <folding>
-            <element signature="e#6#97#0#PHP" expanded="true" />
-            <element signature="e#137#202#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/purchases.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="100" selection-start-line="18" selection-start-column="100" selection-end-line="18" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdvertController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
-          <folding>
-            <element signature="e#582#621#0#PHP" expanded="true" />
-            <element signature="e#764#797#1#PHP" expanded="true" />
-            <element signature="e#918#950#1#PHP" expanded="true" />
-            <element signature="e#1120#1142#1#PHP" expanded="true" />
-            <element signature="e#1412#1448#0#PHP" expanded="true" />
-            <element signature="e#1630#1652#1#PHP" expanded="true" />
-            <element signature="e#1855#1877#1#PHP" expanded="true" />
-            <element signature="e#2067#2108#0#PHP" expanded="true" />
-            <element signature="e#2290#2312#1#PHP" expanded="true" />
-            <element signature="e#2583#2620#0#PHP" expanded="true" />
-            <element signature="e#2803#2825#1#PHP" expanded="true" />
-            <element signature="e#3028#3050#1#PHP" expanded="true" />
-            <element signature="e#3239#3281#0#PHP" expanded="true" />
-            <element signature="e#4650#4672#1#PHP" expanded="true" />
-            <element signature="e#5209#5247#0#PHP" expanded="true" />
-            <element signature="e#5514#5536#1#PHP" expanded="true" />
-            <element signature="e#5587#5609#1#PHP" expanded="true" />
-            <element signature="e#5660#5699#0#PHP" expanded="true" />
-            <element signature="e#5945#5967#1#PHP" expanded="true" />
-            <element signature="e#6016#6053#0#PHP" expanded="true" />
-            <element signature="e#6282#6304#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
-          <folding>
-            <element signature="e#2180#2222#0#PHP" expanded="true" />
-            <element signature="e#2532#2554#1#PHP" expanded="true" />
-            <element signature="e#2820#2863#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="62" column="56" selection-start-line="62" selection-start-column="56" selection-end-line="62" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -964,22 +864,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/purchases.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="100" selection-start-line="18" selection-start-column="100" selection-end-line="18" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Tracking/OrderTracking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="47" column="72" selection-start-line="47" selection-start-column="72" selection-end-line="47" selection-end-column="72" />
+          <folding>
+            <element signature="e#6#97#0#PHP" expanded="true" />
+            <element signature="e#137#202#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdvertController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2516">
+          <caret line="184" column="20" selection-start-line="184" selection-start-column="20" selection-end-line="184" selection-end-column="20" />
+          <folding>
+            <element signature="e#582#621#0#PHP" expanded="true" />
+            <element signature="e#764#797#1#PHP" expanded="true" />
+            <element signature="e#918#950#1#PHP" expanded="true" />
+            <element signature="e#1120#1142#1#PHP" expanded="true" />
+            <element signature="e#1412#1448#0#PHP" expanded="true" />
+            <element signature="e#1630#1652#1#PHP" expanded="true" />
+            <element signature="e#1855#1877#1#PHP" expanded="true" />
+            <element signature="e#2067#2108#0#PHP" expanded="true" />
+            <element signature="e#2290#2312#1#PHP" expanded="true" />
+            <element signature="e#2583#2620#0#PHP" expanded="true" />
+            <element signature="e#2803#2825#1#PHP" expanded="true" />
+            <element signature="e#3028#3050#1#PHP" expanded="true" />
+            <element signature="e#3239#3281#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+          <folding>
+            <element signature="e#2180#2222#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="97" column="64" selection-start-line="97" selection-start-column="64" selection-end-line="97" selection-end-column="64" />
+        <state relative-caret-position="458">
+          <caret line="119" column="57" selection-start-line="119" selection-start-column="57" selection-end-line="119" selection-end-column="57" />
           <folding>
-            <element signature="e#2555#2588#1#PHP" expanded="true" />
+            <element signature="e#2618#2640#1#PHP" expanded="true" />
+            <element signature="e#2921#2943#1#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/buyviewphone.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="102" column="58" selection-start-line="102" selection-start-column="58" selection-end-line="102" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="104" selection-start-line="9" selection-start-column="104" selection-end-line="9" selection-end-column="104" />
+        <state relative-caret-position="270">
+          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
           <folding>
             <element signature="e#12#40#0#Twig" expanded="true" />
+            <element signature="e#720#738#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>

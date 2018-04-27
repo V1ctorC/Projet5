@@ -95,6 +95,28 @@ class AdminController extends Controller
 
     public function orderAction()
     {
-        return $this->render('@VictorAd/Admin/order.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $order = $em->getRepository('VictorAdBundle:Offer');
+
+        $order1 = $order->findBy(array('step' => 1));
+
+
+
+        return $this->render('@VictorAd/Admin/order.html.twig', array('order1'=>$order1));
+    }
+
+    public function increaseAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $order = $em->getRepository('VictorAdBundle:Offer');
+
+        $currentOrder = $order->find($id);
+        $currentStep = $currentOrder->getStep() + 1;
+        $currentOrder->setStep($currentStep);
+
+        $em->persist($currentOrder);
+        $em->flush();
+
+        return $this->redirectToRoute('victor_ad_order');
     }
 }

@@ -120,18 +120,26 @@ class AdvertController extends Controller
     {
         $order = $this->container->get('victor_ad.ordertracking');
 
+        $currentuser = $this->getUser();
+
         $em = $this->getDoctrine()->getManager();
         $purchase = $em->getRepository('VictorAdBundle:Offer')->find($id);
 
-        $step = $purchase->getStep();
+        $buyer = $purchase->getBuyer();
 
-        // Je pars du principe que $text contient le texte d'un message quelconque
-        $infos = $order->getorderinfos($step);
-        $progress = $step * 25;
-        //$progress = $order->getprogressinfos(1);
+        if ($buyer == $currentuser)
+        {
+            $step = $purchase->getStep();
 
+            $infos = $order->getorderinfos($step);
+            $progress = $step * 25;
 
-        return $this->render('@VictorAd/Advert/add.html.twig', array('progress'=>$progress, 'infos'=>$infos));
+            return $this->render('@VictorAd/Advert/add.html.twig', array('progress'=>$progress, 'infos'=>$infos));
+        }
+        else
+        {
+            throw new NotFoundHttpException("Il n'y aucune commande portant ce numéro");
+        }
 
     }
 

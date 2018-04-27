@@ -12,5 +12,6 @@ services:
         class: Victor\AdBundle\Mailer\Mailer
         arguments:
             - "@mailer"
+            - "@templating"
 
 

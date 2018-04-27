@@ -15,24 +15,34 @@ class Mailer
 {
 
     protected $mailer;
+    protected $templating;
 
 
-    public function __construct(\Swift_Mailer $mailer)
+    public function __construct(\Swift_Mailer $mailer, EngineInterface $templating)
     {
         $this->mailer = $mailer;
+        $this->templating = $templating;
     }
 
-    public function sendPayMail($from, $to, $subject, $body)
+    protected function sendMessage($to, $subject, $body)
     {
         $mail = \Swift_Message::newInstance();
 
         $mail
-            ->setFrom($from)
+            ->setFrom("vetudes.noreply@gmail.com")
             ->setTo($to)
             ->setSubject($subject)
             ->setBody($body);
 
         $this->mailer->send($mail);
+    }
+
+    public function sendPayMail($to)
+    {
+        $subject = ("Votre commande a bougé !");
+        $body = $this->templating->render('@VictorAd/Mail/test.html.twig');
+
+        $this->sendMessage($to, $subject, $body);
     }
 
 }

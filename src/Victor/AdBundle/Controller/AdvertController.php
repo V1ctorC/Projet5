@@ -184,9 +184,13 @@ class AdvertController extends Controller
      */
     public function checkoutAction($offerid)
     {
+        $mailer = $this->get('victor_ad.mailer');
+
         $em = $this->getDoctrine()->getManager();
         $offer = $em->getRepository('VictorAdBundle:Offer')->find($offerid);
         $buyer = $this->getUser();
+        $buyerMail = $this->getUser()->getEmail();
+        $buyerUsername = $this->getUser()->getUsername();
         $offer->setBuyer($buyer);
         $offer->setSold(true);
         $em->persist($offer);
@@ -206,8 +210,7 @@ class AdvertController extends Controller
             'source' => $token,
         ]);
 
-        $em->persist($offer);
-        $em->flush();
+        $mailer->sendPayMail($buyerMail, $buyerUsername);
 
         return $this->redirectToRoute('victor_core_home');
     }

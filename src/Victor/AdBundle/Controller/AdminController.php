@@ -113,19 +113,23 @@ class AdminController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $order = $em->getRepository('VictorAdBundle:Offer');
+        $user = $em->getRepository('VictorUserBundle:User');
+
+        $dataorder = $order->find($id);
+        $userID = $dataorder->getBuyer();
+        $buyer = $user->find($userID);
+
         $mail = $this->get('victor_ad.mailer');
-        $user = $this->getUser();
-        $usermail = $user->getEmail();
-        $username = $user->getUsername();
+        $usermail = $buyer->getEmail();
+        $username = $buyer->getUsername();
 
-        $currentOrder = $order->find($id);
 
-        if ($currentOrder->getStep() <= 3)
+        if ($dataorder->getStep() <= 3)
         {
-            $currentStep = $currentOrder->getStep() + 1;
-            $currentOrder->setStep($currentStep);
+            $currentStep = $dataorder->getStep() + 1;
+            $dataorder->setStep($currentStep);
 
-            $em->persist($currentOrder);
+            $em->persist($dataorder);
             $em->flush();
             $mail->sendPostMail($usermail, $username);
         }

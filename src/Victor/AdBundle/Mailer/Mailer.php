@@ -61,10 +61,10 @@ class Mailer
         $this->sendMessage($to, $subject, $body);
     }
 
-    public function sendPostMail($to)
+    public function sendPostMail($to, $username)
     {
         $subject = "Le téléphone est en route pour chez vous :)";
-        $body = $this->templating->render('@VictorAd/Mail/test.html.twig');
+        $body = $this->templating->render('@VictorAd/Mail/test.html.twig', array('username'=>$username));
 
         $this->sendMessage($to, $subject, $body);
     }

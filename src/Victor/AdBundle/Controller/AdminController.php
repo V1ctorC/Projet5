@@ -114,7 +114,9 @@ class AdminController extends Controller
         $em = $this->getDoctrine()->getManager();
         $order = $em->getRepository('VictorAdBundle:Offer');
         $mail = $this->get('victor_ad.mailer');
-        $to = "victor.du.77@hotmail.fr";
+        $user = $this->getUser();
+        $usermail = $user->getEmail();
+        $username = $user->getUsername();
 
         $currentOrder = $order->find($id);
 
@@ -125,7 +127,7 @@ class AdminController extends Controller
 
             $em->persist($currentOrder);
             $em->flush();
-            $mail->sendPostMail($to);
+            $mail->sendPostMail($usermail, $username);
         }
         else
         {

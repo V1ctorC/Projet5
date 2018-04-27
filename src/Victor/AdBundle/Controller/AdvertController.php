@@ -193,6 +193,7 @@ class AdvertController extends Controller
         $buyerUsername = $this->getUser()->getUsername();
         $offer->setBuyer($buyer);
         $offer->setSold(true);
+        $offer->setStep(1);
         $em->persist($offer);
         $em->flush();
         $price = $offer->getPrice() * 100;

@@ -119,19 +119,23 @@ class AdminController extends Controller
         $userID = $dataorder->getBuyer();
         $buyer = $user->find($userID);
 
-        $mail = $this->get('victor_ad.mailer');
-        $usermail = $buyer->getEmail();
+        $mail = $this->get('victor_ad.stepincreasemail');
+        $to = $buyer->getEmail();
         $username = $buyer->getUsername();
 
+        $step = $dataorder->getStep();
 
-        if ($dataorder->getStep() <= 3)
+
+
+        if ($step <= 3)
         {
+
             $currentStep = $dataorder->getStep() + 1;
             $dataorder->setStep($currentStep);
 
             $em->persist($dataorder);
             $em->flush();
-            $mail->sendPostMail($usermail, $username);
+            $mail->SendRightMail($currentStep, $to, $username);
         }
         else
         {

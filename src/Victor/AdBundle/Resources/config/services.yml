@@ -14,4 +14,9 @@ services:
             - "@mailer"
             - "@templating"
 
+    victor_ad.stepincreasemail:
+        class: Victor\AdBundle\Tracking\IncreaseStepMail
+        arguments:
+            - "@victor_ad.mailer"
+
 

@@ -25,7 +25,10 @@ class OfferType extends AbstractType
                     'Très bon état' => 'Très bon état',
                     'Bon état' => 'Bon état',
                     'Correct' => 'Correct',
-                )
+                ),
+                "label" => "form.choices",
+                "required" => true,
+                'translation_domain' => 'messages'
             ))
             ->add('description', TextType::class)
             ->add('save',   SubmitType::class);

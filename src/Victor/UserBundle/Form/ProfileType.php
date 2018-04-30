@@ -4,6 +4,7 @@ namespace Victor\UserBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 class ProfileType extends AbstractType
@@ -17,8 +18,13 @@ class ProfileType extends AbstractType
                 'Femme' => 'Femme',
             ),
         ));
-        $builder->add('firstname');
-        $builder->add('lastname');
+        $builder->add('firstname', TextType::class, array( 'label' => 'Prénom'));
+        $builder->add('lastname', TextType::class,
+            array(
+                "label" => 'form.lastname',
+                "required" => true,
+                "translation_domain" => 'traduction'
+                ));
         $builder->add('address');
         $builder->add('zipcode');
         $builder->add('city');

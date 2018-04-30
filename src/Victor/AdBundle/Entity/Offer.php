@@ -79,11 +79,20 @@ class Offer
      */
     private $step;
 
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="saledate", type="datetime")
+     */
+    private $saledate;
+
 
     public function __construct()
     {
         $this->date = new \Datetime();
         $this->sold = 0;
+        $this->step = 0;
+        $this->saledate = new \DateTime();
     }
 
     /**
@@ -312,5 +321,29 @@ class Offer
     public function getStep()
     {
         return $this->step;
+    }
+
+    /**
+     * Set saledate
+     *
+     * @param \DateTime $saledate
+     *
+     * @return Offer
+     */
+    public function setSaledate($saledate)
+    {
+        $this->saledate = $saledate;
+
+        return $this;
+    }
+
+    /**
+     * Get saledate
+     *
+     * @return \DateTime
+     */
+    public function getSaledate()
+    {
+        return $this->saledate;
     }
 }

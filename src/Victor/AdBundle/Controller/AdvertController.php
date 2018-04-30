@@ -189,11 +189,13 @@ class AdvertController extends Controller
         $em = $this->getDoctrine()->getManager();
         $offer = $em->getRepository('VictorAdBundle:Offer')->find($offerid);
         $buyer = $this->getUser();
+        $datetime = new \DateTime();
         $buyerMail = $this->getUser()->getEmail();
         $buyerUsername = $this->getUser()->getUsername();
         $offer->setBuyer($buyer);
         $offer->setSold(true);
         $offer->setStep(1);
+        $offer->setSaledate($datetime);
         $em->persist($offer);
         $em->flush();
         $price = $offer->getPrice() * 100;

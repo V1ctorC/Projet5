@@ -87,7 +87,7 @@ victor_ad_currentoffer:
     defaults: { _controller: VictorAdBundle:Account:currentoffer}
 
 victor_ad_ordertracking:
-    path: /account/purchases/{id}
+    path: /account/ordertracking/{id}
     defaults: { _controller: VictorAdBundle:Account:ordertracking}
 
 victor_ad_paiement:

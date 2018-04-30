@@ -89,8 +89,9 @@ class AccountController extends Controller
         $purchase = $em->getRepository('VictorAdBundle:Offer')->find($id);
 
         $buyer = $purchase->getBuyer();
+        $seller = $purchase->getUser();
 
-        if ($buyer == $currentuser)
+        if ($buyer == $currentuser OR $seller == $currentuser)
         {
             $step = $purchase->getStep();
 
@@ -99,6 +100,7 @@ class AccountController extends Controller
 
             return $this->render('@VictorAd/Account/ordertracking.html.twig', array('progress'=>$progress, 'infos'=>$infos));
         }
+
         else
         {
             throw new NotFoundHttpException("Il n'y aucune commande portant ce numéro");

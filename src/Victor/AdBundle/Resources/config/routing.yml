@@ -90,6 +90,10 @@ victor_ad_ordertracking:
     path: /account/ordertracking/{id}
     defaults: { _controller: VictorAdBundle:Account:ordertracking}
 
+victor_ad_subscription:
+    path: /account/unsubscribe
+    defaults: { _controller: VictorAdBundle:Account:subscription}
+
 victor_ad_paiement:
     path: /paiement/{offerid}
     defaults: { _controller: VictorAdBundle:Advert:paiement}

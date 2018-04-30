@@ -9,6 +9,11 @@
             <li><a href="{{ path('fos_user_profile_show') }}">Mes informations</a></li>
             <li><a href="{{ path('fos_user_change_password') }}">Changer mon mot de passe</a> </li>
             <li><a href="{{ path('victor_ad_deleteconfirm') }}">Supprimer mon compte</a> </li>
+            {% if subscribe == 1 %}
+            <li><a href="{{ path('victor_ad_subscription') }}">Ne plus m'envoyer de mail de suivi de la commande</a></li>
+            {% elseif subscribe == 0 %}
+            <li><a href="{{ path('victor_ad_subscription') }}">M'envoyer des mails concernant le suivi de ma commande</a></li>
+            {% endif %}
         </ul>
 
     <h3>Mes achats</h3>

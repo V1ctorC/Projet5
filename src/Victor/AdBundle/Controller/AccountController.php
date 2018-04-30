@@ -9,7 +9,9 @@ class AccountController extends Controller
 {
     public function accountAction()
     {
-        return $this->render('@VictorAd/Account/account.html.twig');
+        $user = $this->getUser();
+        $subscribe = $user->getSubscribe();
+        return $this->render('@VictorAd/Account/account.html.twig', array('subscribe'=>$subscribe));
     }
 
     public function deleteAction()
@@ -105,6 +107,26 @@ class AccountController extends Controller
         {
             throw new NotFoundHttpException("Il n'y aucune commande portant ce numéro");
         }
+
+    }
+
+    public function subscriptionAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $usersub = $user->getSubscribe();
+
+        if ($usersub == true)
+        {
+            $user->setSubscribe(false);
+
+        } else {
+            $user->setSubscribe(true);
+        }
+
+        $em->persist($user);
+        $em->flush();
+        return $this->redirectToRoute('victor_ad_account');
 
     }
 }

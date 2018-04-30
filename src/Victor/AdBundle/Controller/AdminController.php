@@ -122,6 +122,7 @@ class AdminController extends Controller
         $mail = $this->get('victor_ad.stepincreasemail');
         $to = $buyer->getEmail();
         $username = $buyer->getUsername();
+        $subscribe = $buyer->getSubscribe();
 
         $step = $dataorder->getStep();
 
@@ -135,7 +136,11 @@ class AdminController extends Controller
 
             $em->persist($dataorder);
             $em->flush();
-            $mail->SendRightMail($currentStep, $to, $username);
+
+            if ($subscribe == true)
+            {
+                $mail->SendRightMail($currentStep, $to, $username);
+            }
         }
         else
         {

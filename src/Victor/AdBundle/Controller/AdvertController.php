@@ -192,6 +192,7 @@ class AdvertController extends Controller
         $datetime = new \DateTime();
         $buyerMail = $this->getUser()->getEmail();
         $buyerUsername = $this->getUser()->getUsername();
+        $buyerSubscribe = $this->getUser()->getSubscribe();
         $offer->setBuyer($buyer);
         $offer->setSold(true);
         $offer->setStep(1);
@@ -212,8 +213,11 @@ class AdvertController extends Controller
             'description' => 'Deuxieme exemple',
             'source' => $token,
         ]);
+        if ($buyerSubscribe == true)
+        {
+            $mailer->sendPayMail($buyerMail, $buyerUsername);
+        }
 
-        $mailer->sendPayMail($buyerMail, $buyerUsername);
 
         return $this->redirectToRoute('victor_core_home');
     }

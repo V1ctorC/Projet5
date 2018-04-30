@@ -81,9 +81,17 @@ class User extends BaseUser
      */
     private $phone;
 
+    /**
+     * @var
+     *
+     * @ORM\Column(name="subscribe", type="boolean")
+     */
+    private $subscribe;
+
     public function __construct()
     {
         parent::__construct();
+        $this->subscribe = true;
     }
 
     /**
@@ -276,5 +284,29 @@ class User extends BaseUser
     public function getPhone()
     {
         return $this->phone;
+    }
+
+    /**
+     * Set subscribe
+     *
+     * @param boolean $subscribe
+     *
+     * @return User
+     */
+    public function setSubscribe($subscribe)
+    {
+        $this->subscribe = $subscribe;
+
+        return $this;
+    }
+
+    /**
+     * Get subscribe
+     *
+     * @return boolean
+     */
+    public function getSubscribe()
+    {
+        return $this->subscribe;
     }
 }

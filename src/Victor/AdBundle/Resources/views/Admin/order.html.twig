@@ -18,6 +18,7 @@
         Vendeur : {{ order.user.email }}
         Produit : {{ order.phone.model }} {{ order.phone.capacity }}Go <br />
         <a data-toggle="modal" href="#increase{{ order.id }}" class="btn btn-primary">Produit reçu</a>
+        <a data-toggle="modal" href="#cancel{{ order.id }}" class="btn btn-danger">Annuler commande</a>
 
         <div class="modal fade" id="increase{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -36,6 +37,23 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="cancel{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Annuler</h4>
+                    </div>
+                    <div class="modal-body">
+                        Voulez-vous annuler la commande numéro <b>{{ order.id }}</b> ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                        <a href="{{ path('victor_ad_cancel', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Confirmer"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <hr />
 
@@ -49,6 +67,7 @@
         Vendeur : {{ order.user.email }}
         Produit : {{ order.phone.model }} {{ order.phone.capacity }}Go <br />
         <a data-toggle="modal" href="#increase{{ order.id }}" class="btn btn-primary">Produit conforme</a>
+        <a data-toggle="modal" href="#cancel{{ order.id }}" class="btn btn-danger">Annuler commande</a>
 
         <div class="modal fade" id="increase{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -67,6 +86,23 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="cancel{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Annuler</h4>
+                    </div>
+                    <div class="modal-body">
+                        Voulez-vous annuler la commande numéro <b>{{ order.id }}</b> ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                        <a href="{{ path('victor_ad_cancel', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Confirmer"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <hr />
 
@@ -80,6 +116,7 @@
         Vendeur : {{ order.user.email }}
         Produit : {{ order.phone.model }} {{ order.phone.capacity }}Go <br />
         <a data-toggle="modal" href="#increase{{ order.id }}" class="btn btn-primary">Produit envoyé</a>
+        <a data-toggle="modal" href="#cancel{{ order.id }}" class="btn btn-danger">Annuler commande</a>
 
         <div class="modal fade" id="increase{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -98,6 +135,24 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="cancel{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Annuler</h4>
+                    </div>
+                    <div class="modal-body">
+                        Voulez-vous annuler la commande numéro <b>{{ order.id }}</b> ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                        <a href="{{ path('victor_ad_cancel', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Confirmer"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <hr />
 
@@ -114,5 +169,7 @@
         <hr />
 
     {% endfor %}
+
+
 
 {% endblock %}

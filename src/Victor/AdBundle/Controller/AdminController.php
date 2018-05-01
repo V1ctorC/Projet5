@@ -149,4 +149,22 @@ class AdminController extends Controller
 
         return $this->redirectToRoute('victor_ad_order');
     }
+
+    public function cancelAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $offer = $em->getRepository('VictorAdBundle:Offer');
+
+        $orderCancel = $offer->find($id);
+
+        $orderCancel->setBuyer(null);
+        $orderCancel->setSold(0);
+        $orderCancel->setStep(0);
+
+        $em->persist($orderCancel);
+        $em->flush();
+
+        return $this->redirectToRoute('victor_ad_order');
+
+    }
 }

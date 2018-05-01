@@ -1,26 +1,4 @@
 {% block victorad_body %}
-    <!--<select class="selectpicker col-md-8 col-sm-push-2">
-        <optgroup label="Apple">
-            <option>iPhone 6</option>
-            <option>iPhone 6 Plus</option>
-            <option>iPhone 6s</option>
-            <option>iPhone 6s Plus</option>
-            <option>iPhone 7</option>
-            <option>iPhone 7 Plus</option>
-            <option>iPhone 8</option>
-            <option>iPhone 8 Plus</option>
-            <option>iPhone X</option>
-        </optgroup>
-        <optgroup label="Samsung">
-            <option>Galaxy S6</option>
-            <option>Galaxy S6 Edge</option>
-            <option>Galaxy S7</option>
-            <option>Galaxy S7 Edge</option>
-            <option>Galaxy S8</option>
-            <option>Galaxy S8+</option>
-            <option>Galaxy Note 8</option>
-        </optgroup>
-    </select>-->
 
     <div id="banner">
         <img src="{{ asset('bundles/victorad/images/desk.jpg') }}" id="deskImage" />
@@ -28,7 +6,7 @@
         <div id="choiceHomePage">
             <p>Il va falloir faire un choix si vous souhaitez : <br />
 
-                <a href="{{ path('victor_ad_buy') }}"><input type="button" class="btn btn-primary btn-lg" value="Acheter"></a>
+                <a href="{{ path('victor_ad_buy') }}"><input type="button" class="btn btn-primary btn-lg" value="Acheter" id="acheter"></a>
 
                 <a href="{{ path('victor_ad_sell') }}"><input type="button" class="btn btn-primary btn-lg" value="Vendre"></a>
 

@@ -4,6 +4,12 @@
 
     <a href="{{ path('victor_ad_account') }}">Revenir sur le compte</a>
 
+    <h3>Vous avez changé d'avis ?</h3>
+
+    <a href="mailto:vetudes.noreply@gmail.com">Contactez nous pour annuler une commande</a>
+
+    <h3>Vos Achats</h3>
+
     {% for purchase in listPurchases %}
 
         <div class="phoneSelect">
@@ -16,6 +22,7 @@
 
             Prix : {{ purchase.price }}
             <hr />
+            Commande numéro : {{ purchase.id }} <br />
             <a href="{{ path('victor_ad_ordertracking',{'id': purchase.id}) }}">Suivi de la commande</a>
         </div>
 

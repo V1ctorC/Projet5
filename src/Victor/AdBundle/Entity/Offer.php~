@@ -86,11 +86,34 @@ class Offer
      */
     private $saledate;
 
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="receivedate", type="datetime")
+     */
+    private $receivedate;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="conformdate", type="datetime")
+     */
+    private $conformdate;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="sendate", type="datetime")
+     */
+    private $sendate;
+
 
     public function __construct()
     {
         $this->date = new \Datetime();
         $this->sold = 0;
+        $this->step = 0;
+        $this->saledate = new \DateTime();
     }
 
     /**
@@ -319,5 +342,102 @@ class Offer
     public function getStep()
     {
         return $this->step;
+    }
+
+
+    /**
+     * Set saledate
+     *
+     * @param \DateTime $saledate
+     *
+     * @return Offer
+     */
+    public function setSaledate($saledate)
+    {
+        $this->saledate = $saledate;
+
+        return $this;
+    }
+
+    /**
+     * Get saledate
+     *
+     * @return \DateTime
+     */
+    public function getSaledate()
+    {
+        return $this->saledate;
+    }
+
+    /**
+     * Set receivedate
+     *
+     * @param \DateTime $receivedate
+     *
+     * @return Offer
+     */
+    public function setReceivedate($receivedate)
+    {
+        $this->receivedate = $receivedate;
+
+        return $this;
+    }
+
+    /**
+     * Get receivedate
+     *
+     * @return \DateTime
+     */
+    public function getReceivedate()
+    {
+        return $this->receivedate;
+    }
+
+    /**
+     * Set conformdate
+     *
+     * @param \DateTime $conformdate
+     *
+     * @return Offer
+     */
+    public function setConformdate($conformdate)
+    {
+        $this->conformdate = $conformdate;
+
+        return $this;
+    }
+
+    /**
+     * Get conformdate
+     *
+     * @return \DateTime
+     */
+    public function getConformdate()
+    {
+        return $this->conformdate;
+    }
+
+    /**
+     * Set sendate
+     *
+     * @param \DateTime $sendate
+     *
+     * @return Offer
+     */
+    public function setSendate($sendate)
+    {
+        $this->sendate = $sendate;
+
+        return $this;
+    }
+
+    /**
+     * Get sendate
+     *
+     * @return \DateTime
+     */
+    public function getSendate()
+    {
+        return $this->sendate;
     }
 }

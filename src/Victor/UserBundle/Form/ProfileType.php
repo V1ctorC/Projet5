@@ -4,6 +4,7 @@ namespace Victor\UserBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
@@ -17,23 +18,20 @@ class ProfileType extends AbstractType
                 'Homme' => 'Homme',
                 'Femme' => 'Femme',
             ),
+            'label' => 'Sexe'
         ));
-        $builder->add('firstname', TextType::class, array( 'label' => 'Prénom'));
-        $builder->add('lastname', TextType::class,
-            array(
-                "label" => 'form.lastname',
-                "required" => true,
-                "translation_domain" => 'traduction'
-                ));
-        $builder->add('address');
-        $builder->add('zipcode');
-        $builder->add('city');
+        $builder->add('firstname', TextType::class, array('label' => 'Prénom'));
+        $builder->add('lastname', TextType::class, array('label' => 'Nom'));
+        $builder->add('address', TextType::class, array('label' => 'Adresse'));
+        $builder->add('zipcode', IntegerType::class, array('label' => 'Code Postal'));
+        $builder->add('city', TextType::class, array('label' => 'Ville'));
         $builder->add('country', ChoiceType::class, array(
             'choices' => array(
                 'France' => 'France',
-            )
+            ),
+            'label' => 'Pays'
         ));
-        $builder->add('phone');
+        $builder->add('phone', TextType::class, array('label' => 'Téléphone portable'));
 
     }
 

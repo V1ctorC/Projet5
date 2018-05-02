@@ -114,6 +114,7 @@ class AdminController extends Controller
         $em = $this->getDoctrine()->getManager();
         $order = $em->getRepository('VictorAdBundle:Offer');
         $user = $em->getRepository('VictorUserBundle:User');
+        $datetime = new \DateTime();
 
         $dataorder = $order->find($id);
         $userID = $dataorder->getBuyer();
@@ -127,12 +128,24 @@ class AdminController extends Controller
         $step = $dataorder->getStep();
 
 
-
         if ($step <= 3)
         {
 
             $currentStep = $dataorder->getStep() + 1;
             $dataorder->setStep($currentStep);
+
+            if ($step == 1)
+            {
+                $dataorder->setReceivedate($datetime);
+            }
+            elseif ($step == 2)
+            {
+                $dataorder->setConformdate($datetime);
+            }
+            elseif ($step == 3)
+            {
+                $dataorder->setSendate($datetime);
+            }
 
             $em->persist($dataorder);
             $em->flush();

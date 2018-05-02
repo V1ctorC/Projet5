@@ -18,7 +18,7 @@ class OfferType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('price',    IntegerType::class)
+            ->add('price',    IntegerType::class, array('label' => 'Prix'))
             ->add('status',  ChoiceType::class, array(
                 'choices' => array(
                     'Comme neuf' => 'Comme neuf',
@@ -26,12 +26,10 @@ class OfferType extends AbstractType
                     'Bon état' => 'Bon état',
                     'Correct' => 'Correct',
                 ),
-                "label" => "form.choices",
-                "required" => true,
-                'translation_domain' => 'messages'
+                "label" => "Etat"
             ))
-            ->add('description', TextType::class)
-            ->add('save',   SubmitType::class);
+            ->add('description', TextType::class, array('label' => 'Description'))
+            ->add('save',   SubmitType::class, array('label' => 'Envoyer'));
     }/**
      * {@inheritdoc}
      */

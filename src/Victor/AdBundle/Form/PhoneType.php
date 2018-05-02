@@ -21,20 +21,22 @@ class PhoneType extends AbstractType
             ->add('brand',    ChoiceType::class, array(
                 'choices' => array(
                     'Apple' => 'Apple',
-                )
+                ),
+                'label' => 'Marque'
             ))
-            ->add('model',    TextType::class)
+            ->add('model',    TextType::class, array('label' => 'Modèle'))
             ->add('capacity', ChoiceType::class, array(
                 'choices' => array(
                     '64 Go' => '64',
                     '128 Go' => '128',
                     '256 Go' => '256',
                     '512 Go' => '512',
-                )
+                ),
+                'label' => 'Capacité'
             ))
-            ->add('color',    TextType::class)
-            ->add('image', ImageType::class)
-            ->add('save', SubmitType::class);
+            ->add('color',    TextType::class, array('label' => 'Couleur'))
+            ->add('image', ImageType::class, array('label' => 'Image'))
+            ->add('save', SubmitType::class, array('label' => 'Envoyer'));
     }
 
     /**

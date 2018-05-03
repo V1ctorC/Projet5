@@ -92,6 +92,11 @@ class AccountController extends Controller
 
         $buyer = $purchase->getBuyer();
         $seller = $purchase->getUser();
+        $ordernumber = $purchase->getId();
+        $paydate = $purchase->getSaledate();
+        $recepdate = $purchase->getReceivedate();
+        $coformdate = $purchase->getConformdate();
+        $sendate = $purchase->getSendate();
 
         if ($buyer == $currentuser OR $seller == $currentuser)
         {
@@ -100,7 +105,8 @@ class AccountController extends Controller
             $infos = $order->getorderinfos($step);
             $progress = $step * 25;
 
-            return $this->render('@VictorAd/Account/ordertracking.html.twig', array('progress'=>$progress, 'infos'=>$infos));
+            return $this->render('@VictorAd/Account/ordertracking.html.twig', array(
+                'progress'=>$progress, 'infos'=>$infos, 'ordernumber'=>$ordernumber, 'paydate'=>$paydate, 'recepdate'=>$recepdate, 'conformdate'=>$coformdate, 'sendate'=>$sendate));
         }
 
         else

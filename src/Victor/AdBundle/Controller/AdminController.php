@@ -4,6 +4,7 @@ namespace Victor\AdBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Victor\AdBundle\Entity\Offer;
 use Victor\AdBundle\Entity\Phone;
 use Symfony\Component\HttpFoundation\Request;
 use Victor\AdBundle\Form\PhoneType;
@@ -180,8 +181,10 @@ class AdminController extends Controller
 
     }
 
+
     /**
      * @param $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function decreaseAction($id)
     {
@@ -205,4 +208,5 @@ class AdminController extends Controller
 
         return $this->redirectToRoute('victor_ad_order');
     }
+
 }

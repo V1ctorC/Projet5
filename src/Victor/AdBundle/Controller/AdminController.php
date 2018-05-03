@@ -122,7 +122,7 @@ class AdminController extends Controller
 
         $order3 = $order->findBy(array('step' => 3));
 
-        return $this->render('@VictorAd/Admin/order2.html.twig', array('order3' => $order3));
+        return $this->render('@VictorAd/Admin/order3.html.twig', array('order3' => $order3));
     }
 
     public function order4Action()
@@ -132,7 +132,7 @@ class AdminController extends Controller
 
         $order4 = $order->findBy(array('step' => 4));
 
-        return $this->render('@VictorAd/Admin/order2.html.twig', array('order4' => $order4));
+        return $this->render('@VictorAd/Admin/order4.html.twig', array('order4' => $order4));
     }
 
     public function increaseAction($id)

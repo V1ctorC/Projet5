@@ -1,0 +1,52 @@
+{% extends '@VictorCore/layout.html.twig' %}
+
+{% block body %}
+
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="{{ path('victor_ad_admin') }}">Liste des membres</a></li>
+        <li role="presentation"><a href="{{ path('victor_ad_addphone') }}">Ajouter un téléphone</a></li>
+        <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                Commandes clients <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li role="presentation"><a href="{{ path('victor_ad_order') }}">Paiements reçu</a></li>
+                <li role="presentation"><a href="{{ path('victor_ad_order2') }}">Téléphones receptionnés</a></li>
+                <li role="presentation" class="active"><a href="{{ path('victor_ad_order3') }}">Téléphones conformes</a></li>
+                <li role="presentation"><a href="{{ path('victor_ad_order4') }}">Téléphones envoyé</a></li>
+
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Step3</h3>
+    {% for order in order3 %}
+        <table class="table">
+            <tr>
+                <th scope="col">Commande</th>
+                <th scope="col">Paiement</th>
+                <th scope="col">Reception</th>
+                <th scope="col">Conformité</th>
+                <th scope="col">Envoi</th>
+            </tr>
+
+
+            <tr>
+                <th>{{ order.id }}</th>
+                <th>{{ order.saledate|date('d-m-Y') }}</th>
+                <th>{{ order.receivedate|date('d-m-Y') }}</th>
+                <th>{{ order.conformdate|date('d-m-Y') }}</th>
+                <th>--</th>
+            </tr>
+            <tr>
+                <th><button type="button" class="btn btn-primary">Primary</button></th>
+                <th><button type="button" class="btn btn-primary">Primary</button></th>
+                <th><button type="button" class="btn btn-primary">Primary</button></th>
+                <th><button type="button" class="btn btn-primary">Primary</button></th>
+                <th><button type="button" class="btn btn-primary">Primary</button></th>
+            </tr>
+
+        </table>
+    {% endfor %}
+
+{% endblock %}

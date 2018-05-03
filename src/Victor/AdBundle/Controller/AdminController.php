@@ -101,13 +101,38 @@ class AdminController extends Controller
         $order = $em->getRepository('VictorAdBundle:Offer');
 
         $order1 = $order->findBy(array('step' => 1));
+
+        return $this->render('@VictorAd/Admin/order.html.twig', array('order1'=>$order1));
+    }
+
+    public function order2Action()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $order = $em->getRepository('VictorAdBundle:Offer');
+
         $order2 = $order->findBy(array('step' => 2));
+
+        return $this->render('@VictorAd/Admin/order2.html.twig', array('order2' => $order2));
+    }
+
+    public function order3Action()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $order = $em->getRepository('VictorAdBundle:Offer');
+
         $order3 = $order->findBy(array('step' => 3));
+
+        return $this->render('@VictorAd/Admin/order2.html.twig', array('order3' => $order3));
+    }
+
+    public function order4Action()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $order = $em->getRepository('VictorAdBundle:Offer');
+
         $order4 = $order->findBy(array('step' => 4));
 
-
-
-        return $this->render('@VictorAd/Admin/order.html.twig', array('order1'=>$order1, 'order2'=>$order2, 'order3'=>$order3, 'order4'=>$order4, ));
+        return $this->render('@VictorAd/Admin/order2.html.twig', array('order4' => $order4));
     }
 
     public function increaseAction($id)

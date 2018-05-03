@@ -7,7 +7,18 @@
     <ul class="nav nav-tabs">
         <li role="presentation"><a href="{{ path('victor_ad_admin') }}">Liste des membres</a></li>
         <li role="presentation" class="active"><a href="{{ path('victor_ad_addphone') }}">Ajouter un téléphone</a></li>
-        <li role="presentation"><a href="{{ path('victor_ad_order') }}">Commandes clients</a></li>
+        <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                Commandes clients <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li role="presentation"><a href="{{ path('victor_ad_order') }}">Paiements reçu</a></li>
+                <li role="presentation"><a href="{{ path('victor_ad_order2') }}">Téléphones receptionnés</a></li>
+                <li role="presentation"><a href="{{ path('victor_ad_order3') }}">Téléphones conformes</a></li>
+                <li role="presentation"><a href="{{ path('victor_ad_order4') }}">Téléphones envoyé</a></li>
+
+            </ul>
+        </li>
     </ul>
 
     <div id="addPhone">

@@ -62,6 +62,18 @@ victor_ad_order:
     path: /admin/order
     defaults: { _controller: VictorAdBundle:Admin:order}
 
+victor_ad_order2:
+    path: /admin/order2
+    defaults: { _controller: VictorAdBundle:Admin:order2}
+
+victor_ad_order3:
+    path: /admin/order3
+    defaults: { _controller: VictorAdBundle:Admin:order3}
+
+victor_ad_order4:
+    path: /admin/order4
+    defaults: { _controller: VictorAdBundle:Admin:order4}
+
 victor_ad_cancel:
     path: /admin/cancel/{id}
     defaults: { _controller: VictorAdBundle:Admin:cancel}

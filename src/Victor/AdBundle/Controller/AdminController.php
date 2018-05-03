@@ -130,7 +130,6 @@ class AdminController extends Controller
 
         if ($step <= 3)
         {
-
             $currentStep = $dataorder->getStep() + 1;
             $dataorder->setStep($currentStep);
 
@@ -179,5 +178,31 @@ class AdminController extends Controller
 
         return $this->redirectToRoute('victor_ad_order');
 
+    }
+
+    /**
+     * @param $id
+     */
+    public function decreaseAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $order = $em->getRepository('VictorAdBundle:Offer');
+
+        $dataorder = $order->find($id);
+        $step = $dataorder->getStep();
+
+        if ($step > 1)
+        {
+            $realStep = $step - 1;
+            $dataorder->setStep($realStep);
+            $em->persist($dataorder);
+            $em->flush();
+        }
+        else
+        {
+            throw new NotFoundHttpException('Impossible de revenir à l\'étape précedente');
+        }
+
+        return $this->redirectToRoute('victor_ad_order');
     }
 }

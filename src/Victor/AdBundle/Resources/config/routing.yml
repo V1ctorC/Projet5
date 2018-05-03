@@ -109,3 +109,7 @@ victor_ad_ordercheckout:
 victor_ad_increase:
     path: /admin/order/{id}
     defaults: { _controller: VictorAdBundle:Admin:increase}
+
+victor_ad_decrease:
+    path: /admin/order/decrease/{id}
+    defaults: { _controller: VictorAdBundle:Admin:decrease}

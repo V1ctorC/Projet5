@@ -32,7 +32,7 @@ class Mailer
             ->setFrom("vetudes.noreply@gmail.com")
             ->setTo($to)
             ->setSubject($subject)
-            ->setBody($body);
+            ->setBody($body, 'text/html');
 
         $this->mailer->send($mail);
     }

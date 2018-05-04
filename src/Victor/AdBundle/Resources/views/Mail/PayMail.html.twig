@@ -1,10 +1,16 @@
-Bonjour {{ username }},
+{% extends '@VictorAd/layoutmail.html.twig' %}
 
-Nous voulions vous informer que nous avons reçu votre paiement.
+{% block body %}
 
-Le vendeur va nous envoyer son téléphone.
+    <h1>Bonjour {{ username }},</h1>
 
-Nous ne manquerons pas de vous tenir informé.
+    <p>Nous voulions vous informer que nous avons reçu votre paiement.</p>
+
+    <p>Le vendeur va nous envoyer son téléphone.</p>
+
+    <p>Nous ne manquerons pas de vous tenir informé.</p>
 
 
-Excellent journée :)
+    <p>Excellent journée :)</p>
+
+{% endblock %}

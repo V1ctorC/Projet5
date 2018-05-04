@@ -1,10 +1,15 @@
-Bonjour {{ username }} !
+{% extends '@VictorAd/layoutmail.html.twig' %}
 
-Nous voulions vous informer que nous avons bien reçu votre produit.
+{% block body %}
 
-Nous allons vérifier qu'il soit bien conforme et en bonne santé :)
+    <h1>Bonjour {{ username }} !</h1>
 
+    <p>Nous voulions vous informer que nous avons bien reçu votre produit.</p>
 
-Nous vous tiendrons au courant de la suite des évènements.
+    <p>Nous allons vérifier qu'il soit bien conforme et en bonne santé :) </p>
 
-Bonne journée ! ;)
+    <p>Nous vous tiendrons au courant de la suite des évènements.</p>
+
+    <p>Bonne journée ! ;)</p>
+
+{% endblock %}

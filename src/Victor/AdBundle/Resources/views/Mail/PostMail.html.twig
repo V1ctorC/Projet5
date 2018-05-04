@@ -1,10 +1,15 @@
-Bonjour {{ username }},
+{% extends '@VictorAd/layoutmail.html.twig' %}
 
-Et voilà votre téléphone vient d'être envoyé.
+{% block body %}
 
-Il est en route jusqu'a chez vous pour son nouveau foyer ;)
+    <h1>Bonjour {{ username }},</h1>
 
-Nous esperons que vous apprécierez votre nouveau téléphone !
+    <p>Et voilà votre téléphone vient d'être envoyé.</p>
 
+    <p>Il est en route jusqu'a chez vous pour son nouveau foyer ;)</p>
 
-A bientôt, et merci encore pour votre confiance :)
+    <p>Nous esperons que vous apprécierez votre nouveau téléphone !</p>
+
+    <p>A bientôt, et merci encore pour votre confiance :)</p>
+
+{% endblock %}

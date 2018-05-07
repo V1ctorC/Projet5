@@ -93,6 +93,43 @@ body
 
 /* Choix telephone */
 
+.yearPhone
+{
+    width: 25%;
+    border: 2px solid red;
+}
+
+#allPhones
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.persoButton
+{
+    background-color: #4FB783;
+    color: #034561;
+    border: 2px solid #034561;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    font-weight: bold;
+}
+
+
+.persoButton:hover
+{
+    background-color: #409D9B;
+    text-decoration: underline;
+}
+
+.year
+{
+    text-align: center;
+    font-size: 2em;
+}
+
 .phoneSelect
 {
     border: 2px solid white;

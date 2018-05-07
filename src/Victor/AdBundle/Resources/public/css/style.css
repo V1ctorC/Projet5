@@ -186,7 +186,6 @@ body
 #choiceHomePage
 {
     position: absolute;
-    border: 2px solid red;
     text-align: center;
     font-size: 4vw;
     color: white;
@@ -205,6 +204,27 @@ body
     height: 200px;
 }
 
+#summary
+{
+    background-color: white;
+}
+
+.labelSummary
+{
+    font-weight: bold;
+}
+
+#summaryList
+{
+    text-align: center;
+}
+
+#offerview
+{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
 table
 {
     border-collapse: collapse;
@@ -212,11 +232,6 @@ table
 td, th /* Mettre une bordure sur les td ET les th */
 {
     border: 1px solid black;
-}
-
-#offerview
-{
-    font-size: 3em;
 }
 
 

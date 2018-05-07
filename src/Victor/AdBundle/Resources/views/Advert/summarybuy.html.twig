@@ -2,22 +2,25 @@
 
 {% block body %}
 
-    <p>Ici récapitulatif</p>
+    <div id="summary" class="col-md-6 col-md-offset-3">
+        <h2>Récapitulatif :</h2>
 
-    <span id="offerview">{{ offer.price }}</span> c'est l'offre que vous avez selectionné !
 
-    <p>Cette offre est valabre pour :</p>
+        <p>Vous avez choisi ce téléphone :</p>
 
-    <div class="phoneSelect center-block">
-
-        <span id="brand">{{ phone.brand }} </span><br />
-        <span id="model">{{ phone.model }} </span><br />
-        Couleur : {{ phone.color }} <br />
-        Capacité : {{ phone.capacity }} Go <br />
+        <div id="summaryList">
+            Marque : <span class="labelSummary">{{ phone.brand }} </span><br />
+            Modèle : <span class="labelSummary">{{ phone.model }} </span><br />
+            Couleur : <span class="labelSummary">{{ phone.color }} </span> <br />
+            Capacité : <span class="labelSummary">{{ phone.capacity }} Go</span> <br />
+        </div>
         <img src="{{ phone.image.url }}" class="imgPhone">
+        <hr>
 
+        <p>L'offre que vous avez selectionné est à <span id="offerview">{{ offer.price }}€</span>,
+        si cela vous conviens, nous pouvons passer au paiement :)</p>
+
+        <a href="{{ path('victor_ad_paiement',{'offerid': offer.id} ) }}">Proceder au paiement</a>
     </div>
-
-    <a href="{{ path('victor_ad_paiement',{'offerid': offer.id} ) }}">Proceder au paiement</a>
 
 {% endblock %}

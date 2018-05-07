@@ -2,27 +2,34 @@
 
 {% block victorad_body %}
 
-    <h3>Je choisi mon modèle d'iPhone</h3>
+    <h2>Je choisi mon modèle d'iPhone</h2>
 
-    <h4>2014</h4>
-    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 6'}) }}><input type="button" class="btn btn-primary phoneChoice" value="iPhone 6"> </a> <br />
-    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 6 Plus'}) }}><input type="button" class="btn btn-primary phoneChoice" value="iPhone 6 Plus"></a> <br />
-    <hr />
+    <div class="container-fluid">
+        <div class="yearPhone col-md-3">
+            <h3 class="year">2014</h3>
+            <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 6'}) }}><input type="button" class="persoButton" value="iPhone 6"></a> <br />
+            <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 6 Plus'}) }}><input type="button" class="persoButton" value="iPhone 6 Plus"></a> <br />
+        </div>
 
-    <h4>2015</h4>
-    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 6s'}) }}><input type="button" class="btn btn-primary phoneChoice" value=" iPhone 6s"></a> <br />
-    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 6s Plus'}) }}><input type="button" class="btn btn-primary phoneChoice" value="iPhone 6s Plus"></a> <br />
-    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone SE'}) }}><input type="button" class="btn btn-primary phoneChoice" value=" iPhone SE"></a> <br />
-    <hr />
+        <div class="yearPhone col-md-3">
+            <h3 class="year">2015</h3>
+            <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 6s'}) }}><input type="button" class="persoButton" value=" iPhone 6s"></a> <br />
+            <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 6s Plus'}) }}><input type="button" class="persoButton" value="iPhone 6s Plus"></a> <br />
+            <a href={{ path('victor_ad_sellview', {'phone': 'iPhone SE'}) }}><input type="button" class="persoButton" value=" iPhone SE"></a> <br />
+        </div>
 
-    <h4>2016</h4>
-    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 7'}) }}><input type="button" class="btn btn-primary phoneChoice" value="iPhone 7"></a> <br />
-    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 7 Plus'}) }}><input type="button" class="btn btn-primary phoneChoice" value="iPhone 7 Plus"></a><br />
-    <hr />
+        <div class="yearPhone col-md-3">
+            <h3 class="year">2016</h3>
+            <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 7'}) }}><input type="button" class="persoButton" value="iPhone 7"></a> <br />
+            <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 7 Plus'}) }}><input type="button" class="persoButton" value="iPhone 7 Plus"></a><br />
+        </div>
 
-    <h4>2017</h4>
-    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 8'}) }}><input type="button" class="btn btn-primary phoneChoice" value="iPhone 8"></a> <br />
-    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 8 Plus'}) }}><input type="button" class="btn btn-primary phoneChoice" value="iPhone 8 Plus"></a><br />
-    <a href={{ path('victor_ad_sellview', {'phone': 'iPhone X'}) }}><input type="button" class="btn btn-primary phoneChoice" value="iPhone X"></a>
+        <div class="yearPhone col-md-3">
+            <h3 class="year">2017</h3>
+            <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 8'}) }}><input type="button" class="persoButton" value="iPhone 8"></a> <br />
+            <a href={{ path('victor_ad_sellview', {'phone': 'iPhone 8 Plus'}) }}><input type="button" class="persoButton" value="iPhone 8 Plus"></a><br />
+            <a href={{ path('victor_ad_sellview', {'phone': 'iPhone X'}) }}><input type="button" class="persoButton" value="iPhone X"></a>
+        </div>
+    </div>
 
 {% endblock %}

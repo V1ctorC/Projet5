@@ -108,6 +108,7 @@ body
 
 .persoButton
 {
+    display: block;
     background-color: #4FB783;
     color: #034561;
     border: 2px solid #034561;

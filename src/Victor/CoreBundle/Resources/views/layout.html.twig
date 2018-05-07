@@ -33,7 +33,7 @@
                 <li><a href="{{ path('victor_ad_sell') }}" class="navigation">Vendre</a></li>
                 <li><a href="{{ path('victor_ad_buy') }}" class="navigation">Acheter</a> </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" id="rightnav">
                 <!--<li><a href="#" class="navigation">Mon compte</a></li>-->
                 {% if is_granted('ROLE_ADMIN') %}
                     <li><a href="{{ path('victor_ad_admin') }}">Administration du site</a></li>
@@ -42,8 +42,8 @@
                     <li><a href="{{ path('victor_ad_account') }}">Connecté en tant que {{ app.user.username }}</a></li>
                     <li><a href="{{ path('fos_user_security_logout') }}">Déconnexion</a></li>
                 {% else %}
-                    <li><a href="{{ path('fos_user_registration_register') }}">Inscription</a></li>
-                    <li><a href="{{ path('fos_user_security_login') }}">Connexion</a></li>
+                    <li><a href="{{ path('fos_user_registration_register') }}" id="registre">Inscription</a></li>
+                    <li><a href="{{ path('fos_user_security_login') }}" id="connect">Connexion</a></li>
                 {% endif %}
             </ul>
         </div>
@@ -60,7 +60,7 @@ footer abc
 
 <footer>
 
-    <div class="container-fluid text-center text-md-left" style="background-color: #2C98F0">
+    <div class="container-fluid text-center text-md-left" style="background-color: #4FB783">
         <div class="row">
 
             <div class="col-md-6">
@@ -90,7 +90,7 @@ footer abc
         </div>
     </div>
 
-    <div class="footer-copyright text-center" style="background-color: #237AC0">
+    <div class="footer-copyright text-center" style="background-color: #409D9B">
         OpenClassrooms 2018 - Projet 5
     </div>
 </footer>

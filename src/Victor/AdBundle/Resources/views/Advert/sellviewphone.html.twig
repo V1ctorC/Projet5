@@ -2,7 +2,7 @@
 
 {% block victorad_body %}
 
-<h3>Votre choix :</h3>
+<h2>Votre choix :</h2>
     <div class="phoneSelect center-block">
 
         <span id="brand">{{ phone.brand }} </span><br />
@@ -17,51 +17,52 @@
 
     <hr />
 
-    <h4>Offres</h4>
-
-    <table>
-        <tr>
-            <th>Etat du téléphone</th>
-            <th>Prix</th>
-            <th>Description</th>
-        </tr>
-
-    {% for offer in listOffers %}
-
-        {% if offer.sold == 0 %}
-
-        <tr>
-            <td>{{ offer.status }}</td>
-            <td>{{ offer.price }}</td>
-            <td>{{ offer.description }}</td>
-        </tr>
-
-        {% else %}
-
-            <p>Toutes les offres ont déjà trouvé preneur</p>
-
-        {% endif %}
-
-    {% endfor %}
-
-    </table>
-
-    {% if listOffers == null %}
-
-        <p>Il n'y a actuellement aucune offre concernant ce produit</p>
-
-    {% endif %}
-
-    <h4>Faire une offre</h4>
+    <h3>Faire une offre</h3>
 
     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
 
-        <p>Vous pensez faire mieux ? Faite votre proposition <a href="{{ path('victor_ad_selloffer', {'phone': phone.model, 'id': phone.id}) }}">ici</a></p>
+        <p>Vous souhaitez faire une offre ? Faite votre proposition <a href="{{ path('victor_ad_selloffer', {'phone': phone.model, 'id': phone.id}) }}">ici</a></p>
 
     {% else %}
 
         <p>Si vous souhaitez faire une offre ... <a href="{{ path('fos_user_security_login') }}">Connectez-vous</a></p>
 
     {% endif %}
+
+    <br />
+
+    <h3>Les offres en cours</h3>
+
+    {% if listOffers == null %}
+
+        <p>Il n'y a actuellement aucune offre concernant ce produit</p>
+
+    {% else %}
+
+        <table class="table">
+            <tr>
+                <th scope="col">Etat du téléphone</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Description</th>
+            </tr>
+
+        {% for offer in listOffers %}
+
+            {% if offer.sold == 0 %}
+
+                <tr>
+                    <td>{{ offer.status }}</td>
+                    <td>{{ offer.price }}</td>
+                    <td>{{ offer.description }}</td>
+                </tr>
+
+            {% endif %}
+
+        {% endfor %}
+
+        </table>
+
+    {% endif %}
+
 
 {% endblock %}

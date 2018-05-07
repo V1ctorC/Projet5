@@ -25,12 +25,12 @@
 
     {% else %}
 
-        <table>
+        <table class="table">
             <tr>
-                <th>Etat du téléphone</th>
-                <th>Prix</th>
-                <th>Description</th>
-                <th>Accepter offre</th>
+                <th scope="col">Etat du téléphone</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Description</th>
+                <th scope="col">Accepter offre</th>
             </tr>
 
             {% for offer in listOffers %}

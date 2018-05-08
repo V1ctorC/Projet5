@@ -36,7 +36,8 @@ class AccountController extends Controller
         $user = $this->getUser();
 
         $listPurchases = $repository->findBy(
-            array('buyer' => $user, 'sold' => 1)
+            array('buyer' => $user, 'sold' => 1),
+            array('id' => 'desc')
         );
 
         if (empty($listPurchases))

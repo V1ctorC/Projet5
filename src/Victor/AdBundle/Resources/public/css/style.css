@@ -95,8 +95,14 @@ body
 
 .yearPhone
 {
-    width: 25%;
-    border: 2px solid red;
+    display: block;
+
+}
+
+.phoneButton
+{
+    display: block;
+    margin: auto;
 }
 
 #allPhones
@@ -114,7 +120,6 @@ body
     border: 2px solid #034561;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px 0 10px 0;
     font-weight: bold;
 }
 

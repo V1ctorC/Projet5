@@ -171,17 +171,6 @@ class AdvertController extends Controller
     /**
      * @Security("has_role('ROLE_USER')")
      */
-    public function paiementAction($offerid)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $offer = $em->getRepository('VictorAdBundle:Offer')->find($offerid);
-
-        return $this->render('@VictorAd/Advert/paiement.html.twig', array('offer'=>$offer));
-    }
-
-    /**
-     * @Security("has_role('ROLE_USER')")
-     */
     public function checkoutAction($offerid)
     {
         $mailer = $this->get('victor_ad.mailer');

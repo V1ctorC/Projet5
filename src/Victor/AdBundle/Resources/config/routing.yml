@@ -110,10 +110,6 @@ victor_ad_subscription:
     path: /account/unsubscribe
     defaults: { _controller: VictorAdBundle:Account:subscription}
 
-victor_ad_paiement:
-    path: /paiement/{offerid}
-    defaults: { _controller: VictorAdBundle:Advert:paiement}
-
 victor_ad_ordercheckout:
     path: /checkout/{offerid}
     defaults: { _controller: VictorAdBundle:Advert:checkout}

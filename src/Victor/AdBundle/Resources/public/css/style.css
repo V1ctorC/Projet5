@@ -235,6 +235,11 @@ td, th /* Mettre une bordure sur les td ET les th */
     border: 1px solid black;
 }
 
+#paiementButton
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 /* Footer */
 

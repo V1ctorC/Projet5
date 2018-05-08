@@ -19,21 +19,22 @@
 
         <p>L'offre que vous avez selectionné est à <span id="offerview">{{ offer.price }}€</span>,
         si cela vous conviens, nous pouvons passer au paiement :)</p>
-
-        <form action="{{ path('victor_ad_ordercheckout',{'offerid': offer.id} ) }}" method="POST" id="payform">
-            <script
-                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                    data-key="pk_test_9y2iO8ZCIEg06ONKLxjJ9qvb"
-                    data-amount="{{ offer.price * 100}}"
-                    data-label="Passer au paiement"
-                    data-name="iVente"
-                    data-description="Merci de votre achat :)"
-                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-                    data-locale="auto"
-                    data-zip-code="true"
-                    data-currency="eur">
-            </script>
-        </form>
+        <div id="paiementButton">
+            <form action="{{ path('victor_ad_ordercheckout',{'offerid': offer.id} ) }}" method="POST" id="payform">
+                <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_test_9y2iO8ZCIEg06ONKLxjJ9qvb"
+                        data-amount="{{ offer.price * 100}}"
+                        data-label="Passer au paiement"
+                        data-name="iVente"
+                        data-description="Merci de votre achat :)"
+                        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                        data-locale="auto"
+                        data-zip-code="true"
+                        data-currency="eur">
+                </script>
+            </form>
+        </div>
     </div>
 
 {% endblock %}

@@ -10,7 +10,7 @@ body
 
 
 .navbar-default {
-    background-color: #4FB783;
+    background-color: #409D9B;
     border: none;
     border-radius: 0;
 }
@@ -118,9 +118,35 @@ body
     background-color: #4FB783;
     color: #034561;
     border: 2px solid #034561;
-    border-radius: 5px;
+    border-radius: 25px;
     padding: 10px;
     font-weight: bold;
+    text-align: center;
+}
+
+.persoButtonAdmin
+{
+    display: block;
+    background-color: #FEEB97;
+    color: #034561;
+    border: 2px solid #409D9B;
+    border-radius: 25px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.persoButtonAdmin:hover
+{
+    text-decoration: none;
+    background-color: #4FB783;
+    color: #034561;
+    border: 2px solid #034561;
+}
+
+th
+{
+    background-color: white;
 }
 
 

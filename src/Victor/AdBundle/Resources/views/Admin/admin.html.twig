@@ -59,10 +59,10 @@
                                 {% set status = "Desactiver" %}
                             {% endif %}
                         </td>
-                        <td><a data-toggle="modal" href="#delete{{ user.id }}" class="btn btn-primary center-block">Supprimer</a></td>
-                        <td><a data-toggle="modal" href="#deactivate{{ user.id }}" class="btn btn-primary center-block">Activer / Désactiver</a></td>
-                        <td><a data-toggle="modal" href="#promote{{ user.id }}" class="btn btn-primary center-block">Promouvoir</a></td>
-                        <td><a data-toggle="modal" href="#demote{{ user.id }}" class="btn btn-primary center-block">Rétrograder</a></td>
+                        <td><a data-toggle="modal" href="#delete{{ user.id }}" class="persoButtonAdmin">Supprimer</a></td>
+                        <td><a data-toggle="modal" href="#deactivate{{ user.id }}" class="persoButtonAdmin">Activer / Désactiver</a></td>
+                        <td><a data-toggle="modal" href="#promote{{ user.id }}" class="persoButtonAdmin">Promouvoir</a></td>
+                        <td><a data-toggle="modal" href="#demote{{ user.id }}" class="persoButtonAdmin">Rétrograder</a></td>
                     </tr>
 
                     <div class="modal fade" id="delete{{ user.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

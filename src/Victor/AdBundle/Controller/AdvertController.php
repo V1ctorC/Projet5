@@ -214,14 +214,21 @@ class AdvertController extends Controller
     public function checkmailAction()
     {
         $post = $_POST['field'];
+        $em = $this->getDoctrine()->getManager();
+        $usernow = $em->getRepository('VictorUserBundle:User');
 
-        if ($post == 'coucou')
+        $listUser = $usernow
+            ->findBy(
+                array('email' => $post)
+            );
+
+        if ($listUser == null)
         {
-            echo 'Si le champs est coucou c est bon';
+            echo 'personne a cette adresse';
         }
         else
         {
-            echo 'le champs n est pas coucou';
+            echo 'deja pris';
         }
 
     }

@@ -13,3 +13,10 @@ document.getElementById('fos_user_registration_form_phone').addEventListener("bl
         alert('Un numéro de téléphone est composé de 10 chiffres')
     }
 });
+
+console.log('hello world');
+
+/*document.getElementById('fos_user_registration_form_email').addEventListener("blur", function (e) {
+
+    console.log(e.target.value);
+});*/

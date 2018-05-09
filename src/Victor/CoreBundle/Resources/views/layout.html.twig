@@ -96,9 +96,45 @@ footer abc
 </footer>
 
 {% block javascripts %}
-    <script src="{{ asset('bundles/victorad/js/script.js') }}"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="{{ asset('bundles/victorad/js/script.js') }}"></script>
+    <script>
+
+        var field = "";
+
+        document.getElementById('fos_user_registration_form_email').addEventListener("blur", function (e) {
+
+             field = e.target.value;
+
+            var url = "{{ absolute_url(path('ajax_check_mail')) }}";
+
+            $(document).ready(function () {
+                $.ajax({
+                    url: url,
+                    data: field,
+                    success: function (data) {
+                        console.log(data);
+                        console.log(field);
+                    }
+                })});
+
+        });
+
+        /*var url = "{{ absolute_url(path('ajax_check_mail')) }}";
+         
+            $(document).ready(function () { 
+                $.ajax({ 
+                    url: url,
+            success: function (data) {
+                console.log('hello');
+                console.log(field);
+            }
+        })});*/
+    </script>
+
 {% endblock %}
 </body>
 

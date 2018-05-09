@@ -211,4 +211,9 @@ class AdvertController extends Controller
         return $this->redirectToRoute('victor_core_home');
     }
 
+    public function checkmailAction()
+    {
+        return $this->redirectToRoute('fos_user_registration_register');
+    }
+
 }

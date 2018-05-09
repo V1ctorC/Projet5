@@ -113,8 +113,9 @@ footer abc
 
             $(document).ready(function () {
                 $.ajax({
+                    type: 'POST',
                     url: url,
-                    data: field,
+                    data: 'field='+field,
                     success: function (data) {
                         console.log(data);
                         console.log(field);

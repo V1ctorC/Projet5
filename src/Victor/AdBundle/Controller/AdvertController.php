@@ -213,7 +213,9 @@ class AdvertController extends Controller
 
     public function checkmailAction()
     {
-        return $this->redirectToRoute('fos_user_registration_register');
+        $post = $_POST;
+
+        print_r($post);
     }
 
 }

@@ -213,9 +213,17 @@ class AdvertController extends Controller
 
     public function checkmailAction()
     {
-        $post = $_POST;
+        $post = $_POST['field'];
 
-        print_r($post);
+        if ($post == 'coucou')
+        {
+            echo 'Si le champs est coucou c est bon';
+        }
+        else
+        {
+            echo 'le champs n est pas coucou';
+        }
+
     }
 
 }

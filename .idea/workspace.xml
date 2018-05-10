@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af6761b9-47cf-4f15-8481-960258f01b61" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Victor/CoreBundle/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/CoreBundle/Resources/views/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/public/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/public/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/bundles/victorad/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/bundles/victorad/js/script.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,20 +26,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/bundles/victorad/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            <state relative-caret-position="328">
+              <caret line="30" column="105" selection-start-line="30" selection-start-column="105" selection-end-line="30" selection-end-column="105" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Victor/CoreBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="136" column="64" selection-start-line="136" selection-start-column="64" selection-end-line="136" selection-end-column="64" />
+            <state relative-caret-position="-13">
+              <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -121,10 +122,10 @@
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/buyviewphone.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/sellviewphone.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" />
-        <option value="$PROJECT_DIR$/web/bundles/victorad/js/script.js" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdvertController.php" />
         <option value="$PROJECT_DIR$/src/Victor/CoreBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/web/bundles/victorad/js/script.js" />
       </list>
     </option>
   </component>
@@ -573,12 +574,12 @@
       <workItem from="1525693843099" duration="10142000" />
       <workItem from="1525772144612" duration="8690000" />
       <workItem from="1525855269817" duration="8430000" />
-      <workItem from="1525941797299" duration="4727000" />
+      <workItem from="1525941797299" duration="6101000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="312160000" />
+    <option name="totallyTimeSpent" value="313534000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -915,13 +916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/UserBundle/Form/RegistrationType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-225">
@@ -932,17 +926,17 @@
     <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/victorad/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="130" column="64" selection-start-line="130" selection-start-column="64" selection-end-line="130" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -955,8 +949,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/CoreBundle/Resources/views/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="136" column="64" selection-start-line="136" selection-start-column="64" selection-end-line="136" selection-end-column="64" />
+        <state relative-caret-position="-13">
+          <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/victorad/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="30" column="105" selection-start-line="30" selection-start-column="105" selection-end-line="30" selection-end-column="105" />
         </state>
       </provider>
     </entry>

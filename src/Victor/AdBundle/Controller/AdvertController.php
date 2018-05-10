@@ -224,11 +224,13 @@ class AdvertController extends Controller
 
         if ($listUser == null)
         {
-            echo 'personne a cette adresse';
+            echo 'test';
+            return $test = true;
         }
         else
         {
-            echo 'deja pris';
+            header('HTTP/1.1 500 Internal Server Error');
+
         }
 
     }

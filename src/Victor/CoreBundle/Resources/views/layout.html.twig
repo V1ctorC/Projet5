@@ -105,7 +105,8 @@ footer abc
 
         var field = "";
 
-        document.getElementById('fos_user_registration_form_email').addEventListener("blur", function (e) {
+        var elmt = document.getElementById('fos_user_registration_form_email');
+            elmt.addEventListener("blur", function (e) {
 
              field = e.target.value;
 
@@ -116,24 +117,15 @@ footer abc
                     type: 'POST',
                     url: url,
                     data: 'field='+field,
-                    success: function (data) {
-                        console.log(data);
-                        console.log(field);
+                    success: function () {
+                        elmt.style.color = "green";
+                    },
+                    error: function () {
+                        elmt.style.color = 'red';
                     }
                 })});
 
         });
-
-        /*var url = "{{ absolute_url(path('ajax_check_mail')) }}";
-         
-            $(document).ready(function () { 
-                $.ajax({ 
-                    url: url,
-            success: function (data) {
-                console.log('hello');
-                console.log(field);
-            }
-        })});*/
     </script>
 
 {% endblock %}

@@ -125,3 +125,7 @@ victor_ad_decrease:
 ajax_check_mail:
     path: /ajax/mail
     defaults: { _controller: VictorAdBundle:Advert:checkmail}
+
+ajax_check_username:
+    path: /ajax/username
+    defaults: { _controller: VictorAdBundle:Advert:checkusername}

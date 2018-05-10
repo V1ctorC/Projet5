@@ -235,4 +235,27 @@ class AdvertController extends Controller
 
     }
 
+    public function checkusernameAction()
+    {
+        $post = $_POST['userfield'];
+        $em = $this->getDoctrine()->getManager();
+        $usernow = $em->getRepository('VictorUserBundle:User');
+
+        $listUser = $usernow
+            ->findBy(
+                array('username' => $post)
+            );
+
+        if ($listUser == null)
+        {
+            echo 'test';
+            return $test = true;
+        }
+        else
+        {
+            header('HTTP/1.1 500 Internal Server Error');
+
+        }
+    }
+
 }

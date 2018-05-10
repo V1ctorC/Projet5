@@ -126,6 +126,30 @@ footer abc
                 })});
 
         });
+
+        var userfield = "";
+
+        var elmtuser = document.getElementById('fos_user_registration_form_username');
+        elmtuser.addEventListener("blur", function (e) {
+
+            userfield = e.target.value;
+
+            var url = "{{ absolute_url(path('ajax_check_mail')) }}";
+
+            $(document).ready(function () {
+                $.ajax({
+                    type: 'POST',
+                    url: url,
+                    data: 'userfield='+userfield,
+                    success: function () {
+                        elmtuser.style.color = "green";
+                    },
+                    error: function () {
+                        elmtuser.style.color = 'red';
+                    }
+                })});
+
+        });
     </script>
 
 {% endblock %}

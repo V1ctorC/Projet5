@@ -272,6 +272,17 @@ td, th /* Mettre une bordure sur les td ET les th */
     margin-bottom: 20px;
 }
 
+#registerButton
+{
+    display: block;
+    margin: auto;
+}
+
+#information
+{
+    display: none;
+}
+
 /* Footer */
 
 

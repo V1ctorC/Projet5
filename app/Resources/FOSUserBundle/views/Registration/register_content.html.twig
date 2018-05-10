@@ -2,10 +2,12 @@
 
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
     {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="{{ 'registration.submit'|trans }}" />
-    </div>
-    <div id="information">
+
+    <div id="information" class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
         Formulaire invalide pour la/les raison(s) suivante(s) :
+    </div>
+    <div>
+        <input type="submit" value="{{ 'registration.submit'|trans }}" id="registerButton"/>
     </div>
 {{ form_end(form) }}

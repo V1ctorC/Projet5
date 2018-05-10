@@ -5,7 +5,8 @@ document.getElementById('fos_user_registration_form_zipcode').addEventListener("
     var zipcode = e.target.value;
     if (zipcode.length !== 5)
     {
-        alert('Un code postal est composé de 5 chiffres')
+        errorfield.style.display = "block";
+        errorfield.innerHTML += "<br/> - Le code postal doit être composé de 5 chiffres";
     }
 });
 
@@ -32,6 +33,7 @@ document.getElementById('fos_user_registration_form_plainPassword_first').addEve
         {
             document.getElementById('fos_user_registration_form_plainPassword_first').style.color = "red";
             document.getElementById('fos_user_registration_form_plainPassword_second').style.color = "red";
+            errorfield.style.display = "block";
             errorfield.innerHTML += "<br/> - Les mots de passe ne correspondent pas"
         }
     })

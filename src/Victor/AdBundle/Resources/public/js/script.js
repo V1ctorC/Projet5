@@ -1,3 +1,6 @@
+var errorfield = document.getElementById('information');
+
+
 document.getElementById('fos_user_registration_form_zipcode').addEventListener("blur", function (e) {
     var zipcode = e.target.value;
     if (zipcode.length !== 5)
@@ -29,6 +32,7 @@ document.getElementById('fos_user_registration_form_plainPassword_first').addEve
         {
             document.getElementById('fos_user_registration_form_plainPassword_first').style.color = "red";
             document.getElementById('fos_user_registration_form_plainPassword_second').style.color = "red";
+            errorfield.innerHTML += "<br/> - Les mots de passe ne correspondent pas"
         }
     })
-})
+});

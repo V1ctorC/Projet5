@@ -119,9 +119,11 @@ footer abc
                     data: 'field='+field,
                     success: function () {
                         elmt.style.color = "green";
+
                     },
                     error: function () {
                         elmt.style.color = 'red';
+                        errorfield.innerHTML += "<br/> - L'adresse mail à déjà été utilisée";
                     }
                 })});
 
@@ -146,6 +148,7 @@ footer abc
                     },
                     error: function () {
                         elmtuser.style.color = 'red';
+                        errorfield.innerHTML += "<br/> - Le pseudo à déjà été utilisé";
                     }
                 })});
 

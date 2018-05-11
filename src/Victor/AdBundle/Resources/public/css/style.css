@@ -296,20 +296,49 @@ td, th /* Mettre une bordure sur les td ET les th */
     border: 2px solid red;
     text-align: center;
     background-color: white;
+    margin-bottom: 20px;
+
 }
 
 .accountBloc
 {
-    border: 2px solid red;
-    height: 50%;
+    border: 1px solid #4FB783;
     padding-right: 0;
     padding-left: 0;
+    height: 180px;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.accountBloc ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+.accountBloc li
+{
+    list-style-type: none;
+    list-style-position: inside;
 }
 
 .categorie
 {
     text-align: center;
-    border: 2px solid blue;
+    border: 2px solid #4FB783;
+    background-color: #FEEB97;
+    color: #034561;
+}
+
+#contactBloc
+{
+    border: 1px solid #4FB783;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+    height: 120px;
+    line-height: 60px;
 }
 
 /* Footer */

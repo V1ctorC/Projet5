@@ -119,10 +119,12 @@ footer abc
                     data: 'field='+field,
                     success: function () {
                         elmt.style.color = "green";
+                        elmt.style.border = "1px solid green";
 
                     },
                     error: function () {
                         elmt.style.color = 'red';
+                        elmt.style.border = '2px solid red';
                         errorfield.style.display = "block";
                         errorfield.innerHTML += "<br/> - L'adresse mail à déjà été utilisée";
                     }
@@ -146,6 +148,7 @@ footer abc
                     data: 'userfield='+userfield,
                     success: function () {
                         elmtuser.style.color = "green";
+                        elmtuser.style.border = "1px solid green";
                     },
                     error: function () {
                         elmtuser.style.color = 'red';

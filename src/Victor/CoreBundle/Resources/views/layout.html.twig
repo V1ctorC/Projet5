@@ -14,153 +14,159 @@
 </head>
 
 <body>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand link-menu" href="{{ path('victor_core_home') }}">iVente !</a>
-        </div>
+<div id="global">
+    <div id="header">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand link-menu" href="{{ path('victor_core_home') }}">iVente !</a>
+                </div>
 
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav link-menu">
-                <li><a href="{{ path('victor_core_home') }}" class="navigation">Accueil</a></li>
-                <li><a href="{{ path('victor_ad_sell') }}" class="navigation">Vendre</a></li>
-                <li><a href="{{ path('victor_ad_buy') }}" class="navigation">Acheter</a> </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right" id="rightnav">
-                <!--<li><a href="#" class="navigation">Mon compte</a></li>-->
-                {% if is_granted('ROLE_ADMIN') %}
-                    <li><a href="{{ path('victor_ad_admin') }}">Administration du site</a></li>
-                {% endif %}
-                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    <li><a href="{{ path('victor_ad_account') }}">Connecté en tant que {{ app.user.username }}</a></li>
-                    <li><a href="{{ path('fos_user_security_logout') }}">Déconnexion</a></li>
-                {% else %}
-                    <li><a href="{{ path('fos_user_registration_register') }}" id="registre">Inscription</a></li>
-                    <li><a href="{{ path('fos_user_security_login') }}" id="connect">Connexion</a></li>
-                {% endif %}
-            </ul>
-        </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav link-menu">
+                        <li><a href="{{ path('victor_core_home') }}" class="navigation">Accueil</a></li>
+                        <li><a href="{{ path('victor_ad_sell') }}" class="navigation">Vendre</a></li>
+                        <li><a href="{{ path('victor_ad_buy') }}" class="navigation">Acheter</a> </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right" id="rightnav">
+                        <!--<li><a href="#" class="navigation">Mon compte</a></li>-->
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <li><a href="{{ path('victor_ad_admin') }}">Administration du site</a></li>
+                        {% endif %}
+                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                            <li><a href="{{ path('victor_ad_account') }}">Connecté en tant que {{ app.user.username }}</a></li>
+                            <li><a href="{{ path('fos_user_security_logout') }}">Déconnexion</a></li>
+                        {% else %}
+                            <li><a href="{{ path('fos_user_registration_register') }}" id="registre">Inscription</a></li>
+                            <li><a href="{{ path('fos_user_security_login') }}" id="connect">Connexion</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-</nav>
 
-<div id="content" class="col-md-12">
-    {% block body %}
+
+    <div id="content" class="col-md-12">
+        {% block body %}
+        {% endblock %}
+    </div>
+
+    <!--footer abc -->
+
+    <div id="footer">
+        <footer>
+
+            <div class="container-fluid text-center text-md-left" style="background-color: #4FB783">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <h5 class="text-uppercase">Retrouvez nous sur les différents réseaux sociaux</h5>
+                        <a href="http://www.facebook.com" class="fa fa-facebook"></a>
+                        <a href="http://www.twitter.com" class="fa fa-twitter"></a>
+                        <a href="http://www.youtube.com" class="fa fa-youtube"></a>
+                        <a href="https://www.instagram.com" class="fa fa-instagram"></a>
+                        <a href="http://www.google.com" class="fa fa-google"></a>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <h5 class="text-uppercase">Liens utiles</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!" class="footer-links">Qui sommes-nous ?</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="footer-links">Conditions Générales d'Utilisation</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="footer-links">Vie privée et Cookies</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copyright text-center" style="background-color: #409D9B">
+                OpenClassrooms 2018 - Projet 5
+            </div>
+        </footer>
+    </div>
+
+    {% block javascripts %}
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+                crossorigin="anonymous"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="{{ asset('bundles/victorad/js/script.js') }}"></script>
+        <script>
+
+            var field = "";
+
+            var elmt = document.getElementById('fos_user_registration_form_email');
+                elmt.addEventListener("blur", function (e) {
+
+                 field = e.target.value;
+
+                var url = "{{ absolute_url(path('ajax_check_mail')) }}";
+
+                $(document).ready(function () {
+                    $.ajax({
+                        type: 'POST',
+                        url: url,
+                        data: 'field='+field,
+                        success: function () {
+                            elmt.style.color = "green";
+                            elmt.style.border = "1px solid green";
+
+                        },
+                        error: function () {
+                            elmt.style.color = 'red';
+                            elmt.style.border = '2px solid red';
+                            errorfield.style.display = "block";
+                            errorfield.innerHTML += "<br/> - L'adresse mail à déjà été utilisée";
+                        }
+                    })});
+
+            });
+
+            var userfield = "";
+
+            var elmtuser = document.getElementById('fos_user_registration_form_username');
+            elmtuser.addEventListener("blur", function (e) {
+
+                userfield = e.target.value;
+
+                var url = "{{ absolute_url(path('ajax_check_username')) }}";
+
+                $(document).ready(function () {
+                    $.ajax({
+                        type: 'POST',
+                        url: url,
+                        data: 'userfield='+userfield,
+                        success: function () {
+                            elmtuser.style.color = "green";
+                            elmtuser.style.border = "1px solid green";
+                        },
+                        error: function () {
+                            elmtuser.style.color = 'red';
+                            errorfield.style.display = "block";
+                            errorfield.innerHTML += "<br/> - Le pseudo à déjà été utilisé";
+                        }
+                    })});
+
+            });
+        </script>
+
     {% endblock %}
 </div>
-
-footer abc
-
-
-<footer>
-
-    <div class="container-fluid text-center text-md-left" style="background-color: #4FB783">
-        <div class="row">
-
-            <div class="col-md-6">
-                <h5 class="text-uppercase">Retrouvez nous sur les différents réseaux sociaux</h5>
-                <a href="http://www.facebook.com" class="fa fa-facebook"></a>
-                <a href="http://www.twitter.com" class="fa fa-twitter"></a>
-                <a href="http://www.youtube.com" class="fa fa-youtube"></a>
-                <a href="https://www.instagram.com" class="fa fa-instagram"></a>
-                <a href="http://www.google.com" class="fa fa-google"></a>
-
-            </div>
-
-            <div class="col-md-6">
-                <h5 class="text-uppercase">Liens utiles</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="#!" class="footer-links">Qui sommes-nous ?</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="footer-links">Conditions Générales d'Utilisation</a>
-                    </li>
-                    <li>
-                        <a href="#!" class="footer-links">Vie privée et Cookies</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-copyright text-center" style="background-color: #409D9B">
-        OpenClassrooms 2018 - Projet 5
-    </div>
-</footer>
-
-{% block javascripts %}
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
-            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-            crossorigin="anonymous"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="{{ asset('bundles/victorad/js/script.js') }}"></script>
-    <script>
-
-        var field = "";
-
-        var elmt = document.getElementById('fos_user_registration_form_email');
-            elmt.addEventListener("blur", function (e) {
-
-             field = e.target.value;
-
-            var url = "{{ absolute_url(path('ajax_check_mail')) }}";
-
-            $(document).ready(function () {
-                $.ajax({
-                    type: 'POST',
-                    url: url,
-                    data: 'field='+field,
-                    success: function () {
-                        elmt.style.color = "green";
-                        elmt.style.border = "1px solid green";
-
-                    },
-                    error: function () {
-                        elmt.style.color = 'red';
-                        elmt.style.border = '2px solid red';
-                        errorfield.style.display = "block";
-                        errorfield.innerHTML += "<br/> - L'adresse mail à déjà été utilisée";
-                    }
-                })});
-
-        });
-
-        var userfield = "";
-
-        var elmtuser = document.getElementById('fos_user_registration_form_username');
-        elmtuser.addEventListener("blur", function (e) {
-
-            userfield = e.target.value;
-
-            var url = "{{ absolute_url(path('ajax_check_username')) }}";
-
-            $(document).ready(function () {
-                $.ajax({
-                    type: 'POST',
-                    url: url,
-                    data: 'userfield='+userfield,
-                    success: function () {
-                        elmtuser.style.color = "green";
-                        elmtuser.style.border = "1px solid green";
-                    },
-                    error: function () {
-                        elmtuser.style.color = 'red';
-                        errorfield.style.display = "block";
-                        errorfield.innerHTML += "<br/> - Le pseudo à déjà été utilisé";
-                    }
-                })});
-
-        });
-    </script>
-
-{% endblock %}
 </body>
 
 

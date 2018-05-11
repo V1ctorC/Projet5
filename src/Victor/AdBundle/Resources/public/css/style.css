@@ -289,6 +289,29 @@ td, th /* Mettre une bordure sur les td ET les th */
     display: none;
 }
 
+/* Account */
+
+#h2account
+{
+    border: 2px solid red;
+    text-align: center;
+    background-color: white;
+}
+
+.accountBloc
+{
+    border: 2px solid red;
+    height: 50%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.categorie
+{
+    text-align: center;
+    border: 2px solid blue;
+}
+
 /* Footer */
 
 

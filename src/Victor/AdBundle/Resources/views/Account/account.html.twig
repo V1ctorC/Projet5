@@ -11,13 +11,13 @@
         <h3>Opérations courantes</h3>
         </div>
             <ul>
-                <li><a href="{{ path('fos_user_profile_show') }}">Mes informations</a></li>
-                <li><a href="{{ path('fos_user_change_password') }}">Changer mon mot de passe</a> </li>
-                <li><a href="{{ path('victor_ad_deleteconfirm') }}">Supprimer mon compte</a> </li>
+                <li><a class="linksAccount" href="{{ path('fos_user_profile_show') }}">Mes informations</a></li>
+                <li><a class="linksAccount" href="{{ path('fos_user_change_password') }}">Changer mon mot de passe</a> </li>
+                <li><a class="linksAccount" href="{{ path('victor_ad_deleteconfirm') }}">Supprimer mon compte</a> </li>
                 {% if subscribe == 1 %}
-                <li><a href="{{ path('victor_ad_subscription') }}">Ne plus m'envoyer de mail de suivi de la commande</a></li>
+                <li><a class="linksAccount" href="{{ path('victor_ad_subscription') }}">Ne plus m'envoyer de mail de suivi de la commande</a></li>
                 {% elseif subscribe == 0 %}
-                <li><a href="{{ path('victor_ad_subscription') }}">M'envoyer des mails concernant le suivi de ma commande</a></li>
+                <li><a class="linksAccount" href="{{ path('victor_ad_subscription') }}">M'envoyer des mails concernant le suivi de ma commande</a></li>
                 {% endif %}
             </ul>
     </div>
@@ -27,7 +27,7 @@
         <h3>Mes achats</h3>
     </div>
 
-            <a href="{{ path('victor_ad_purchases') }}">Mes commandes</a>
+            <a class="linksAccount" href="{{ path('victor_ad_purchases') }}">Mes commandes</a>
     </div>
 
     <div class="accountBloc col-sm-4">
@@ -35,8 +35,8 @@
         <h3>Mes ventes</h3>
     </div>
         <ul>
-            <li><a href="{{ path('victor_ad_sales') }}">Mes ventes</a></li>
-            <li><a href="{{ path('victor_ad_currentoffer') }}">Mes offres</a></li>
+            <li><a class="linksAccount" href="{{ path('victor_ad_sales') }}">Mes ventes</a></li>
+            <li><a class="linksAccount" href="{{ path('victor_ad_currentoffer') }}">Mes offres</a></li>
         </ul>
     </div>
 
@@ -45,7 +45,7 @@
             <h3>Un problème ?</h3>
         </div>
 
-        <a href="mailto:vetudes.noreply@gmail.com">Contactez-nous ! :)</a>
+        <a class="linksAccount" href="mailto:vetudes.noreply@gmail.com">Contactez-nous ! :)</a>
     </div>
 
 

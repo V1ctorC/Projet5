@@ -65,7 +65,7 @@ class AdvertController extends Controller
         $listOffers = $em
             ->getRepository('VictorAdBundle:Offer')
             ->findBy(
-                array('phone' => $phone),
+                array('phone' => $phone, 'sold' => 0),
                 array('price' => 'asc'),
                 10,
                 0
@@ -105,7 +105,7 @@ class AdvertController extends Controller
         $listOffers = $em
             ->getRepository('VictorAdBundle:Offer')
             ->findBy(
-                array('phone' => $phone),
+                array('phone' => $phone, 'sold' => 0),
                 array('price' => 'asc'),
                 5,
                 0

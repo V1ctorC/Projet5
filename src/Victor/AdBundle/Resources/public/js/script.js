@@ -1,6 +1,9 @@
 var errorfield = document.getElementById('information');
 var mailfield = document.getElementById('mailProblem');
+var usernamefield = document.getElementById('usernameProblem');
+var passwordfield = document.getElementById('passwordProblem');
 var zipCodefield = document.getElementById('zipCodeProblem');
+var phonefield = document.getElementById('phoneProblem');
 
 
 document.getElementById('fos_user_registration_form_zipcode').addEventListener("blur", function (e) {
@@ -10,11 +13,12 @@ document.getElementById('fos_user_registration_form_zipcode').addEventListener("
         document.getElementById('fos_user_registration_form_zipcode').style.color = "red";
         document.getElementById('fos_user_registration_form_zipcode').style.border = "2px solid red";
         errorfield.style.display = "block";
+        zipCodefield.style.display ="block";
         zipCodefield.innerHTML = "<br/> - Le code postal doit être composé de 5 chiffres";
     }
     else
     {
-        alert('test');
+        zipCodefield.style.display = "none";
     }
 });
 
@@ -25,7 +29,12 @@ document.getElementById('fos_user_registration_form_phone').addEventListener("bl
         document.getElementById('fos_user_registration_form_phone').style.color = "red";
         document.getElementById('fos_user_registration_form_phone').style.border = "2px solid red";
         errorfield.style.display = "block";
-        errorfield.innerHTML += "<br/> - Le code numéro de téléphone doit comporter 10 chiffres";
+        phonefield.style.display = "block";
+        phonefield.innerHTML = "<br/> - Le code numéro de téléphone doit comporter 10 chiffres";
+    }
+    else
+    {
+        phonefield.style.display = "none";
     }
 });
 
@@ -41,6 +50,7 @@ document.getElementById('fos_user_registration_form_plainPassword_first').addEve
             document.getElementById('fos_user_registration_form_plainPassword_first').style.border = "1px solid green";
             document.getElementById('fos_user_registration_form_plainPassword_second').style.color = "green";
             document.getElementById('fos_user_registration_form_plainPassword_second').style.border = "1px solid green";
+            passwordfield.style.display = "none";
         }
         else
         {
@@ -49,7 +59,8 @@ document.getElementById('fos_user_registration_form_plainPassword_first').addEve
             document.getElementById('fos_user_registration_form_plainPassword_second').style.color = "red";
             document.getElementById('fos_user_registration_form_plainPassword_second').style.border = "2px solid red";
             errorfield.style.display = "block";
-            errorfield.innerHTML += "<br/> - Les mots de passe ne correspondent pas"
+            passwordfield.style.display = "block";
+            passwordfield.innerHTML = "<br/> - Les mots de passe ne correspondent pas"
         }
     })
 });

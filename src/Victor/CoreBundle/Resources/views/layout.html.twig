@@ -156,11 +156,13 @@
                         success: function () {
                             elmtuser.style.color = "green";
                             elmtuser.style.border = "1px solid green";
+                            usernamefield.style.display = "none";
                         },
                         error: function () {
                             elmtuser.style.color = 'red';
                             errorfield.style.display = "block";
-                            errorfield.innerHTML += "<br/> - Le pseudo à déjà été utilisé";
+                            usernamefield.style.display = "block";
+                            usernamefield.innerHTML = "<br/> - Le pseudo à déjà été utilisé";
                         }
                     })});
 

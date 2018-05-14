@@ -19,6 +19,8 @@ document.getElementById('fos_user_registration_form_zipcode').addEventListener("
     else
     {
         zipCodefield.style.display = "none";
+        zipCodefield.innerHTML = "success";
+        errorBlock();
     }
 });
 
@@ -35,6 +37,8 @@ document.getElementById('fos_user_registration_form_phone').addEventListener("bl
     else
     {
         phonefield.style.display = "none";
+        phonefield.innerHTML = "success";
+        errorBlock();
     }
 });
 
@@ -51,6 +55,8 @@ document.getElementById('fos_user_registration_form_plainPassword_first').addEve
             document.getElementById('fos_user_registration_form_plainPassword_second').style.color = "green";
             document.getElementById('fos_user_registration_form_plainPassword_second').style.border = "1px solid green";
             passwordfield.style.display = "none";
+            passwordfield.innerHTML = "success";
+            errorBlock();
         }
         else
         {
@@ -64,3 +70,36 @@ document.getElementById('fos_user_registration_form_plainPassword_first').addEve
         }
     })
 });
+
+function errorBlock()
+{
+    if (mailfield.innerHTML === "success")
+    {
+        if (usernamefield.innerHTML === "success")
+        {
+            if (passwordfield.innerHTML === "success")
+            {
+                if (zipCodefield.innerHTML === "success")
+                {
+                    if (phonefield.innerHTML === "success")
+                    {
+                        errorfield.style.display = "none";
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*
+function errorBlock()
+{
+    if ((mailfield.innerHTML && usernamefield.innerHTML && passwordfield.innerHTML && zipCodefield.innerHTML && phonefield.innerHTML )
+    {
+        alert('test');
+    }
+}
+
+ */
+

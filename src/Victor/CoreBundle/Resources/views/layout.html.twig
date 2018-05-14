@@ -126,6 +126,8 @@
                             elmt.style.color = "green";
                             elmt.style.border = "1px solid green";
                             mailfield.style.display = "none";
+                            mailfield.innerHTML = "success";
+                            errorBlock();
 
                         },
                         error: function () {
@@ -157,6 +159,8 @@
                             elmtuser.style.color = "green";
                             elmtuser.style.border = "1px solid green";
                             usernamefield.style.display = "none";
+                            usernamefield.innerHTML = "success";
+                            errorBlock();
                         },
                         error: function () {
                             elmtuser.style.color = 'red';

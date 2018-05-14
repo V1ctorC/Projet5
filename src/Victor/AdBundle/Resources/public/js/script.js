@@ -1,4 +1,6 @@
 var errorfield = document.getElementById('information');
+var mailfield = document.getElementById('mailProblem');
+var zipCodefield = document.getElementById('zipCodeProblem');
 
 
 document.getElementById('fos_user_registration_form_zipcode').addEventListener("blur", function (e) {
@@ -8,7 +10,11 @@ document.getElementById('fos_user_registration_form_zipcode').addEventListener("
         document.getElementById('fos_user_registration_form_zipcode').style.color = "red";
         document.getElementById('fos_user_registration_form_zipcode').style.border = "2px solid red";
         errorfield.style.display = "block";
-        errorfield.innerHTML += "<br/> - Le code postal doit être composé de 5 chiffres";
+        zipCodefield.innerHTML = "<br/> - Le code postal doit être composé de 5 chiffres";
+    }
+    else
+    {
+        alert('test');
     }
 });
 

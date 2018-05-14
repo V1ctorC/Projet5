@@ -2,20 +2,23 @@
 
 {% block body %}
 
-<h2>Vos informations</h2>
+    <div id="userInformation">
+        <h2>Vos informations</h2>
 
-<ul>
-    <li>Sexe : {{ app.user.gender }}</li>
-    <li>Prénom : {{ app.user.firstname }}</li>
-    <li>Nom de famille : {{ app.user.lastname }}</li>
-    <li>Adresse : {{ app.user.address }}</li>
-    <li>Code Postal : {{ app.user.zipcode }}</li>
-    <li>Ville : {{ app.user.city }}</li>
-    <li>Pays : {{ app.user.country }}</li>
-    <li>Numéro de téléphone : {{ app.user.phone }}</li>
+        <ul>
+            <li>Sexe : {{ app.user.gender }}</li>
+            <li>Prénom : {{ app.user.firstname }}</li>
+            <li>Nom de famille : {{ app.user.lastname }}</li>
+            <li>Adresse : {{ app.user.address }}</li>
+            <li>Code Postal : {{ app.user.zipcode }}</li>
+            <li>Ville : {{ app.user.city }}</li>
+            <li>Pays : {{ app.user.country }}</li>
+            <li>Numéro de téléphone : {{ app.user.phone }}</li>
 
-</ul>
+        </ul>
 
-    <a href="{{ path('victor_ad_editprofile') }}">Modifier mes infos</a>
+        <a href="{{ path('victor_ad_editprofile') }}">Modifier mes infos</a>
+    </div>
+
 
 {% endblock %}

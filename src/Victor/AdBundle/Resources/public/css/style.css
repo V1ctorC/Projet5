@@ -5,13 +5,13 @@ body
 
 #global
 {
-    min-height:100vh; /* 1 */
-    display:flex; /* 2 */
-    flex-direction:column; /* 3 */
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
 }
 
 #content {
-    flex-grow:1; /* 4 */
+    flex-grow:1;
 }
 
 .navbar
@@ -362,6 +362,12 @@ td, th /* Mettre une bordure sur les td ET les th */
     text-align: center;
     height: 120px;
     line-height: 60px;
+}
+
+#userInformation
+{
+    border: 2px solid red;
+    text-align: center;
 }
 
 /* Footer */

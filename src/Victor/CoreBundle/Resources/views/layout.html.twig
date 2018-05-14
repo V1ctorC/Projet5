@@ -125,13 +125,15 @@
                         success: function () {
                             elmt.style.color = "green";
                             elmt.style.border = "1px solid green";
+                            mailfield.style.display = "none";
 
                         },
                         error: function () {
                             elmt.style.color = 'red';
                             elmt.style.border = '2px solid red';
                             errorfield.style.display = "block";
-                            errorfield.innerHTML += "<br/> - L'adresse mail à déjà été utilisée";
+                            mailfield.style.display = "block";
+                            mailfield.innerHTML = "<br/> - L'adresse mail à déjà été utilisée";
                         }
                     })});
 

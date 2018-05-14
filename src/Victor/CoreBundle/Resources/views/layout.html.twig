@@ -123,8 +123,8 @@
                         url: url,
                         data: 'field='+field,
                         success: function () {
-                            elmt.style.color = "green";
-                            elmt.style.border = "1px solid green";
+                            elmt.style.color = "inherit";
+                            elmt.style.border = "1px solid #ccc";
                             mailfield.style.display = "none";
                             mailfield.innerHTML = "success";
                             errorBlock();
@@ -156,8 +156,8 @@
                         url: url,
                         data: 'userfield='+userfield,
                         success: function () {
-                            elmtuser.style.color = "green";
-                            elmtuser.style.border = "1px solid green";
+                            elmtuser.style.color = "inherit";
+                            elmtuser.style.border = "1px solid #ccc";
                             usernamefield.style.display = "none";
                             usernamefield.innerHTML = "success";
                             errorBlock();

@@ -18,6 +18,8 @@ document.getElementById('fos_user_registration_form_zipcode').addEventListener("
     }
     else
     {
+        document.getElementById('fos_user_registration_form_zipcode').style.color = "inherit";
+        document.getElementById('fos_user_registration_form_zipcode').style.border = "1px solid #ccc";
         zipCodefield.style.display = "none";
         zipCodefield.innerHTML = "success";
         errorBlock();
@@ -36,6 +38,8 @@ document.getElementById('fos_user_registration_form_phone').addEventListener("bl
     }
     else
     {
+        document.getElementById('fos_user_registration_form_phone').style.color = "inherit";
+        document.getElementById('fos_user_registration_form_phone').style.border = "1px solid #ccc";
         phonefield.style.display = "none";
         phonefield.innerHTML = "success";
         errorBlock();
@@ -50,10 +54,10 @@ document.getElementById('fos_user_registration_form_plainPassword_first').addEve
 
         if (firstmdp === secondmdp)
         {
-            document.getElementById('fos_user_registration_form_plainPassword_first').style.color = "green";
-            document.getElementById('fos_user_registration_form_plainPassword_first').style.border = "1px solid green";
-            document.getElementById('fos_user_registration_form_plainPassword_second').style.color = "green";
-            document.getElementById('fos_user_registration_form_plainPassword_second').style.border = "1px solid green";
+            document.getElementById('fos_user_registration_form_plainPassword_first').style.color = "inherit";
+            document.getElementById('fos_user_registration_form_plainPassword_first').style.border = "1px solid #ccc";
+            document.getElementById('fos_user_registration_form_plainPassword_second').style.color = "inherit";
+            document.getElementById('fos_user_registration_form_plainPassword_second').style.border = "1px solid #ccc";
             passwordfield.style.display = "none";
             passwordfield.innerHTML = "success";
             errorBlock();

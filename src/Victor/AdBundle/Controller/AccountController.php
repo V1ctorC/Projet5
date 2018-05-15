@@ -148,7 +148,12 @@ class AccountController extends Controller
             array('user'=> $user, 'topay'=> 1, 'paid'=> 0)
         );
 
-        return $this->render('@VictorAd/Account/wallet.html.twig', array('listOfferToPay'=>$listOfferToPay, 'sum'=>$sum));
+        foreach ($listOfferToPay as $offerToPay)
+        {
+            $sum = $sum + $offerToPay->getPrice();
+        }
+
+        return $this->render('@VictorAd/Account/wallet.html.twig', array('sum'=>$sum));
     }
 
 }

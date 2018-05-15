@@ -170,6 +170,7 @@ class AdminController extends Controller
             elseif ($step == 3)
             {
                 $dataorder->setSendate($datetime);
+                $dataorder->setTopay(1);
             }
 
             $em->persist($dataorder);
@@ -186,6 +187,24 @@ class AdminController extends Controller
         }
 
         return $this->redirectToRoute('victor_ad_order');
+    }
+
+    public function sendAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $order = $em->getRepository('VictorAdBundle:Offer');
+        $user = $em->getRepository('VictorUserBundle:User');
+        $datetime = new \DateTime();
+
+        $dataorder = $order->find($id);
+        $sum = $dataorder->getPrice();
+        $userID = $dataorder->getBuyer();
+        $userSell = $dataorder->getUser();
+        $buyer = $user->find($userID);
+        $seller = $user->find($userSell);
+
+
+
     }
 
     public function cancelAction($id)

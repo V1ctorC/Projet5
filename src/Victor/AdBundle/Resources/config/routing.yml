@@ -102,6 +102,10 @@ victor_ad_currentoffer:
     path: /account/currentoffer
     defaults: { _controller: VictorAdBundle:Account:currentoffer}
 
+victor_ad_wallet:
+    path: /account/wallet
+    defaults: { _controller: VictorAdBundle:Account:wallet}
+
 victor_ad_ordertracking:
     path: /account/ordertracking/{id}
     defaults: { _controller: VictorAdBundle:Account:ordertracking}

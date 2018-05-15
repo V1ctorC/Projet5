@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af6761b9-47cf-4f15-8481-960258f01b61" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/wallet.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/wallet.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,8 +55,8 @@
       <file leaf-file-name="wallet.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/wallet.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+            <state relative-caret-position="306">
+              <caret line="21" column="111" selection-start-line="21" selection-start-column="111" selection-end-line="21" selection-end-column="111" />
               <folding>
                 <element signature="e#12#40#0#Twig" expanded="true" />
                 <element signature="e#154#180#0#HTML" expanded="true" />
@@ -65,7 +64,9 @@
                 <element signature="e#334#375#0#HTML" expanded="true" />
                 <element signature="e#210#236#0#HTML" expanded="true" />
                 <element signature="e#697#723#0#HTML" expanded="true" />
-                <element signature="e#777#857#0#HTML" expanded="true" />
+                <element signature="e#774#800#0#HTML" expanded="true" />
+                <element signature="e#777#863#0#HTML" expanded="true" />
+                <element signature="e#900#926#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -638,12 +639,12 @@
       <workItem from="1526031006440" duration="6331000" />
       <workItem from="1526289633220" duration="10714000" />
       <workItem from="1526372756300" duration="7173000" />
-      <workItem from="1526391818730" duration="877000" />
+      <workItem from="1526391818730" duration="1471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="343152000" />
+    <option name="totallyTimeSpent" value="343746000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -659,7 +660,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28109854" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28109854" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32954547" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50646204" side_tool="true" weight="0.32954547" />
@@ -668,7 +669,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32954547" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24959612" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49353796" visible="true" weight="0.2948718" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49353796" visible="true" weight="0.2948718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -703,7 +704,9 @@
             <element signature="e#334#375#0#HTML" expanded="true" />
             <element signature="e#210#236#0#HTML" expanded="true" />
             <element signature="e#697#723#0#HTML" expanded="true" />
-            <element signature="e#777#857#0#HTML" expanded="true" />
+            <element signature="e#774#800#0#HTML" expanded="true" />
+            <element signature="e#777#863#0#HTML" expanded="true" />
+            <element signature="e#900#926#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1023,8 +1026,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/wallet.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        <state relative-caret-position="306">
+          <caret line="21" column="111" selection-start-line="21" selection-start-column="111" selection-end-line="21" selection-end-column="111" />
           <folding>
             <element signature="e#12#40#0#Twig" expanded="true" />
             <element signature="e#154#180#0#HTML" expanded="true" />
@@ -1032,7 +1035,9 @@
             <element signature="e#334#375#0#HTML" expanded="true" />
             <element signature="e#210#236#0#HTML" expanded="true" />
             <element signature="e#697#723#0#HTML" expanded="true" />
-            <element signature="e#777#857#0#HTML" expanded="true" />
+            <element signature="e#774#800#0#HTML" expanded="true" />
+            <element signature="e#777#863#0#HTML" expanded="true" />
+            <element signature="e#900#926#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

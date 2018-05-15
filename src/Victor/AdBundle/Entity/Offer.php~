@@ -107,6 +107,20 @@ class Offer
      */
     private $sendate;
 
+    /**
+     * @var
+     *
+     * @ORM\Column(name="topay", type="boolean")
+     */
+    private $topay;
+
+    /**
+     * @var
+     *
+     * @ORM\Column(name="$paid", type="boolean")
+     */
+    private $paid;
+
 
     public function __construct()
     {
@@ -114,6 +128,9 @@ class Offer
         $this->sold = 0;
         $this->step = 0;
         $this->saledate = new \DateTime();
+        $this->receivedate = new \DateTime();
+        $this->conformdate = new \DateTime();
+        $this->sendate = new \DateTime();
     }
 
     /**

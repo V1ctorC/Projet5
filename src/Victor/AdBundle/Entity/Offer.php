@@ -107,6 +107,20 @@ class Offer
      */
     private $sendate;
 
+    /**
+     * @var
+     *
+     * @ORM\Column(name="topay", type="boolean")
+     */
+    private $topay;
+
+    /**
+     * @var
+     *
+     * @ORM\Column(name="paid", type="boolean")
+     */
+    private $paid;
+
 
     public function __construct()
     {
@@ -117,6 +131,8 @@ class Offer
         $this->receivedate = new \DateTime();
         $this->conformdate = new \DateTime();
         $this->sendate = new \DateTime();
+        $this->topay = 0;
+        $this->paid = 0;
     }
 
     /**
@@ -442,5 +458,53 @@ class Offer
     public function getSendate()
     {
         return $this->sendate;
+    }
+
+    /**
+     * Set topay
+     *
+     * @param boolean $topay
+     *
+     * @return Offer
+     */
+    public function setTopay($topay)
+    {
+        $this->topay = $topay;
+
+        return $this;
+    }
+
+    /**
+     * Get topay
+     *
+     * @return boolean
+     */
+    public function getTopay()
+    {
+        return $this->topay;
+    }
+
+    /**
+     * Set paid
+     *
+     * @param boolean $paid
+     *
+     * @return Offer
+     */
+    public function setPaid($paid)
+    {
+        $this->paid = $paid;
+
+        return $this;
+    }
+
+    /**
+     * Get paid
+     *
+     * @return boolean
+     */
+    public function getPaid()
+    {
+        return $this->paid;
     }
 }

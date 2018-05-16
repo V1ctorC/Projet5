@@ -156,4 +156,24 @@ class AccountController extends Controller
         return $this->render('@VictorAd/Account/wallet.html.twig', array('sum'=>$sum));
     }
 
+    public function confirmwalletAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $offer = $em->getRepository('VictorAdBundle:Offer');
+        $user = $this->getUser();
+        $sum = 0;
+
+        $listOfferToPay = $offer->findBy(
+            array('user'=> $user, 'topay'=> 1, 'paid'=> 0)
+        );
+
+        foreach ($listOfferToPay as $offerToPay)
+        {
+            $sum = $sum + $offerToPay->getPrice();
+        }
+
+        return $this->render('@VictorAd/Account/confirmwallet.html.twig', array('user'=>$user, 'sum'=>$sum));
+
+    }
+
 }

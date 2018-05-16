@@ -1,0 +1,29 @@
+{% extends '@VictorCore/layout.html.twig' %}
+
+{% block body %}
+
+    <h2>Votre résumer avant le paiement</h2>
+
+    <p>Vous souhaitez recevoir la somme de : <b>{{ sum }}€</b></p>
+
+    <p>Nous allons vous envoyer un chèque à l'addresse que vous nous avez renseigner,
+    nous vous prions de vérifier que celles-ci sont correctes.</p>
+
+    <div class="container-fluid">
+        <h3>Vos infos</h3>
+        <ul>
+            <li>{{ user.email }}</li>
+            <li>{{ user.firstname }}</li>
+            <li>{{ user.lastname }}</li>
+            <li>{{ user.address }}</li>
+            <li>{{ user.zipcode }}</li>
+            <li>{{ user.city }}</li>
+            <li>{{ user.country }}</li>
+            <li>{{ user.phone }}</li>
+        </ul>
+    </div>
+
+    <a href="{{ path('fos_user_profile_edit') }}"><input type="button" class="persoButton" value="Modifier mes infos"></a>
+    <a href="#"><input type="button" class="persoButton" value="Confirmer la demande de paiement"></a>
+
+{% endblock %}

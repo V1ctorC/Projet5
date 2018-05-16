@@ -82,6 +82,10 @@ victor_ad_paymentwaiting:
     path: /admin/payment
     defaults: { _controller: VictorAdBundle:Admin:paymentwaiting}
 
+victor_ad_paymentsend:
+    path: /admin/payment/send/{id}
+    defaults: { _controller: VictorAdBundle:Admin:paymentsend}
+
 victor_ad_account:
     path: /account
     defaults: { _controller: VictorAdBundle:Account:account}

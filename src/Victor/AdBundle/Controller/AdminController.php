@@ -266,4 +266,20 @@ class AdminController extends Controller
         return $this->render('@VictorAd/Admin/paymentwaiting.html.twig', array('listPaymentWaiting'=>$listPaymentWaiting));
     }
 
+    public function  paymentsendAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $offer = $em->getRepository('VictorAdBundle:Offer');
+
+        $paidoffer = $offer->find($id);
+
+        $paidoffer->setPayrequest(0);
+        $paidoffer->setPaid(1);
+
+        $em->persist($paidoffer);
+        $em->flush();
+
+        return $this->redirectToRoute('victor_ad_paymentwaiting');
+    }
+
 }

@@ -253,4 +253,9 @@ class AdminController extends Controller
         return $this->redirectToRoute('victor_ad_order');
     }
 
+    public function paymentwaitingAction()
+    {
+        return $this->render('@VictorAd/Admin/paymentwaiting.html.twig');
+    }
+
 }

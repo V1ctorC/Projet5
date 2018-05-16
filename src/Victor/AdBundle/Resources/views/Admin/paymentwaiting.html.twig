@@ -23,6 +23,24 @@
 
     <div id="listPayment">
 
+        {% for payment in listPaymentWaiting %}
+
+            <div id="block-paymentWaiting" class="contrainer-fluid" style="border: 2px solid red">
+                <div id="block-paymentUsername">
+                    {{ payment.user.username }}
+                </div>
+                <div id="block-paymentPrice">
+                    {{ payment.price }}
+                </div>
+            </div>
+
+        <ul>
+            <li>{{ payment.price }}</li>
+            <li>{{ payment.user.username }}</li>
+        </ul>
+
+        {% endfor %}
+
     </div>
 
 {% endblock %}

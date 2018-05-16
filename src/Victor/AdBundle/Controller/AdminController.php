@@ -255,7 +255,15 @@ class AdminController extends Controller
 
     public function paymentwaitingAction()
     {
-        return $this->render('@VictorAd/Admin/paymentwaiting.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $offer = $em->getRepository('VictorAdBundle:Offer');
+
+        $listPaymentWaiting = $offer->findBy(
+            array('topay'=>0, 'paid'=>0, 'payrequest'=>1),
+            array('user'=>'desc')
+        );
+
+        return $this->render('@VictorAd/Admin/paymentwaiting.html.twig', array('listPaymentWaiting'=>$listPaymentWaiting));
     }
 
 }

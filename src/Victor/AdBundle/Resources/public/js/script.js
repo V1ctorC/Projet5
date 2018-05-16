@@ -96,14 +96,14 @@ function errorBlock()
 }
 
 
-/*
-function errorBlock()
+
+/*function errorBlock()
 {
-    if ((mailfield.innerHTML && usernamefield.innerHTML && passwordfield.innerHTML && zipCodefield.innerHTML && phonefield.innerHTML )
+    if ((mailfield.innerHTML && usernamefield.innerHTML && passwordfield.innerHTML && zipCodefield.innerHTML && phonefield.innerHTML )=== "success")
     {
-        alert('test');
+        errorfield.style.display = "none";
     }
 }
 
- */
+*/
 

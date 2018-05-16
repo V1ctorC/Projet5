@@ -171,7 +171,7 @@ class AdvertController extends Controller
     /**
      * @Security("has_role('ROLE_USER')")
      */
-    public function checkoutAction($offerid)
+    public function checkoutAction($offerid, Request $request)
     {
         $mailer = $this->get('victor_ad.mailer');
 
@@ -194,7 +194,8 @@ class AdvertController extends Controller
 
 // Token is created using Checkout or Elements!
 // Get the payment token ID submitted by the form:
-        $token = $_POST['stripeToken'];
+        //$token = $_POST['stripeToken'];
+        $token = $request->request->get('stripeToken');
 
         $charge = \Stripe\Charge::create([
             'amount' => $price,
@@ -211,9 +212,9 @@ class AdvertController extends Controller
         return $this->redirectToRoute('victor_core_home');
     }
 
-    public function checkmailAction()
+    public function checkmailAction(Request $request)
     {
-        $post = $_POST['field'];
+        $post = $request->request->get('field');
         $em = $this->getDoctrine()->getManager();
         $usernow = $em->getRepository('VictorUserBundle:User');
 
@@ -235,9 +236,9 @@ class AdvertController extends Controller
 
     }
 
-    public function checkusernameAction()
+    public function checkusernameAction(Request $request)
     {
-        $post = $_POST['userfield'];
+        $post = $request->request->get('userfield');
         $em = $this->getDoctrine()->getManager();
         $usernow = $em->getRepository('VictorUserBundle:User');
 

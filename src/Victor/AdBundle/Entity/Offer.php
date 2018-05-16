@@ -121,6 +121,13 @@ class Offer
      */
     private $paid;
 
+    /**
+    * @var
+    *
+    * @ORM\Column(name="payrequest", type="boolean")
+    */
+    private $payrequest;
+
 
     public function __construct()
     {
@@ -132,6 +139,7 @@ class Offer
         $this->conformdate = new \DateTime();
         $this->sendate = new \DateTime();
         $this->topay = 0;
+        $this->payrequest = 0;
         $this->paid = 0;
     }
 
@@ -506,5 +514,29 @@ class Offer
     public function getPaid()
     {
         return $this->paid;
+    }
+
+    /**
+     * Set payrequest
+     *
+     * @param boolean $payrequest
+     *
+     * @return Offer
+     */
+    public function setPayrequest($payrequest)
+    {
+        $this->payrequest = $payrequest;
+
+        return $this;
+    }
+
+    /**
+     * Get payrequest
+     *
+     * @return boolean
+     */
+    public function getPayrequest()
+    {
+        return $this->payrequest;
     }
 }

@@ -110,6 +110,10 @@ victor_ad_confirmwallet:
     path: /account/wallet/confirm
     defaults: { _controller: VictorAdBundle:Account:confirmwallet}
 
+victor_ad_payrequest:
+    path: /account/wallet/payrequest
+    defaults: { _controller: VictorAdBundle:Account:payrequest}
+
 victor_ad_ordertracking:
     path: /account/ordertracking/{id}
     defaults: { _controller: VictorAdBundle:Account:ordertracking}

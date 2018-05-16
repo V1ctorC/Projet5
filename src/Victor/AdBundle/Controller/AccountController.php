@@ -145,7 +145,7 @@ class AccountController extends Controller
         $sum = 0;
 
         $listOfferToPay = $offer->findBy(
-            array('user'=> $user, 'topay'=> 1, 'paid'=> 0)
+            array('user'=> $user, 'topay'=> 1, 'paid'=> 0, 'payrequest'=>0)
         );
 
         foreach ($listOfferToPay as $offerToPay)
@@ -164,7 +164,7 @@ class AccountController extends Controller
         $sum = 0;
 
         $listOfferToPay = $offer->findBy(
-            array('user'=> $user, 'topay'=> 1, 'paid'=> 0)
+            array('user'=> $user, 'topay'=> 1, 'paid'=> 0, 'payrequest'=>0)
         );
 
         foreach ($listOfferToPay as $offerToPay)
@@ -173,6 +173,29 @@ class AccountController extends Controller
         }
 
         return $this->render('@VictorAd/Account/confirmwallet.html.twig', array('user'=>$user, 'sum'=>$sum));
+
+    }
+
+    public function payrequestAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $offer = $em->getRepository('VictorAdBundle:Offer');
+        $user = $this->getUser();
+
+        $listOfferToPay = $offer->findBy(
+            array('user'=> $user, 'topay'=> 1, 'paid'=> 0, 'payrequest'=>0)
+        );
+
+        foreach ($listOfferToPay as $offerToPay)
+        {
+            $offerToPay->setPayrequest(1);
+            $offerToPay->setTopay(0);
+        }
+
+        $em->persist($offerToPay);
+        $em->flush();
+
+        return $this->redirectToRoute('victor_ad_account');
 
     }
 

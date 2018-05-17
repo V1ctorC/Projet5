@@ -270,8 +270,22 @@ class AdminController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $offer = $em->getRepository('VictorAdBundle:Offer');
+        $user = $em->getRepository('VictorUserBundle:User');
 
         $paidoffer = $offer->find($id);
+        $userID = $paidoffer->getUser();
+        $seller = $user->find($userID);
+
+        $mail = $this->get('victor_ad.mailer');
+        $price = $paidoffer->getPrice();
+        $username = $seller->getUsername();
+        $email = $seller->getEmail();
+        $subscribe = $seller->getSubscribe();
+
+        if ($subscribe == true)
+        {
+            $mail->sendPaidMail($email, $username, $price);
+        }
 
         $paidoffer->setPayrequest(0);
         $paidoffer->setPaid(1);

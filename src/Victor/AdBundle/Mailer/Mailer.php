@@ -69,4 +69,12 @@ class Mailer
         $this->sendMessage($to, $subject, $body);
     }
 
+    public function sendPaidMail($to, $username, $price)
+    {
+        $subject = "Votre paiement est en route !";
+        $body = $this->templating->render('VictorAdBundle:Mail:PaidMail.html.twig', array('username'=>$username, 'price'=>$price));
+
+        $this->sendMessage($to, $subject, $body);
+    }
+
 }

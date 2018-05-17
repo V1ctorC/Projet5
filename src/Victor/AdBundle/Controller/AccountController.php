@@ -199,4 +199,26 @@ class AccountController extends Controller
 
     }
 
+    public function deleteofferAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $offer = $em->getRepository('VictorAdBundle:Offer');
+        $user= $this->getUser();
+
+        $offertodelete = $offer->find($id);
+        $author = $offertodelete->getUser();
+        $sold = $offertodelete->getSold();
+
+        if (($author == $user) && ($sold == 0))
+        {
+            $em->remove($offertodelete);
+            $em->flush();
+            return $this->redirectToRoute('victor_ad_currentoffer');
+        }
+        else
+        {
+            throw new NotFoundHttpException("Vous ne pouvez pas supprimer cette offre");
+        }
+    }
+
 }

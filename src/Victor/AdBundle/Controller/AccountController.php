@@ -227,6 +227,20 @@ class AccountController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $offer = $em->getRepository('VictorAdBundle:Offer')->find($id);
+        $user = $this->getUser();
+
+        if ($offer == null)
+        {
+            throw new NotFoundHttpException('Cette offre n\'existe pas');
+        }
+
+        $author = $offer->getUser();
+        $sold = $offer->getSold();
+
+        if (($author !== $user) || ($sold == 1))
+        {
+            throw new NotFoundHttpException('Vous ne pouvez pas modifier cette offre');
+        }
 
         $form = $this->get('form.factory')->create(OfferType::class, $offer);
 

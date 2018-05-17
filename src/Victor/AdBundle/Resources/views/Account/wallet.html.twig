@@ -16,11 +16,13 @@
         <div id="wallet-sum">
             <p style="text-align: center">Vous avez actuellement :<br /></p>
             <p style="text-align: center"><b style="font-size: 5vw;border: 5px solid green; padding: 10px">{{ sum }}€</b></p>
-            <p style="text-align: center">Félicitation c'est une somme rondelette :)</p>
         </div>
+
+        {% if sum > 0 %}
         <div id="wallet-button">
             <a href="{{ path('victor_ad_confirmwallet') }}"><input type="button" class="persoButton" value="Retirer mon argent" style="margin: auto"></a>
         </div>
+        {% endif %}
     </div>
 
 

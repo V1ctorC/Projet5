@@ -3,7 +3,9 @@
 namespace Victor\AdBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Victor\AdBundle\Form\OfferType;
 
 class AccountController extends Controller
 {
@@ -219,6 +221,23 @@ class AccountController extends Controller
         {
             throw new NotFoundHttpException("Vous ne pouvez pas supprimer cette offre");
         }
+    }
+
+    public function editofferAction($id, Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $offer = $em->getRepository('VictorAdBundle:Offer')->find($id);
+
+        $form = $this->get('form.factory')->create(OfferType::class, $offer);
+
+        if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
+
+            $em->flush();
+
+            return $this->redirectToRoute('victor_ad_account');
+        }
+
+        return $this->render('@VictorAd/Account/editoffer.html.twig', array('offer'=>$offer, 'form'=>$form->createView()));
     }
 
 }

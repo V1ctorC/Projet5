@@ -1,0 +1,15 @@
+{% extends '@VictorAd/layoutmail.html.twig' %}
+
+{% block body %}
+
+    <h1>Bonjour {{ username }}</h1>
+
+    <p>Nous venons à l'instant d'envoyer le téléphone vers son nouveau propriétaire, à partir de maintenant vous
+    pouvez aller sur votre compte et voir votre solde, juste <a href="{{ url('victor_ad_wallet') }}">ICI</a></p>
+
+    <p>Vous pourrez alors très facilement faire un demande de retrait, nous vous enverrons alors un chèque qui se chez
+    vous dans les 2-3 jours ouvrés</p>
+
+    <p>Merci de votre confiance !</p>
+
+{% endblock %}

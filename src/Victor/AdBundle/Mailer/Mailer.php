@@ -88,7 +88,7 @@ class Mailer
     public function sendRecieveSellerMail($to, $username)
     {
         $subject = "Nous avons bien reçu votre téléphone";
-        $body = $test;
+        $body = $this->templating->render('VictorAdBundle:Mail:RecieveSellerMail.html.twig', array('username'=>$username));
 
         $this->sendMessage($to, $subject, $body);
     }
@@ -96,7 +96,7 @@ class Mailer
     public function sendConformSellerMail($to, $username)
     {
         $subject = "Nous avons bien reçu votre téléphone";
-        $body = $test;
+        $body = $this->templating->render('VictorAdBundle:Mail:ConformSellerMail.html.twig', array('username'=>$username));
 
         $this->sendMessage($to, $subject, $body);
     }
@@ -104,7 +104,7 @@ class Mailer
     public function sendPostSellerMail($to, $username)
     {
         $subject = "Nous avons bien reçu votre téléphone";
-        $body = $test;
+        $body = $this->templating->render('VictorAdBundle:Mail:PostSellerMail.html.twig', array('username'=>$username));
 
         $this->sendMessage($to, $subject, $body);
     }

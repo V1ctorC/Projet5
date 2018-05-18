@@ -77,4 +77,12 @@ class Mailer
         $this->sendMessage($to, $subject, $body);
     }
 
+    public function sendsoldMail($to, $username, $model)
+    {
+        $subject = "Votre téléphone est vendu !";
+        $body = $this->templating->render('@VictorAd/Mail/SoldMail.html.twig', array('username'=>$username, 'model'=>$model));
+
+        $this->sendMessage($to, $subject, $body);
+    }
+
 }

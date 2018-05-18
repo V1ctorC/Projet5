@@ -182,11 +182,20 @@ class AdvertController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $offer = $em->getRepository('VictorAdBundle:Offer')->find($offerid);
+        $user = $em->getRepository('VictorUserBundle:User');
+        $phone = $em->getRepository('VictorAdBundle:Phone');
+        $sellerID = $offer->getUser();
+        $seller = $user->find($sellerID);
         $buyer = $this->getUser();
         $datetime = new \DateTime();
-        $buyerMail = $this->getUser()->getEmail();
-        $buyerUsername = $this->getUser()->getUsername();
-        $buyerSubscribe = $this->getUser()->getSubscribe();
+        $buyerMail = $buyer->getEmail();
+        $buyerUsername = $buyer->getUsername();
+        $buyerSubscribe = $buyer->getSubscribe();
+        $sellerMail = $seller->getEmail();
+        $sellerUsername = $seller->getUsername();
+        $sellerSubscribe = $seller->getSubscribe();
+        $phoneID = $offer->getPhone();
+        $phoneModel = $phone->find($phoneID)->getModel();
         $offer->setBuyer($buyer);
         $offer->setSold(true);
         $offer->setStep(1);
@@ -197,9 +206,6 @@ class AdvertController extends Controller
 
         \Stripe\Stripe::setApiKey("sk_test_rAGQCR0jx66px1wmcyb3me6U");
 
-// Token is created using Checkout or Elements!
-// Get the payment token ID submitted by the form:
-        //$token = $_POST['stripeToken'];
         $token = $request->request->get('stripeToken');
 
         $charge = \Stripe\Charge::create([
@@ -213,6 +219,7 @@ class AdvertController extends Controller
             $mailer->sendPayMail($buyerMail, $buyerUsername);
         }
 
+        $mailer->sendsoldMail($sellerMail, $sellerUsername, $phoneModel);
 
         return $this->redirectToRoute('victor_core_home');
     }

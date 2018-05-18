@@ -34,4 +34,20 @@ class IncreaseStepMail
             $this->mailer->sendPostMail($to, $username);
         }
     }
+
+    public function SendSellerRightMail($step, $toSeller, $usernameSeller)
+    {
+        if ($step == 2)
+        {
+            $this->mailer->sendRecieveSellerMail($toSeller, $usernameSeller);
+        }
+        elseif ($step == 3)
+        {
+            $this->mailer->sendConformSellerMail($toSeller, $usernameSeller);
+        }
+        elseif ($step == 4)
+        {
+            $this->mailer->sendPostSellerMail($toSeller, $usernameSeller);
+        }
+    }
 }

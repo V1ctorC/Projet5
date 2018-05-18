@@ -85,4 +85,28 @@ class Mailer
         $this->sendMessage($to, $subject, $body);
     }
 
+    public function sendRecieveSellerMail($to, $username)
+    {
+        $subject = "Nous avons bien reçu votre téléphone";
+        $body = $test;
+
+        $this->sendMessage($to, $subject, $body);
+    }
+
+    public function sendConformSellerMail($to, $username)
+    {
+        $subject = "Nous avons bien reçu votre téléphone";
+        $body = $test;
+
+        $this->sendMessage($to, $subject, $body);
+    }
+
+    public function sendPostSellerMail($to, $username)
+    {
+        $subject = "Nous avons bien reçu votre téléphone";
+        $body = $test;
+
+        $this->sendMessage($to, $subject, $body);
+    }
+
 }

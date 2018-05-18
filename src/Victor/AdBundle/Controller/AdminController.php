@@ -144,12 +144,17 @@ class AdminController extends Controller
 
         $dataorder = $order->find($id);
         $userID = $dataorder->getBuyer();
+        $sellerID = $dataorder->getUser();
         $buyer = $user->find($userID);
+        $seller = $user->find($sellerID);
 
         $mail = $this->get('victor_ad.stepincreasemail');
         $to = $buyer->getEmail();
+        $toSeller = $seller->getEmail();
         $username = $buyer->getUsername();
+        $usernameSeller = $seller->getUsername();
         $subscribe = $buyer->getSubscribe();
+        $subscribeSeller = $buyer->getSubscribe();
 
         $step = $dataorder->getStep();
 
@@ -180,6 +185,10 @@ class AdminController extends Controller
             {
                 $mail->SendRightMail($currentStep, $to, $username);
             }
+            if ($subscribeSeller == true)
+            {
+                $mail->SendSellerRightMail($currentStep, $toSeller, $usernameSeller);
+            }
         }
         else
         {
@@ -189,23 +198,6 @@ class AdminController extends Controller
         return $this->redirectToRoute('victor_ad_order');
     }
 
-    public function sendAction($id)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $order = $em->getRepository('VictorAdBundle:Offer');
-        $user = $em->getRepository('VictorUserBundle:User');
-        $datetime = new \DateTime();
-
-        $dataorder = $order->find($id);
-        $sum = $dataorder->getPrice();
-        $userID = $dataorder->getBuyer();
-        $userSell = $dataorder->getUser();
-        $buyer = $user->find($userID);
-        $seller = $user->find($userSell);
-
-
-
-    }
 
     public function cancelAction($id)
     {

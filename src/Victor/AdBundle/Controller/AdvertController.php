@@ -145,12 +145,17 @@ class AdvertController extends Controller
             $em->flush();
 
 
-            return $this->redirectToRoute('victor_core_home');
+            return $this->redirectToRoute('victor_ad_afterselloffer');
 
         }
 
 
         return $this->render('@VictorAd/Advert/selloffer.html.twig', array('phone'=>$phone, 'form' => $form->createView()));
+    }
+
+    public function aftersellofferAction()
+    {
+        return $this->render('@VictorAd/Advert/afterselloffer.html.twig');
     }
 
     /**

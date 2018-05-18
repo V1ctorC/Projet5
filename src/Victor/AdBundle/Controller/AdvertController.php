@@ -211,7 +211,7 @@ class AdvertController extends Controller
         $charge = \Stripe\Charge::create([
             'amount' => $price,
             'currency' => 'eur',
-            'description' => 'Deuxieme exemple',
+            'description' => 'Achat téléphone',
             'source' => $token,
         ]);
         if ($buyerSubscribe == true)

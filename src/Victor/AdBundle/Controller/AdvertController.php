@@ -218,8 +218,10 @@ class AdvertController extends Controller
         {
             $mailer->sendPayMail($buyerMail, $buyerUsername);
         }
-
-        $mailer->sendsoldMail($sellerMail, $sellerUsername, $phoneModel);
+        if ($sellerSubscribe == true)
+        {
+            $mailer->sendsoldMail($sellerMail, $sellerUsername, $phoneModel);
+        }
 
         return $this->redirectToRoute('victor_core_home');
     }

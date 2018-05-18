@@ -42,7 +42,7 @@
                         <p>{{ payment.user.phone }}</p>
                     </div>
                     <div id="paymentAction">
-                        <p>Montant : <b>{{ payment.price }}€</b></p>
+                        <p>Montant : <b>{{ payment.price * 0.9}}€</b></p>
                         <a href="{{ path('victor_ad_paymentsend', {'id': payment.id} ) }}"><input type="button" class="persoButton" value="Chèque envoyé"></a>
                     </div>
                 </div>

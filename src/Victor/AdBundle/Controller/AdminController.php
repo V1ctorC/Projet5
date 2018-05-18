@@ -277,7 +277,7 @@ class AdminController extends Controller
         $seller = $user->find($userID);
 
         $mail = $this->get('victor_ad.mailer');
-        $price = $paidoffer->getPrice();
+        $price = ($paidoffer->getPrice())*0.9;
         $username = $seller->getUsername();
         $email = $seller->getEmail();
         $subscribe = $seller->getSubscribe();

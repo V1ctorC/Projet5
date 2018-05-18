@@ -152,7 +152,7 @@ class AccountController extends Controller
 
         foreach ($listOfferToPay as $offerToPay)
         {
-            $sum = $sum + $offerToPay->getPrice();
+            $sum = ($sum + $offerToPay->getPrice())*0.9;
         }
 
         return $this->render('@VictorAd/Account/wallet.html.twig', array('sum'=>$sum));
@@ -171,7 +171,7 @@ class AccountController extends Controller
 
         foreach ($listOfferToPay as $offerToPay)
         {
-            $sum = $sum + $offerToPay->getPrice();
+            $sum = ($sum + $offerToPay->getPrice())*0.9;
         }
 
         return $this->render('@VictorAd/Account/confirmwallet.html.twig', array('user'=>$user, 'sum'=>$sum));

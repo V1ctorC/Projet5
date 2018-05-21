@@ -4,20 +4,42 @@
 
     <h2>Vos ventes</h2>
 
-    {% for sale in listSales %}
+    {% if listSales == null %}
 
-        <div class="sales container-fluid">
+    <p>Vous n'avez actuellement rien vendu</p>
 
-            {{ sale.phone.brand }} <br />
-            {{ sale.phone.model }} <br />
-            {{ sale.phone.capacity }} <br />
-            {{ sale.phone.color }} <br />
+    {% else %}
 
-            Au prix de : {{ sale.price }}€ <br />
+        <div class="table-responsive">
 
-            Vous pouvez acceder au suivi de vos vente : <a href="{{ path('victor_ad_ordertracking',{'id': sale.id}) }}">ici</a>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>Vente n°</th>
+                    <th>Marque</th>
+                    <th>Modèle</th>
+                    <th>Capacité</th>
+                    <th>Couleur</th>
+                    <th>Prix</th>
+                    <th>Suivi</th>
+                </tr>
+
+            {% for sale in listSales %}
+
+                <tr>
+                    <td>{{ sale.id }}</td>
+                    <td>{{ sale.phone.brand }}</td>
+                    <td>{{ sale.phone.model }}</td>
+                    <td>{{ sale.phone.capacity }}</td>
+                    <td>{{ sale.phone.color }}</td>
+                    <td>{{ sale.price }}</td>
+                    <td><a href="{{ path('victor_ad_ordertracking',{'id': sale.id}) }}">Suivi</a></td>
+                </tr>
+
+            {% endfor %}
+
+            </table>
         </div>
 
-    {% endfor %}
+    {% endif %}
 
 {% endblock %}

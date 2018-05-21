@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af6761b9-47cf-4f15-8481-960258f01b61" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/account.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/account.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/currentoffer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/currentoffer.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/sales.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/sales.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,7 +32,7 @@
       <file leaf-file-name="AccountController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1065">
+            <state relative-caret-position="736">
               <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
               <folding>
                 <element signature="e#46#103#0#PHP" expanded="true" />
@@ -43,20 +41,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sales.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/sales.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="currentoffer.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="currentoffer.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/currentoffer.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+            <state relative-caret-position="239">
+              <caret line="47" column="83" selection-start-line="47" selection-start-column="83" selection-end-line="47" selection-end-column="83" />
+              <folding>
+                <element signature="e#1258#1278#0#HTML" expanded="true" />
+                <element signature="e#1978#1985#1#HTML" expanded="true" />
+                <element signature="e#2597#2617#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,17 +58,8 @@
       <file leaf-file-name="admin.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/admin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sellviewphone.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/sellviewphone.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="44" />
+            <state relative-caret-position="216">
+              <caret line="64" column="119" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="119" />
             </state>
           </provider>
         </entry>
@@ -82,26 +67,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/bundles/victorad/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7605">
-              <caret line="507" column="13" selection-start-line="507" selection-start-column="13" selection-end-line="507" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Victor/CoreBundle/Resources/views/layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1590">
-              <caret line="106" column="93" selection-start-line="106" selection-start-column="93" selection-end-line="106" selection-end-column="93" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register_content.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1245">
-              <caret line="83" column="26" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
+            <state>
+              <caret line="128" column="20" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -173,12 +140,12 @@
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdvertController.php" />
         <option value="$PROJECT_DIR$/src/Victor/CoreBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" />
-        <option value="$PROJECT_DIR$/web/bundles/victorad/css/style.css" />
         <option value="$PROJECT_DIR$/web/bundles/victorad/js/script.js" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/account.html.twig" />
-        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/currentoffer.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/sales.html.twig" />
+        <option value="$PROJECT_DIR$/web/bundles/victorad/css/style.css" />
+        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/currentoffer.html.twig" />
       </list>
     </option>
   </component>
@@ -689,12 +656,12 @@
       <workItem from="1526475163817" duration="6533000" />
       <workItem from="1526550174952" duration="7234000" />
       <workItem from="1526630419324" duration="10190000" />
-      <workItem from="1526893603417" duration="3799000" />
+      <workItem from="1526893603417" duration="4658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="375929000" />
+    <option name="totallyTimeSpent" value="376788000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1008,13 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/victorad/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7605">
-          <caret line="507" column="13" selection-start-line="507" selection-start-column="13" selection-end-line="507" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/buyviewphone.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-353">
@@ -1041,20 +1001,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/sellviewphone.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/admin.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/account.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1062,9 +1008,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/sales.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-194">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/victorad/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="128" column="20" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/sellviewphone.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
+        <state relative-caret-position="736">
           <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
           <folding>
             <element signature="e#46#103#0#PHP" expanded="true" />
@@ -1072,17 +1039,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/currentoffer.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/admin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        <state relative-caret-position="216">
+          <caret line="64" column="119" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="119" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/sales.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/currentoffer.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="239">
+          <caret line="47" column="83" selection-start-line="47" selection-start-column="83" selection-end-line="47" selection-end-column="83" />
+          <folding>
+            <element signature="e#1258#1278#0#HTML" expanded="true" />
+            <element signature="e#1978#1985#1#HTML" expanded="true" />
+            <element signature="e#2597#2617#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

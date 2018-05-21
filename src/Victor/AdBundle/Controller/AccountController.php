@@ -59,11 +59,6 @@ class AccountController extends Controller
             array('user' => $user, 'sold' => 1)
         );
 
-        if (empty($listSales))
-        {
-            throw new NotFoundHttpException("Vous n'avez rien vendu");
-        }
-
         return $this->render('@VictorAd/Account/sales.html.twig', array('listSales'=>$listSales));
     }
 

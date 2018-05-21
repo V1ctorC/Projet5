@@ -20,9 +20,10 @@
             Capacité : {{ purchase.phone.capacity }} Go
             <img src="{{ purchase.phone.image.url }}" class="imgPhone">
 
-            Prix : {{ purchase.price }}
             <hr />
-            Commande numéro : {{ purchase.id }} <br />
+            Prix : {{ purchase.price }}€ <br />
+            Acheté le : {{ purchase.saledate | date('d/m/Y') }} <br />
+            Commande numéro : <b>{{ purchase.id }}</b> <br />
             <a href="{{ path('victor_ad_ordertracking',{'id': purchase.id}) }}">Suivi de la commande</a>
         </div>
 

@@ -71,11 +71,6 @@ class AccountController extends Controller
             array('user' => $user, 'sold' => 0)
         );
 
-        if (empty($listCurrentoffer))
-        {
-            throw new NotFoundHttpException("Vous n'avez aucune vente en cours");
-        }
-
         return $this->render('@VictorAd/Account/currentoffer.html.twig', array('listCurrentoffer'=>$listCurrentoffer));
     }
 

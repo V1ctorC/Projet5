@@ -2,24 +2,46 @@
 
 {% block body %}
 
-    {% for currentoffer in listCurrentoffer %}
+    <h2>Vos offre en cours :</h2>
 
-        Vos ventes en cours : <br />
+    {% if listCurrentoffer == null %}
 
-        {{ currentoffer.phone.brand }} <br />
-        {{ currentoffer.phone.model }} <br />
-        {{ currentoffer.phone.capacity }} <br />
-        {{ currentoffer.phone.color }} <br />
+        <p>Vous n'avez actuellement aucune annonce en cours</p>
 
-        Au prix de : <br />
+    {% else %}
 
-        {{ currentoffer.price }}€
+        <div class="table-responsive">
 
-        <hr>
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>Vente n°</th>
+                    <th>Marque</th>
+                    <th>Modèle</th>
+                    <th>Capacité</th>
+                    <th>Couleur</th>
+                    <th>Prix</th>
+                    <th>Modifier</th>
+                    <th>Supprimer</th>
+                </tr>
 
-        <a href="{{ path('victor_ad_deleteoffer', {'id': currentoffer.id}) }}"><input type="button" class="persoButton" value="Supprimer cette offre"></a>
-        <a href="{{ path('victor_ad_editoffer', {'id': currentoffer.id}) }}"><input type="button" class="persoButton" value="Modifier l'offre"></a>
+                {% for currentoffer in listCurrentoffer %}
 
-    {% endfor %}
+                    <tr>
+                        <td>{{ currentoffer.id }}</td>
+                        <td>{{ currentoffer.phone.brand }}</td>
+                        <td>{{ currentoffer.phone.model }}</td>
+                        <td>{{ currentoffer.phone.capacity }}Go</td>
+                        <td>{{ currentoffer.phone.color }}</td>
+                        <td>{{ currentoffer.price }}€</td>
+                        <td><a href="{{ path('victor_ad_editoffer', {'id': currentoffer.id}) }}"><input type="button" class="persoButton" value="Modifier l'offre"></a></td>
+                        <td><a href="{{ path('victor_ad_deleteoffer', {'id': currentoffer.id}) }}"><input type="button" class="persoButton" value="Supprimer cette offre"></a></td>
+                    </tr>
+
+                {% endfor %}
+
+            </table>
+        </div>
+
+    {% endif %}
 
 {% endblock %}

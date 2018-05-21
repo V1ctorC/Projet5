@@ -2,7 +2,7 @@
 
 {% block body %}
 
-    <h2>Vos ventes</h2>
+    <h2>Vos ventes :</h2>
 
     {% if listSales == null %}
 
@@ -29,9 +29,9 @@
                     <td>{{ sale.id }}</td>
                     <td>{{ sale.phone.brand }}</td>
                     <td>{{ sale.phone.model }}</td>
-                    <td>{{ sale.phone.capacity }}</td>
+                    <td>{{ sale.phone.capacity }}Go</td>
                     <td>{{ sale.phone.color }}</td>
-                    <td>{{ sale.price }}</td>
+                    <td>{{ sale.price }}€</td>
                     <td><a href="{{ path('victor_ad_ordertracking',{'id': sale.id}) }}">Suivi</a></td>
                 </tr>
 

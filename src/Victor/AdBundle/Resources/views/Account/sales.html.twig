@@ -2,23 +2,21 @@
 
 {% block body %}
 
+    <h2>Vos ventes</h2>
+
     {% for sale in listSales %}
 
-        Vos ventes : <br />
+        <div class="sales container-fluid">
 
-        {{ sale.phone.brand }} <br />
-        {{ sale.phone.model }} <br />
-        {{ sale.phone.capacity }} <br />
-        {{ sale.phone.color }} <br />
+            {{ sale.phone.brand }} <br />
+            {{ sale.phone.model }} <br />
+            {{ sale.phone.capacity }} <br />
+            {{ sale.phone.color }} <br />
 
-        Au prix de : <br />
+            Au prix de : {{ sale.price }}€ <br />
 
-        {{ sale.price }}€
-
-        Vous pouvez acceder au suivi de vos vente : <a href="{{ path('victor_ad_ordertracking',{'id': sale.id}) }}">ici</a>
-
-        <hr>
-
+            Vous pouvez acceder au suivi de vos vente : <a href="{{ path('victor_ad_ordertracking',{'id': sale.id}) }}">ici</a>
+        </div>
 
     {% endfor %}
 

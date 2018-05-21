@@ -77,15 +77,15 @@ document.getElementById('fos_user_registration_form_plainPassword_first').addEve
 
 function errorBlock()
 {
-    if (mailfield.innerHTML === "success")
+    if ((mailfield.innerHTML === "success") || (mailfield.innerHTML === ""))
     {
-        if (usernamefield.innerHTML === "success")
+        if ((usernamefield.innerHTML === "success") || (usernamefield.innerHTML === ""))
         {
-            if (passwordfield.innerHTML === "success")
+            if ((passwordfield.innerHTML === "success") || (passwordfield.innerHTML === ""))
             {
-                if (zipCodefield.innerHTML === "success")
+                if ((zipCodefield.innerHTML === "success") || (zipCodefield.innerHTML === ""))
                 {
-                    if (phonefield.innerHTML === "success")
+                    if ((phonefield.innerHTML === "success") || (phonefield.innerHTML === ""))
                     {
                         errorfield.style.display = "none";
                     }

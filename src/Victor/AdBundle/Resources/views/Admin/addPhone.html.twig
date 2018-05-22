@@ -24,9 +24,32 @@
 
     <div id="addPhone">
 
-        <h3>Ajouter un nouveau mobile</h3>
+        <h2>Ajouter un nouveau mobile</h2>
 
-        {{ form(form) }}
+        <p>Un nouveau téléphone est sorti ? C'est le moment de le rajouter :)</p>
+
+        {{ form_start(form) }}
+
+        <div id="addPhone" class="container block-register" >
+            <h3>Les informations concernant le téléphone</h3>
+            {{ form_row(form.brand) }}
+            {{ form_row(form.model) }}
+            {{ form_row(form.capacity) }}
+            {{ form_row(form.color) }}
+        </div>
+
+        <div id="addImage" class="container block-register">
+            <h3>Il suffit de rajouter une petite image et le tour est joué</h3>
+            {{ form_row(form.image.url) }}
+            {{ form_row(form.image.alt) }}
+        </div>
+        <div id="submitAddPhone" class="container">
+            {{ form_widget(form.save, {'attr': {'class': 'persoButton'}}) }}
+        </div>
+
+        {{ form_rest(form) }}
+
+        {{ form_end(form) }}
 
     </div>
 

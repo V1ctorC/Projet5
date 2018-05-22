@@ -25,16 +25,16 @@
 
         {% for payment in listPaymentWaiting %}
 
-            <div id="block-paymentWaiting" class="contrainer-fluid" style="border: 2px solid red">
+            <div id="block-paymentWaiting" class="contrainer-fluid">
                 <div id="paymentUsername">
                     {{ payment.user.username }}
                 </div>
-                <div id="paymentPrice">
-                    {{ payment.id }}
+                <div id="paymentID">
+                    Commande n° {{ payment.id }}
                 </div>
                 <div id="paymentInfos">
                     <div id="userData">
-                        <h3>Infos</h3>
+                        <h3>Infos :</h3>
                         <p>{{ payment.user.firstname }} {{ payment.user.lastname }}</p>
                         <p>{{ payment.user.address }}<br />
                             {{ payment.user.zipcode }}{{ payment.user.city }}<br />
@@ -42,8 +42,8 @@
                         <p>{{ payment.user.phone }}</p>
                     </div>
                     <div id="paymentAction">
-                        <p>Montant : <b>{{ payment.price * 0.9}}€</b></p>
-                        <a href="{{ path('victor_ad_paymentsend', {'id': payment.id} ) }}"><input type="button" class="persoButton" value="Chèque envoyé"></a>
+                        <p style="font-size: 2em">Montant : <b>{{ payment.price * 0.9}}€</b></p>
+                        <a href="{{ path('victor_ad_paymentsend', {'id': payment.id} ) }}"><input type="button" class="persoButton" value="Envoyé" style="margin: auto"></a>
                     </div>
                 </div>
             </div>

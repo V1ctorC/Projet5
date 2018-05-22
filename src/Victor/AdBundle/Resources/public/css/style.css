@@ -399,6 +399,8 @@ td, th /* Mettre une bordure sur les td ET les th */
     justify-content: center;
 }
 
+
+
 /* Footer */
 
 
@@ -528,15 +530,21 @@ footer
     border-top-right-radius: 0;
 }
 
+#block-paymentWaiting
+{
+    margin-top: 15px;
+    border: 3px solid #D3D3D3;
+}
+
 #paymentUsername
 {
-    border: 2px solid purple;
     text-align: center;
 }
 
-#paymentPrice
+#paymentID
 {
-    border: 2px solid green;
+    border-top: 1px solid  #D3D3D3;
+    border-bottom: 1px solid  #D3D3D3;
     text-align: center;
     font-size: 2em;
     font-weight: bold;
@@ -550,13 +558,14 @@ footer
 
 #userData
 {
-    border: 2px solid yellow;
+    border-right: 1px solid #D3D3D3;
     width: 60%;
     text-align: center;
 }
 
 #paymentAction
 {
-    border: 2px solid blue;
     width: 40%;
+    text-align: center;
+    margin: auto;
 }

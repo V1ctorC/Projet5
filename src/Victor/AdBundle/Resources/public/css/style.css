@@ -386,6 +386,13 @@ td, th /* Mettre une bordure sur les td ET les th */
     margin-bottom: 20px;
 }
 
+#infomessage
+{
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
 /* Footer */
 
 

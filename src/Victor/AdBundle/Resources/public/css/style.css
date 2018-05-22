@@ -378,6 +378,13 @@ td, th /* Mettre une bordure sur les td ET les th */
     background-color: #edf9de;
 }
 
+.problem-register
+{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
 /* Footer */
 
 

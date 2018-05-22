@@ -3,8 +3,7 @@
 <h2>Nous rejoindre</h2>
 
 <div class="container">
-
-    <form name="fos_user_registration_form" method="post" action="{{ path('fos_user_registration_register') }}" class="fos_user_registration_register">
+<!--
     <div id="fos_user_registration_form">
 
         <div class="container block-register">
@@ -70,11 +69,54 @@
         <input type="submit" value="{{ 'registration.submit'|trans }}" id="registerButton" class="persoButton"/>
     </div>
 
-    </form>
-
-</div>
 
 
+
+</div> -->
+
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+
+    <div class="container block-register">
+        <h3>Votre compte</h3>
+        {{ form_row(form.email) }}
+        {{ form_row(form.username) }}
+        {{ form_row(form.plainPassword) }}
+    </div>
+
+    <div class="container block-register">
+        <h3>Votre identité</h3>
+        {{ form_row(form.gender) }}
+        {{ form_row(form.firstname) }}
+        {{ form_row(form.lastname) }}
+    </div>
+
+    <div class="container block-register">
+        <h3>Vos infos</h3>
+        {{ form_row(form.address) }}
+        {{ form_row(form.zipcode) }}
+        {{ form_row(form.city) }}
+        {{ form_row(form.country) }}
+        {{ form_row(form.phone) }}
+    </div>
+
+    <div id="information" class="alert alert-danger problem-register" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        Formulaire invalide pour la/les raison(s) suivante(s) :
+        <div id="mailProblem"></div>
+        <div id="usernameProblem"></div>
+        <div id="passwordProblem"></div>
+        <div id="zipCodeProblem"></div>
+        <div id="phoneProblem"></div>
+    </div>
+
+    <div>
+        <input type="submit" value="{{ 'registration.submit'|trans }}" id="registerButton" class="persoButton"/>
+    </div>
+
+    {{ form_rest(form) }}
+
+{{ form_end(form) }}
 
 <script>
 var field = "";

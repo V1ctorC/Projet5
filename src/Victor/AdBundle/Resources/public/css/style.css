@@ -375,6 +375,7 @@ td, th /* Mettre une bordure sur les td ET les th */
     border-radius: 10px;
     width: 90%;
     margin-bottom: 20px;
+    padding-bottom: 10px;
     background-color: #edf9de;
 }
 

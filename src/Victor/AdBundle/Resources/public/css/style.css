@@ -197,7 +197,7 @@ th
     padding-left: 10px;
 }
 
-#listPhone
+.listPhone
 {
     display: flex;
     flex-wrap: wrap;

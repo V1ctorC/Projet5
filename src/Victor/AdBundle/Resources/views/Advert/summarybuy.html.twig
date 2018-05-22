@@ -18,7 +18,7 @@
         <hr>
 
         <p>L'offre que vous avez selectionné est à <span id="offerview">{{ offer.price }}€</span>,
-        si cela vous conviens, nous pouvons passer au paiement :)</p>
+        si cela vous convient, nous pouvons passer au paiement :)</p>
         <div id="paiementButton">
             <form action="{{ path('victor_ad_ordercheckout',{'offerid': offer.id} ) }}" method="POST" id="payform">
                 <script

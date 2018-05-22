@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af6761b9-47cf-4f15-8481-960258f01b61" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order2.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/bundles/victorad/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/bundles/victorad/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,11 +42,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register_content.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="register_content.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="80" column="6" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
+            <state relative-caret-position="199">
+              <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/bundles/victorad/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="373" column="1" selection-start-line="373" selection-start-column="1" selection-end-line="373" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -125,7 +133,6 @@
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/account.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/sales.html.twig" />
-        <option value="$PROJECT_DIR$/web/bundles/victorad/css/style.css" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/currentoffer.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/buyview.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/purchases.html.twig" />
@@ -134,6 +141,7 @@
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order2.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" />
+        <option value="$PROJECT_DIR$/web/bundles/victorad/css/style.css" />
       </list>
     </option>
   </component>
@@ -646,12 +654,12 @@
       <workItem from="1526630419324" duration="10190000" />
       <workItem from="1526893603417" duration="5550000" />
       <workItem from="1526913598382" duration="2061000" />
-      <workItem from="1526978123163" duration="1378000" />
+      <workItem from="1526978123163" duration="2464000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="381119000" />
+    <option name="totallyTimeSpent" value="382205000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -989,13 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/victorad/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="79" column="1" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
@@ -1036,8 +1037,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="80" column="6" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
+        <state relative-caret-position="199">
+          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/victorad/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="373" column="1" selection-start-line="373" selection-start-column="1" selection-end-line="373" selection-end-column="1" />
         </state>
       </provider>
     </entry>

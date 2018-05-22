@@ -24,42 +24,55 @@
 
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
     <div id="fos_user_registration_form">
-        <div class="form-group">
-            <label class="control-label required" for="fos_user_registration_form_email">Adresse e-mail</label>
-            <input type="email" id="fos_user_registration_form_email" name="fos_user_registration_form[email]" required="required" class="form-control" /></div>
-        <div class="form-group">
-            <label class="control-label required" for="fos_user_registration_form_username">Nom d&#039;utilisateur</label>
-            <input type="text" id="fos_user_registration_form_username" name="fos_user_registration_form[username]" required="required" maxlength="180" pattern=".{2,}" class="form-control" />
+
+        <div class="container block-register">
+            <h3>Votre compte</h3>
+            <div class="form-group">
+                <label class="control-label required" for="fos_user_registration_form_email">Adresse e-mail</label>
+                <input type="email" id="fos_user_registration_form_email" name="fos_user_registration_form[email]" required="required" class="form-control" /></div>
+            <div class="form-group">
+                <label class="control-label required" for="fos_user_registration_form_username">Nom d&#039;utilisateur</label>
+                <input type="text" id="fos_user_registration_form_username" name="fos_user_registration_form[username]" required="required" maxlength="180" pattern=".{2,}" class="form-control" />
+            </div>
+            <div class="form-group"><label class="control-label required" for="fos_user_registration_form_plainPassword_first">Mot de passe</label>
+                <input type="password" id="fos_user_registration_form_plainPassword_first" name="fos_user_registration_form[plainPassword][first]" required="required" autocomplete="new-password" class="form-control" />
+            </div>
+            <div class="form-group"><label class="control-label required" for="fos_user_registration_form_plainPassword_second">Répéter le mot de passe</label>
+                <input type="password" id="fos_user_registration_form_plainPassword_second" name="fos_user_registration_form[plainPassword][second]" required="required" autocomplete="new-password" class="form-control" />
+            </div>
         </div>
-        <div class="form-group"><label class="control-label required" for="fos_user_registration_form_plainPassword_first">Mot de passe</label>
-            <input type="password" id="fos_user_registration_form_plainPassword_first" name="fos_user_registration_form[plainPassword][first]" required="required" autocomplete="new-password" class="form-control" />
+
+        <div class="container block-register">
+            <h3>Votre identité</h3>
+            <div class="form-group"><label class="control-label required" for="fos_user_registration_form_gender">Sexe</label>
+                <select id="fos_user_registration_form_gender" name="fos_user_registration_form[gender]" class="form-control"><option value="Homme">Homme</option><option value="Femme">Femme</option></select>
+            </div>
+            <div class="form-group"><label class="control-label required" for="fos_user_registration_form_firstname">Prénom</label>
+                <input type="text" id="fos_user_registration_form_firstname" name="fos_user_registration_form[firstname]" required="required" class="form-control" />
+            </div>
+            <div class="form-group"><label class="control-label required" for="fos_user_registration_form_lastname">Nom</label>
+                <input type="text" id="fos_user_registration_form_lastname" name="fos_user_registration_form[lastname]" required="required" class="form-control" />
+            </div>
         </div>
-        <div class="form-group"><label class="control-label required" for="fos_user_registration_form_plainPassword_second">Répéter le mot de passe</label>
-            <input type="password" id="fos_user_registration_form_plainPassword_second" name="fos_user_registration_form[plainPassword][second]" required="required" autocomplete="new-password" class="form-control" />
+
+        <div class="container block-register">
+            <h3>Vos infos</h3>
+            <div class="form-group"><label class="control-label required" for="fos_user_registration_form_address">Adresse</label>
+                <input type="text" id="fos_user_registration_form_address" name="fos_user_registration_form[address]" required="required" class="form-control" /></div>
+            <div class="form-group"><label class="control-label required" for="fos_user_registration_form_zipcode">Code Postal</label>
+                <input type="number" id="fos_user_registration_form_zipcode" name="fos_user_registration_form[zipcode]" required="required" class="form-control" />
+            </div>
+            <div class="form-group"><label class="control-label required" for="fos_user_registration_form_city">Ville</label>
+                <input type="text" id="fos_user_registration_form_city" name="fos_user_registration_form[city]" required="required" class="form-control" />
+            </div>
+            <div class="form-group"><label class="control-label required" for="fos_user_registration_form_country">Pays</label>
+                <select id="fos_user_registration_form_country" name="fos_user_registration_form[country]" class="form-control"><option value="France">France</option></select>
+            </div>
+            <div class="form-group"><label class="control-label required" for="fos_user_registration_form_phone">Téléphone portable</label>
+                <input type="text" id="fos_user_registration_form_phone" name="fos_user_registration_form[phone]" required="required" class="form-control" />
+            </div>
         </div>
-        <div class="form-group"><label class="control-label required" for="fos_user_registration_form_gender">Sexe</label>
-            <select id="fos_user_registration_form_gender" name="fos_user_registration_form[gender]" class="form-control"><option value="Homme">Homme</option><option value="Femme">Femme</option></select>
-        </div>
-        <div class="form-group"><label class="control-label required" for="fos_user_registration_form_firstname">Prénom</label>
-            <input type="text" id="fos_user_registration_form_firstname" name="fos_user_registration_form[firstname]" required="required" class="form-control" />
-        </div>
-        <div class="form-group"><label class="control-label required" for="fos_user_registration_form_lastname">Nom</label>
-            <input type="text" id="fos_user_registration_form_lastname" name="fos_user_registration_form[lastname]" required="required" class="form-control" />
-        </div>
-        <div class="form-group"><label class="control-label required" for="fos_user_registration_form_address">Adresse</label>
-            <input type="text" id="fos_user_registration_form_address" name="fos_user_registration_form[address]" required="required" class="form-control" /></div>
-        <div class="form-group"><label class="control-label required" for="fos_user_registration_form_zipcode">Code Postal</label>
-            <input type="number" id="fos_user_registration_form_zipcode" name="fos_user_registration_form[zipcode]" required="required" class="form-control" />
-        </div>
-        <div class="form-group"><label class="control-label required" for="fos_user_registration_form_city">Ville</label>
-            <input type="text" id="fos_user_registration_form_city" name="fos_user_registration_form[city]" required="required" class="form-control" />
-        </div>
-        <div class="form-group"><label class="control-label required" for="fos_user_registration_form_country">Pays</label>
-            <select id="fos_user_registration_form_country" name="fos_user_registration_form[country]" class="form-control"><option value="France">France</option></select>
-        </div>
-        <div class="form-group"><label class="control-label required" for="fos_user_registration_form_phone">Téléphone portable</label>
-            <input type="text" id="fos_user_registration_form_phone" name="fos_user_registration_form[phone]" required="required" class="form-control" />
-        </div>
+
         <input type="hidden" id="fos_user_registration_form__token" name="fos_user_registration_form[_token]" value="p4Mu7ijXACjpnHo3ZmEB3Yi2EaJc0IzmfboGHv2EsXc" /></div>
 
     <div id="information" class="alert alert-danger" role="alert">

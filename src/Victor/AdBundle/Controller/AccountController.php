@@ -42,11 +42,6 @@ class AccountController extends Controller
             array('id' => 'desc')
         );
 
-        if (empty($listPurchases))
-        {
-            throw new NotFoundHttpException("Aucun achat");
-        }
-
         return $this->render('@VictorAd/Account/purchases.html.twig', array('listPurchases'=>$listPurchases));
     }
 

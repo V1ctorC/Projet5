@@ -1,8 +1,54 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
+<h2>Modifier vos informations</h2>
+
 {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
-    {{ form_widget(form) }}
+    <!-- form_widget(form)
     <div>
         <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
-    </div>
+    </div>-->
+
+<div class="container block-register">
+    <h3>Votre compte</h3>
+    {{ form_row(form.email) }}
+    {{ form_row(form.username) }}
+</div>
+
+<div class="container block-register">
+    <h3>Votre identité</h3>
+    {{ form_row(form.gender) }}
+    {{ form_row(form.firstname) }}
+    {{ form_row(form.lastname) }}
+</div>
+
+<div class="container block-register">
+    <h3>Vos infos</h3>
+    {{ form_row(form.address) }}
+    {{ form_row(form.zipcode) }}
+    {{ form_row(form.city) }}
+    {{ form_row(form.country) }}
+    {{ form_row(form.phone) }}
+</div>
+
+<div id="information" class="alert alert-danger problem-register" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    Formulaire invalide pour la/les raison(s) suivante(s) :
+    <div id="mailProblem"></div>
+    <div id="usernameProblem"></div>
+    <div id="passwordProblem"></div>
+    <div id="zipCodeProblem"></div>
+    <div id="phoneProblem"></div>
+</div>
+
+<div class="container block-register">
+    <h3>Mot de passe</h3>
+    <p><em>Pour valider les modifications vous devez écrire votre mot de passe ici</em></p>
+    {{ form_row(form.current_password) }}
+</div>
+
+<div>
+    <input type="submit" value="{{ 'profile.edit.submit'|trans }}" id="registerButton" class="persoButton"/>
+</div>
+{{ form_rest(form) }}
+
 {{ form_end(form) }}

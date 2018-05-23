@@ -43,7 +43,25 @@
                     </div>
                     <div id="paymentAction">
                         <p style="font-size: 2em">Montant : <b>{{ payment.price * 0.9}}0€</b></p>
-                        <a href="{{ path('victor_ad_paymentsend', {'id': payment.id} ) }}"><input type="button" class="persoButton" value="Envoyé" style="margin: auto"></a>
+                        <a data-toggle="modal" href="#pay{{ payment.id }}"><input type="button" class="persoButton" value="Envoyé" style="margin: auto"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="pay{{ payment.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Paiement</h4>
+                        </div>
+                        <div class="modal-body">
+                            Avez-vous bien envoyé le paiement pour la commmande n°<b>{{ payment.id }}</b>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="{{ path('victor_ad_paymentsend', {'id': payment.id} ) }}"><input type="button" class="btn btn-primary" value="Envoyé" style="margin: auto"></a>
+                        </div>
                     </div>
                 </div>
             </div>

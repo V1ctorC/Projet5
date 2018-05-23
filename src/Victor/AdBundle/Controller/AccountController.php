@@ -194,7 +194,7 @@ class AccountController extends Controller
 
         $mail->sendRequestMail($customerMail, $customerUsername);
 
-        return $this->redirectToRoute('victor_ad_account');
+        return $this->render('@VictorAd/Account/afterwalletrequest.html.twig');
 
     }
 

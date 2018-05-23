@@ -180,7 +180,7 @@ class AccountController extends Controller
         $customerUsername = $customer->getUsername();
 
         $listOfferToPay = $offer->findBy(
-            array('user'=> $user, 'topay'=> 1, 'paid'=> 0, 'payrequest'=>0)
+            array('user'=> $userID, 'topay'=> 1, 'paid'=> 0, 'payrequest'=>0)
         );
 
         foreach ($listOfferToPay as $offerToPay)

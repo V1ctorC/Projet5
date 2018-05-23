@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af6761b9-47cf-4f15-8481-960258f01b61" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Mail/RequestMail.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Mailer/Mailer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Mailer/Mailer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/paymentwaiting.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/paymentwaiting.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,8 +21,8 @@
       <file leaf-file-name="AccountController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="194" column="65" selection-start-line="194" selection-start-column="65" selection-end-line="194" selection-end-column="65" />
+            <state relative-caret-position="222">
+              <caret line="187" column="42" lean-forward="true" selection-start-line="187" selection-start-column="42" selection-end-line="187" selection-end-column="42" />
               <folding>
                 <element signature="e#46#103#0#PHP" expanded="true" />
                 <element signature="e#5230#5253#1#PHP" expanded="true" />
@@ -35,7 +34,7 @@
       <file leaf-file-name="Mailer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Mailer/Mailer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
+            <state relative-caret-position="331">
               <caret line="114" column="79" selection-start-line="114" selection-start-column="79" selection-end-line="114" selection-end-column="79" />
               <folding>
                 <element signature="e#3551#3589#0#PHP" expanded="true" />
@@ -126,7 +125,6 @@
         <option value="$PROJECT_DIR$/web/bundles/victorad/css/style.css" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/public/css/style.css" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Mail/PostSellerMail.html.twig" />
-        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/paymentwaiting.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/wallet.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/currentoffer.html.twig" />
@@ -135,6 +133,7 @@
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Account/confirmwallet.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Mail/RequestMail.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Mailer/Mailer.php" />
+        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/paymentwaiting.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php" />
       </list>
     </option>
@@ -650,12 +649,12 @@
       <workItem from="1526913598382" duration="2061000" />
       <workItem from="1526978123163" duration="11561000" />
       <workItem from="1527015983185" duration="1175000" />
-      <workItem from="1527063101876" duration="798000" />
+      <workItem from="1527063101876" duration="1622000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="393275000" />
+    <option name="totallyTimeSpent" value="394099000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -942,13 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/paymentwaiting.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1017,10 +1009,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdminController.php">
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/paymentwaiting.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020">
-          <caret line="187" column="12" selection-start-line="187" selection-start-column="12" selection-end-line="187" selection-end-column="12" />
+        <state relative-caret-position="660">
+          <caret line="44" column="88" selection-start-line="44" selection-start-column="88" selection-end-line="44" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Mailer/Mailer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="114" column="79" selection-start-line="114" selection-start-column="79" selection-end-line="114" selection-end-column="79" />
+          <folding>
+            <element signature="e#3551#3589#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1031,20 +1033,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Mailer/Mailer.php">
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="114" column="79" selection-start-line="114" selection-start-column="79" selection-end-line="114" selection-end-column="79" />
-          <folding>
-            <element signature="e#3551#3589#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1020">
+          <caret line="187" column="12" selection-start-line="187" selection-start-column="12" selection-end-line="187" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/AccountController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="194" column="65" selection-start-line="194" selection-start-column="65" selection-end-line="194" selection-end-column="65" />
+        <state relative-caret-position="222">
+          <caret line="187" column="42" lean-forward="true" selection-start-line="187" selection-start-column="42" selection-end-line="187" selection-end-column="42" />
           <folding>
             <element signature="e#46#103#0#PHP" expanded="true" />
             <element signature="e#5230#5253#1#PHP" expanded="true" />

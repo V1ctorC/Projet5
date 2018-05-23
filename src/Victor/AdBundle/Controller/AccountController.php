@@ -172,7 +172,12 @@ class AccountController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $offer = $em->getRepository('VictorAdBundle:Offer');
-        $user = $this->getUser();
+        $user = $em->getRepository('VictorUserBundle:User');
+        $mail = $this->get('victor_ad.mailer');
+        $userID = $this->getUser();
+        $customer = $user->find($userID);
+        $customerMail = $customer->getEmail();
+        $customerUsername = $customer->getUsername();
 
         $listOfferToPay = $offer->findBy(
             array('user'=> $user, 'topay'=> 1, 'paid'=> 0, 'payrequest'=>0)
@@ -186,6 +191,8 @@ class AccountController extends Controller
 
         $em->persist($offerToPay);
         $em->flush();
+
+        $mail->sendRequestMail($customerMail, $customerUsername);
 
         return $this->redirectToRoute('victor_ad_account');
 

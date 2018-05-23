@@ -109,4 +109,12 @@ class Mailer
         $this->sendMessage($to, $subject, $body);
     }
 
+    public function sendRequestMail($to, $username)
+    {
+        $subject = "Nous avons reçu votre demande de paiement";
+        $body = $this->templating->render('@VictorAd/Mail/RequestMail.html.twig', array('username'=>$username));
+
+        $this->sendMessage($to, $subject, $body);
+    }
+
 }

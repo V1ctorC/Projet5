@@ -2,8 +2,21 @@
 
 {% block body %}
 
-    <h3>Faire sa proposition : </h3>
+    <h2>Faire sa proposition : </h2>
 
-    {{ form(form) }}
+    {{ form_start(form) }}
+
+    <div class="container block-register">
+        {{ form_row(form.price) }}
+
+        {{ form_row(form.status) }}
+
+        {{ form_row(form.description) }}
+
+    </div>
+
+    {{ form_rest(form) }}
+
+    {{ form_end(form) }}
 
 {% endblock %}

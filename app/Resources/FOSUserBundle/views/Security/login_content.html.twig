@@ -14,15 +14,18 @@
         {% endif %}
 
         <h2 class="form-signin-heading">Se connecter</h2>
+
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="text" id="inputUsername" name="_username" class="form-control" value="{{ last_username }}" placeholder="Pseudo" required autocomplete="username" autofocus>
+
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" name="_password" required="required" autocomplete="current-password" placeholder="Mot de Passe">
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" id="remember_me" name="_remember_me" value="on"> Se souvenir de moi
-            </label>
+
+        <div id="resetPassword">
+            <a href="{{ path('fos_user_resetting_request') }}">Mot de passe oublié</a>
         </div>
+
+
         <button class="persoButton" type="submit" name="_submit" style="margin: auto">Connexion</button>
     </form>
 

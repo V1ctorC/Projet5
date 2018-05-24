@@ -530,6 +530,12 @@ footer
     border-top-right-radius: 0;
 }
 
+#resetPassword
+{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 #block-paymentWaiting
 {
     margin-top: 30px;
@@ -569,3 +575,4 @@ footer
     text-align: center;
     margin: auto;
 }
+

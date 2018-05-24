@@ -16,7 +16,7 @@
                 Capacité : {{ phone.capacity }} Go
                 <img src="{{ phone.image.url }}" class="imgPhone">
                 <hr />
-                <a href="{{ path('victor_ad_buyviewphone', {'phone': phone.model, 'id': phone.id}) }}"><input type="button" class="persoButton" value="Voir les offres" style="margin: auto"></a>
+                <a href="{{ path('victor_ad_buyviewphone', {'phone': phone.model, 'id': phone.id}) }}"><input type="button" class="persoButton centerButton" value="Voir les offres"></a>
             </div>
         {% endfor %}
     </div>

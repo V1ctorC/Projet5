@@ -35,8 +35,8 @@
                         <td>{{ currentoffer.phone.capacity }}Go</td>
                         <td>{{ currentoffer.phone.color }}</td>
                         <td>{{ currentoffer.price }}€</td>
-                        <td><a href="{{ path('victor_ad_editoffer', {'id': currentoffer.id}) }}"><input type="button" class="persoButton" style="margin: auto" value="Modifier l'offre"></a></td>
-                        <td><a data-toggle="modal" href="#delete{{ currentoffer.id }}" class="persoButton">Supprimer cette offre</a></td>
+                        <td><a href="{{ path('victor_ad_editoffer', {'id': currentoffer.id}) }}"><input type="button" class="persoButton centerButton" value="Modifier l'offre"></a></td>
+                        <td><a data-toggle="modal" href="#delete{{ currentoffer.id }}"><input type="button" class="persoButton centerButton" value="Supprimer cette offre"></a></td>
                     </tr>
 
                     <div class="modal fade" id="delete{{ currentoffer.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

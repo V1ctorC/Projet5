@@ -1,5 +1,7 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
+<a href="{{ path('victor_ad_account') }}"><input type="button" class="persoButtonReturn" value="Revenir sur le compte"></a>
+
 <h2>Modifier vos informations</h2>
 
 {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}

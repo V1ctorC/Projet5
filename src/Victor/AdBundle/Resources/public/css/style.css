@@ -167,6 +167,16 @@ body
 
 }
 
+.persoButtonReturn
+{
+    border-radius:12px 0 12px 0;
+    background: #409D9B;
+    border:none;
+    color:#fff;
+    font:bold 12px Verdana;
+    padding:6px 6px 6px 6px;
+}
+
 th
 {
     background-color: white;

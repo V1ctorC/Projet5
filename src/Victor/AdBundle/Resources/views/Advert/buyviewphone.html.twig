@@ -2,7 +2,9 @@
 
 {% block victorad_body %}
 
-    <h3>Votre choix :</h3>
+    <a href="{{ path('victor_core_home') }}"><input type="button" class="persoButtonReturn" value="Revenir à l'accueil"></a>
+
+    <h2>Votre choix :</h2>
     <div class="phoneSelect center-block">
 
         <span id="brand">{{ phone.brand }} </span><br />

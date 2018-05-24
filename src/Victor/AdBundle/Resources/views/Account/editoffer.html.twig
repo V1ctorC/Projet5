@@ -5,6 +5,21 @@
     <a href="{{ path('victor_ad_account') }}"><input type="button" class="persoButtonReturn" value="Revenir sur le compte"></a>
 
     <h2>Modifier l'offre</h2>
-{{ form(form) }}
+
+    {{ form_start(form) }}
+
+    <div class="container block-register">
+        <h3>Mon offre</h3>
+        {{ form_row(form.price) }}
+
+        {{ form_row(form.status) }}
+
+        {{ form_row(form.description) }}
+
+    </div>
+
+    {{ form_rest(form) }}
+
+    {{ form_end(form) }}
 
 {% endblock %}

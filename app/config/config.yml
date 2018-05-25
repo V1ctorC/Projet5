@@ -87,7 +87,7 @@ fos_user:
             template:   FOSUserBundle:Registration:email.txt.twig
             from_email:
                 address: vetudes.noreply@gmail.com
-                sender_name: no reply
+                sender_name: Bienvenue !
         form:
             type: Victor\UserBundle\Form\RegistrationType
 
@@ -96,7 +96,7 @@ fos_user:
         email:
             from_email:
                 address:        vetudes.noreply@gmail.com
-                sender_name:    Demo Resetting
+                sender_name:    Réinitialisation du mot de passe
 
     profile:
         form:

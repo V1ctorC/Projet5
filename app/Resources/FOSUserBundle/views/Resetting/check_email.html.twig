@@ -3,7 +3,10 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block fos_user_content %}
-<p>
-{{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}
-</p>
+
+    <div class="jumbotron">
+        <h2>Email envoyé !</h2>
+        <p>Il contient un lien sur lequel il vous faudra cliquer pour réinitialiser votre mot de passe.</p>
+        <p>Remarque : Vous ne pouvez demander un nouveau mot de passe que toutes les {{ tokenLifetime }} heures.</p>
+    </div>
 {% endblock %}

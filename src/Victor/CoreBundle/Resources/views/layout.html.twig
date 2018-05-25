@@ -36,7 +36,6 @@
                         <li><a href="{{ path('victor_ad_buy') }}" class="navigation">Acheter</a> </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right" id="rightnav">
-                        <!--<li><a href="#" class="navigation">Mon compte</a></li>-->
                         {% if is_granted('ROLE_ADMIN') %}
                             <li><a href="{{ path('victor_ad_admin') }}">Administration du site</a></li>
                         {% endif %}

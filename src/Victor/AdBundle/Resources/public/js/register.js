@@ -94,16 +94,3 @@ function errorBlock()
         }
     }
 }
-
-
-
-/*function errorBlock()
-{
-    if ((mailfield.innerHTML && usernamefield.innerHTML && passwordfield.innerHTML && zipCodefield.innerHTML && phonefield.innerHTML )=== "success")
-    {
-        errorfield.style.display = "none";
-    }
-}
-
-*/
-

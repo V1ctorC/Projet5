@@ -1,11 +1,6 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 
-
-{% if error %}
-    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-{% endif %}
-
 <div class="container">
 
     <form action="{{ path("fos_user_security_check") }}" method="post" class="form-signin">
@@ -14,6 +9,13 @@
         {% endif %}
 
         <h2 class="form-signin-heading">Se connecter</h2>
+
+
+        {% if error %}
+            <div class="alert alert-danger">
+                <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            </div>
+        {% endif %}
 
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="text" id="inputUsername" name="_username" class="form-control" value="{{ last_username }}" placeholder="Pseudo" required autocomplete="username" autofocus>

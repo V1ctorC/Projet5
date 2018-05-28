@@ -168,4 +168,4 @@ ajax_check_username:
 
 victor_ad_myinfos:
     path: /account/myinfos
-    defaults: { _controller: VictorAdBundle:Account:myinfos}
+    defaults: { _controller: VictorAdBundle:Account:myinfos, _format: json }

@@ -253,11 +253,9 @@ class AccountController extends Controller
         $userID = $this->getUser();
         $user = $em->getRepository('VictorUserBundle:User')->find($userID);
 
-        $test = $user->to_json();
+        $infosJson = $user->to_json();
 
-        //var_dump($test);
-
-        return new Response($test);
+        return new Response($infosJson);
 
     }
 

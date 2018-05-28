@@ -18,6 +18,10 @@ victor_ad_afterselloffer:
     path: /aftersell
     defaults: { _controller: VictorAdBundle:Advert:afterselloffer}
 
+victor_ad_afterbuy:
+    path: /afterbuy
+    defaults: { _controller: VictorAdBundle:Advert:afterbuy}
+
 victor_ad_buy:
     path: /buy
     defaults: { _controller: VictorAdBundle:Advert:buy}

@@ -158,6 +158,11 @@ class AdvertController extends Controller
         return $this->render('@VictorAd/Advert/afterselloffer.html.twig');
     }
 
+    public function afterbuyAction()
+    {
+        return $this->render('@VictorAd/Advert/afterbuy.html.twig');
+    }
+
     /**
      * @Security("has_role('ROLE_USER')")
      */
@@ -223,7 +228,7 @@ class AdvertController extends Controller
             $mailer->sendsoldMail($sellerMail, $sellerUsername, $phoneModel);
         }
 
-        return $this->redirectToRoute('victor_core_home');
+        return $this->redirectToRoute('victor_ad_afterbuy');
     }
 
     public function checkmailAction(Request $request)

@@ -617,3 +617,23 @@ footer
     font-size: 5vw;
     padding: 10px;
 }
+
+/* ERRORS */
+
+.block-error
+{
+    display: flex;
+    height: 100%;
+}
+
+.error
+{
+    margin: auto;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.sad
+{
+    height: 80px;
+}

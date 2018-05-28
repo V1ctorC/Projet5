@@ -309,4 +309,20 @@ class User extends BaseUser
     {
         return $this->subscribe;
     }
+
+    public function to_json() {
+        return json_encode(array(
+            'username' => $this->getUsername(),
+            'email' => $this->getEmail(),
+            'last_login' => $this->getLastLogin(),
+            'gender' => $this->getGender(),
+            'firstName' => $this->getFirstname(),
+            'lastName' => $this->getLastname(),
+            'address' => $this->getAddress(),
+            'zipCode' => $this->getZipcode(),
+            'city' => $this->getCity(),
+            'country' => $this->getCountry(),
+            'phone' => $this->getPhone()
+        ));
+    }
 }

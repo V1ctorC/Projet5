@@ -165,3 +165,7 @@ ajax_check_mail:
 ajax_check_username:
     path: /ajax/username
     defaults: { _controller: VictorAdBundle:Advert:checkusername}
+
+victor_ad_myinfos:
+    path: /account/myinfos
+    defaults: { _controller: VictorAdBundle:Account:myinfos}

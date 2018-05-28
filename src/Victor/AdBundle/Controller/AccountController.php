@@ -4,6 +4,7 @@ namespace Victor\AdBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Victor\AdBundle\Form\OfferType;
 
@@ -244,6 +245,20 @@ class AccountController extends Controller
         }
 
         return $this->render('@VictorAd/Account/editoffer.html.twig', array('offer'=>$offer, 'form'=>$form->createView()));
+    }
+
+    public function myinfosAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $userID = $this->getUser();
+        $user = $em->getRepository('VictorUserBundle:User')->find($userID);
+
+        $test = $user->to_json();
+
+        //var_dump($test);
+
+        return new Response($test);
+
     }
 
 }

@@ -5,22 +5,22 @@
     <a href="{{ path('victor_ad_account') }}"><input type="button" class="persoButtonReturn" value="Revenir sur le compte"></a>
 
 
-    <div class="container-fluid wallet-block" style="border: 2px solid red">
+    <div class="container-fluid wallet-block">
         <h2 style="text-align: center">Mon porte-feuille</h2>
-        <div id="wallet-img" style="text-align: center">
-            <img src="{{ asset('bundles/victorad/images/wallet.png') }}" style="width: 150px; margin-bottom: 30px"><br />
+        <div id="wallet-img">
+            <img src="{{ asset('bundles/victorad/images/wallet.png') }}"><br />
         </div>
-        <div id="wallet-explain" style="text-align: center">
+        <div id="wallet-explain">
             <p>Vous trouverez ici le contenu de votre porte-feuille avant de le transferer sur votre compte</p>
         </div>
         <div id="wallet-sum">
-            <p style="text-align: center">Vous avez actuellement :<br /></p>
-            <p style="text-align: center"><b style="font-size: 5vw;border: 5px solid green; padding: 10px">{{ sum }}€</b></p>
+            <p>Vous avez actuellement :<br /></p>
+            <p><b id="wallet-price">{{ sum }}0€</b></p>
         </div>
 
         {% if sum > 0 %}
         <div id="wallet-button">
-            <a href="{{ path('victor_ad_confirmwallet') }}"><input type="button" class="persoButton" value="Retirer mon argent" style="margin: auto"></a>
+            <a href="{{ path('victor_ad_confirmwallet') }}"><input type="button" class="persoButton centerButton" value="Retirer mon argent"></a>
         </div>
         {% endif %}
     </div>

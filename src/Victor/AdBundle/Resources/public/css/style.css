@@ -1,6 +1,7 @@
 body
 {
     background-color: #E9EBEE;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
 
 #global
@@ -599,3 +600,20 @@ footer
     margin: auto;
 }
 
+.wallet-block
+{
+    margin-top: 10px;
+    text-align: center;
+}
+
+#wallet-img img
+{
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+#wallet-price
+{
+    font-size: 5vw;
+    padding: 10px;
+}

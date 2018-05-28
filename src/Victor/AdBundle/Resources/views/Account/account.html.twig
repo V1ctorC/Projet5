@@ -15,9 +15,9 @@
                 <li><a class="linksAccount" href="{{ path('fos_user_change_password') }}">Changer mon mot de passe</a> </li>
                 <li><a class="linksAccount" href="{{ path('victor_ad_deleteconfirm') }}">Supprimer mon compte</a> </li>
                 {% if subscribe == 1 %}
-                <li><a class="linksAccount" href="{{ path('victor_ad_subscription') }}">Ne plus m'envoyer de mail de suivi de la commande</a></li>
+                <li><a class="linksAccount" href="{{ path('victor_ad_subscription') }}">Desabonner mail suivi</a></li>
                 {% elseif subscribe == 0 %}
-                <li><a class="linksAccount" href="{{ path('victor_ad_subscription') }}">M'envoyer des mails concernant le suivi de ma commande</a></li>
+                <li><a class="linksAccount" href="{{ path('victor_ad_subscription') }}">Recevoir mail suivi</a></li>
                 {% endif %}
             </ul>
     </div>

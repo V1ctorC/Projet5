@@ -253,10 +253,14 @@ class AccountController extends Controller
         $userID = $this->getUser();
         $user = $em->getRepository('VictorUserBundle:User')->find($userID);
 
-        $infosJson = $user->to_json();
+        if ($user != null)
+        {
+            $infosJson = $user->to_json();
 
-        return new Response($infosJson);
+            return new Response($infosJson);
+        }
 
+        return new NotFoundHttpException('Impossible de récuperer les données');
     }
 
 }

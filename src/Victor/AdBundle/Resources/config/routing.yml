@@ -173,3 +173,7 @@ victor_ad_myinfos:
 victor_ad_gtu:
     path: /gtu
     defaults: { _controller: VictorAdBundle:Legal:gtu}
+
+victor_ad_pp:
+    path: /privacy
+    defaults: { _controller: VictorAdBundle:Legal:pp}

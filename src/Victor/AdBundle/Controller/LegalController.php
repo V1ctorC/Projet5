@@ -10,4 +10,9 @@ class LegalController extends Controller
     {
         return $this->render('@VictorAd/Legal/GTU.html.twig');
     }
+
+    public function ppAction()
+    {
+        return $this->render('@VictorAd/Legal/PP.html.twig');
+    }
 }

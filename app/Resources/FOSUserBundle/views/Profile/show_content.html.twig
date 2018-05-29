@@ -16,9 +16,30 @@
         <p>Pays : {{ user.country }}</p>
         <p>Téléphone : {{ user.phone }}</p>
 
-        <a href="{{ path('fos_user_profile_edit') }}"><input type="button" class="persoButton centerButton" value="Modifer mes infos"></a>
-        <a href="{{ path('victor_ad_myinfos') }}"><input type="button" class="persoButton centerButton" value="Mes infos en JSON"></a>
+        <div id="buttonsProfile">
+            <a data-toggle="modal" href="#myInfos"><input type="button" class="persoButton centerButton" value="Mes infos en JSON"></a>
+            <a href="{{ path('fos_user_profile_edit') }}"><input type="button" class="persoButton centerButton" value="Modifer mes infos"></a>
+        </div>
 
+        <div class="modal fade" id="myInfos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Mes infos</h4>
+                    </div>
+                    <div class="modal-body">
+                        Voulez-vous afficher vos informations personnelles en format JSON conformément au droit à la portabilité des données ? <br />
+                        <br><em>Note: Sur firefox vous pouvez enregistrer directement les données, sur les autres navigateurs il suffit de copier-coller les informations
+                        dans un documents.</em>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                        <a href="{{ path('victor_ad_myinfos') }}"><input type="button" class="btn btn-primary" value="Afficher"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

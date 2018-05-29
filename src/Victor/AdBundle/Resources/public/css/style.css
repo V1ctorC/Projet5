@@ -377,7 +377,6 @@ td, th /* Mettre une bordure sur les td ET les th */
 
 #userInformation
 {
-    border: 2px solid red;
     text-align: center;
 }
 
@@ -636,4 +635,11 @@ footer
 .emoticon
 {
     height: 80px;
+}
+
+#buttonsProfile
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

@@ -177,3 +177,7 @@ victor_ad_gtu:
 victor_ad_pp:
     path: /privacy
     defaults: { _controller: VictorAdBundle:Legal:pp}
+
+victor_ad_wwa:
+    path: /qui_sommes_nous
+    defaults: { _controller: VictorAdBundle:Legal:wwa}

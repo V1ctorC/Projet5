@@ -15,4 +15,9 @@ class LegalController extends Controller
     {
         return $this->render('@VictorAd/Legal/PP.html.twig');
     }
+
+    public function wwaAction()
+    {
+        return $this->render('@VictorAd/Legal/wwa.html.twig');
+    }
 }

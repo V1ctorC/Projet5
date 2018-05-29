@@ -169,3 +169,7 @@ ajax_check_username:
 victor_ad_myinfos:
     path: /account/myinfos
     defaults: { _controller: VictorAdBundle:Account:myinfos, _format: json }
+
+victor_ad_gtu:
+    path: /gtu
+    defaults: { _controller: VictorAdBundle:Legal:gtu}

@@ -263,4 +263,28 @@ class AccountController extends Controller
         return new NotFoundHttpException('Impossible de récuperer les données');
     }
 
+    public function verificationpasswordAction($currentpass)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository('VictorUserBundle:User');
+        $currentUserID = $this->getUser();
+        $currenntUser = $user->find($currentUserID);
+        $pass = $currenntUser->getPassword();
+
+        $encoder_service = $this->get('security.encoder_factory');
+        $encoder = $encoder_service->getEncoder($currenntUser);
+        $encoded_pass = $encoder->encodePassword("user", $currenntUser->getSalt());
+
+        if ($encoded_pass == $pass)
+        {
+            $test = 'oui';
+        }
+        else
+        {
+            $test = 'non';
+        }
+
+        return $this->render('@VictorAd/Account/delete.html.twig', array('test'=>$test));
+    }
+
 }

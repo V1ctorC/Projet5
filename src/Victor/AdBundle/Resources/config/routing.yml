@@ -102,7 +102,7 @@ victor_ad_deleteconfirm:
     path: /account/delete
     defaults: { _controller: VictorAdBundle:Account:delete}
 
-victor_ad_deletehimself:
+victor_ad_verificationpassword:
     path: /account/delete/himself
     defaults: { _controller: VictorAdBundle:Account:verificationpassword}
 

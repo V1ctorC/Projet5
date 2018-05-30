@@ -22,17 +22,6 @@ class AccountController extends Controller
         return $this->render('@VictorAd/Account/delete.html.twig');
     }
 
-    public function deletehimselfAction()
-    {
-        $userManager = $this->get('fos_user.user_manager');
-
-        $user = $this->getUser();
-
-        $userManager->deleteUser($user);
-
-        return $this->redirectToRoute('victor_core_home');
-    }
-
     public function purchasesAction()
     {
         $repository = $this->getDoctrine()->getManager()->getRepository('VictorAdBundle:Offer');
@@ -263,28 +252,31 @@ class AccountController extends Controller
         return new NotFoundHttpException('Impossible de récuperer les données');
     }
 
-    public function verificationpasswordAction($currentpass)
+    public function verificationpasswordAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $user = $em->getRepository('VictorUserBundle:User');
         $currentUserID = $this->getUser();
         $currenntUser = $user->find($currentUserID);
         $pass = $currenntUser->getPassword();
+        $inputPassword = $request->request->get('_password');
 
         $encoder_service = $this->get('security.encoder_factory');
         $encoder = $encoder_service->getEncoder($currenntUser);
-        $encoded_pass = $encoder->encodePassword("user", $currenntUser->getSalt());
+        $encoded_pass = $encoder->encodePassword($inputPassword, $currenntUser->getSalt());
 
         if ($encoded_pass == $pass)
         {
-            $test = 'oui';
+            $userManager = $this->get('fos_user.user_manager');
+            $userManager->deleteUser($currentUserID);
+
+            return $this->redirectToRoute('victor_core_home');
         }
         else
         {
-            $test = 'non';
+            return $this->redirectToRoute('victor_ad_deleteconfirm');
         }
 
-        return $this->render('@VictorAd/Account/delete.html.twig', array('test'=>$test));
     }
 
 }

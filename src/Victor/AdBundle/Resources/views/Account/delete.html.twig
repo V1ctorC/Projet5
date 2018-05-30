@@ -8,10 +8,9 @@
 
     <p>Voulez-vous continuer ? :(</p>
 
-    <a href="{{ path('victor_ad_account') }}"><input type="button" class="btn btn-primary" value="Non"></a>
+    <p>Si c'est votre choix, nous le respectons, merci de rentrer votre mot de passe pour verifier qu'il s'agisse bien de vous</p>
 
-    <!--<a href="{{ path('victor_ad_deletehimself') }}"><input type="button" class="btn btn-danger" value="Oui"></a>-->
-
-
-
+    <form action="{{ path('victor_ad_verificationpassword') }}" method="post">
+        <input type="password" id="inputPassword" class="form-control" name="_password" required="required" autocomplete="current-password" placeholder="Mot de Passe">
+    </form>
 {% endblock %}

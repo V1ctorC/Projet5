@@ -181,3 +181,7 @@ victor_ad_pp:
 victor_ad_wwa:
     path: /qui_sommes_nous
     defaults: { _controller: VictorAdBundle:Legal:wwa}
+
+victor_ad_tos:
+    path: /conditions_de_vente
+    defaults: { _controller: VictorAdBundle:Legal:tos}

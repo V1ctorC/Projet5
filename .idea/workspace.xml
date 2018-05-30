@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af6761b9-47cf-4f15-8481-960258f01b61" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/TOS.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/TOS.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Victor/CoreBundle/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/CoreBundle/Resources/views/layout.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,49 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TOS.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/TOS.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="150" column="207" selection-start-line="150" selection-start-column="207" selection-end-line="150" selection-end-column="207" />
-              <folding>
-                <element signature="e#12#40#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LegalController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Controller/LegalController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-              <folding>
-                <element signature="e#322#352#1#PHP" expanded="true" />
-                <element signature="e#429#460#1#PHP" expanded="true" />
-                <element signature="e#537#568#1#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="186" column="53" selection-start-line="186" selection-start-column="53" selection-end-line="186" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Victor/CoreBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="91" column="120" selection-start-line="91" selection-start-column="120" selection-end-line="91" selection-end-column="120" />
-              <folding>
-                <element signature="e#4567#4580#0#Twig" expanded="true" />
-              </folding>
+            <state relative-caret-position="206">
+              <caret line="94" column="110" selection-start-line="94" selection-start-column="110" selection-end-line="94" selection-end-column="110" />
             </state>
           </provider>
         </entry>
@@ -136,9 +99,9 @@
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/WhoWeAre.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/wwa.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Victor/CoreBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Controller/LegalController.php" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/TOS.html.twig" />
+        <option value="$PROJECT_DIR$/src/Victor/CoreBundle/Resources/views/layout.html.twig" />
       </list>
     </option>
   </component>
@@ -641,12 +604,12 @@
       <workItem from="1527517956748" duration="5136000" />
       <workItem from="1527584047012" duration="6416000" />
       <workItem from="1527601509080" duration="429000" />
-      <workItem from="1527670498422" duration="2479000" />
+      <workItem from="1527670498422" duration="2953000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="440356000" />
+    <option name="totallyTimeSpent" value="440830000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -662,7 +625,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36591277" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36591277" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32954547" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50646204" side_tool="true" weight="0.32954547" />
@@ -671,7 +634,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32954547" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24959612" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49353796" visible="true" weight="0.2962963" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49353796" visible="true" weight="0.2962963" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1006,19 +969,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/TOS.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="186" column="53" selection-start-line="186" selection-start-column="53" selection-end-line="186" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/CoreBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="91" column="120" selection-start-line="91" selection-start-column="120" selection-end-line="91" selection-end-column="120" />
+        <state relative-caret-position="665">
+          <caret line="152" column="18" selection-start-line="152" selection-start-column="18" selection-end-line="152" selection-end-column="18" />
           <folding>
-            <element signature="e#4567#4580#0#Twig" expanded="true" />
+            <element signature="e#12#40#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1035,13 +991,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/TOS.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="150" column="207" selection-start-line="150" selection-start-column="207" selection-end-line="150" selection-end-column="207" />
-          <folding>
-            <element signature="e#12#40#0#Twig" expanded="true" />
-          </folding>
+        <state relative-caret-position="417">
+          <caret line="186" column="53" selection-start-line="186" selection-start-column="53" selection-end-line="186" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Victor/CoreBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="94" column="110" selection-start-line="94" selection-start-column="110" selection-end-line="94" selection-end-column="110" />
         </state>
       </provider>
     </entry>

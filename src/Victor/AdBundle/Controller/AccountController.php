@@ -258,6 +258,9 @@ class AccountController extends Controller
         $user = $em->getRepository('VictorUserBundle:User');
         $currentUserID = $this->getUser();
         $currenntUser = $user->find($currentUserID);
+        $currenntUserUsername = $currenntUser->getUsername();
+        $currenntUserMail = $currenntUser->getEmail();
+        $mail = $this->get('victor_ad.mailer');
         $pass = $currenntUser->getPassword();
         $inputPassword = $request->request->get('_password');
 
@@ -267,6 +270,7 @@ class AccountController extends Controller
 
         if ($encoded_pass == $pass)
         {
+            $mail->sendDeleteAccountMail($currenntUserMail, $currenntUserUsername);
             $userManager = $this->get('fos_user.user_manager');
             $userManager->deleteUser($currentUserID);
 

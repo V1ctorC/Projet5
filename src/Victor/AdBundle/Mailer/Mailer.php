@@ -117,4 +117,12 @@ class Mailer
         $this->sendMessage($to, $subject, $body);
     }
 
+    public function sendDeleteAccountMail($to, $username)
+    {
+        $subject = "Votre compte a bien été supprimé";
+        $body = $this->templating->render('VictorAdBundle:Mail:DeleteAccountMail.html.twig', array('username'=>$username));
+
+        $this->sendMessage($to, $subject, $body);
+    }
+
 }

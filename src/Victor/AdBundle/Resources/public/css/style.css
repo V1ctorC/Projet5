@@ -643,3 +643,15 @@ footer
     flex-direction: row;
     justify-content: space-around;
 }
+
+#deleteinfos
+{
+    margin-top: 8%;
+    text-align: center;
+}
+
+#inputPasswordVerification
+{
+    width: 50%;
+    margin: 20px auto 20px auto;
+}

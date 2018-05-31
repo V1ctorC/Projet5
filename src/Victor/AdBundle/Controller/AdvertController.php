@@ -112,11 +112,6 @@ class AdvertController extends Controller
         return $this->render('@VictorAd/Advert/sellviewphone.html.twig', array('phone'=>$phone, 'listOffers'=>$listOffers));
     }
 
-    public function deleteAction()
-    {
-        return $this->redirectToRoute('victor_ad_index');
-    }
-
     /**
      * @Security("has_role('ROLE_USER')")
      */

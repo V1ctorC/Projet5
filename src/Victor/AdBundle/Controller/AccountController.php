@@ -270,13 +270,18 @@ class AccountController extends Controller
             $userManager = $this->get('fos_user.user_manager');
             $userManager->deleteUser($currentUserID);
 
-            return $this->redirectToRoute('victor_core_home');
+            return $this->redirectToRoute('victor_ad_deletecomplete');
         }
         else
         {
             return $this->redirectToRoute('victor_ad_deleteconfirm');
         }
 
+    }
+
+    public function deletecompleteAction()
+    {
+        return $this->render('@VictorAd/Account/deletecomplete.html.twig');
     }
 
 }

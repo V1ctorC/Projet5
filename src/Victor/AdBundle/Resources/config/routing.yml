@@ -38,10 +38,6 @@ victor_ad_summarybuy:
     path: /buy/{phone}/{id}/summary/{offerid}
     defaults: { _controller: VictorAdBundle:Advert:summarybuy}
 
-victor_ad_delete:
-    path: /delete/{id}
-    defaults: { _controller: VictorAdBundle:Advert:delete}
-
 victor_ad_admin:
     path: /admin
     defaults: { _controller: VictorAdBundle:Admin:admin}
@@ -105,6 +101,10 @@ victor_ad_deleteconfirm:
 victor_ad_verificationpassword:
     path: /account/delete/himself
     defaults: { _controller: VictorAdBundle:Account:verificationpassword}
+
+victor_ad_deletecomplete:
+    path: /delete/complete
+    defaults: { _controller: VictorAdBundle:Account:deletecomplete}
 
 victor_ad_purchases:
     path: /account/purchases

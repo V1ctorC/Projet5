@@ -1,8 +1,22 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
+<h1>Réinitialiser votre mot de passe</h1>
+
 {{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
-    {{ form_widget(form) }}
+
+<div class="container block-register">
+    <h2>Nouveau mot de passe</h2>
     <div>
-        <input type="submit" value="{{ 'resetting.reset.submit'|trans }}" />
+        {{ form_widget(form.plainPassword.first, { 'attr': {'class': "form-control",
+    'placeholder': 'Nouveau mot de passe'} }) }}
     </div>
+    <div>
+        {{ form_widget(form.plainPassword.second, { 'attr': {'class': "form-control",
+            'placeholder': 'test'} }) }}
+    </div>
+    <div>
+        <input type="submit" value="{{ 'resetting.reset.submit'|trans }}" class="persoButton" style="margin: 10px auto" />
+    </div>
+</div>
+
 {{ form_end(form) }}

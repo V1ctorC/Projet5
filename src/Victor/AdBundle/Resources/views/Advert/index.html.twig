@@ -1,6 +1,6 @@
 {% block victorad_body %}
 
-    <div id="banner" style="border: 2px solid red">
+    <div id="banner">
         <img src="{{ asset('bundles/victorad/images/desk.jpg') }}" id="deskImage" />
 
         <div id="choiceHomePage">
@@ -11,6 +11,21 @@
                 <a href="{{ path('victor_ad_sell') }}"><input type="button" class="button-home" value="Vendre"></a>
 
             </p>
+        </div>
+    </div>
+
+    <div id="mobileHeader">
+        <div id="mobileBanner">
+            <img src="{{ asset('bundles/victorad/images/banner2.jpg') }}" id="banner2">
+        </div>
+
+        <div id="mobileChoice">
+            <h2>Que souhaitez vous faire aujourd'hui ?</h2>
+            <div id="mobileChoiceButton">
+                <a href="{{ path('victor_ad_buy') }}"><input type="button" class="button-home" value="Acheter"></a>
+
+                <a href="{{ path('victor_ad_sell') }}"><input type="button" class="button-home" value="Vendre"></a>
+            </div>
         </div>
     </div>
 

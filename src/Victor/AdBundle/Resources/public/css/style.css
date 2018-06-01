@@ -108,6 +108,11 @@ body
     box-shadow: 0 2px 0 #409D9B;
 }
 
+#mobileHeader
+{
+    display: none;
+}
+
 
 /* Choix telephone */
 
@@ -657,6 +662,16 @@ footer
     margin: 20px auto 20px auto;
 }
 
+#mobileChoice
+{
+    margin: 20px auto 20px auto;
+    width: 90%;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+}
+
 #concept
 {
     margin: 20px auto 20px auto;
@@ -664,6 +679,7 @@ footer
     text-align: center;
     background-color: white;
     border-radius: 5px;
+    padding: 5px 10px 5px 10px;
 }
 
 #operation
@@ -702,5 +718,39 @@ footer
     #banner
     {
         display: none;
+    }
+
+    #mobileHeader
+    {
+        display: block;
+    }
+
+    #banner2
+    {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    #mobileBanner
+    {
+        width: 90%;
+        margin: auto;
+    }
+
+    #mobileChoice
+    {
+        margin: 20px auto 20px auto;
+        width: 90%;
+        text-align: center;
+        background-color: white;
+        border-radius: 5px;
+        padding: 5px 10px 20px 10px;
+    }
+
+    #mobileChoiceButton
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 }

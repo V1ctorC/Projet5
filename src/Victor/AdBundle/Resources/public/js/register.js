@@ -28,13 +28,15 @@ document.getElementById('fos_user_registration_form_zipcode').addEventListener("
 
 document.getElementById('fos_user_registration_form_phone').addEventListener("blur", function (e) {
     var phone = e.target.value;
-    if (phone.length !== 10)
+    var regexPhone = new RegExp(/^(06|07)[0-9]{8}$/);
+    var phoneNumber = regexPhone.test(phone);
+    if (phoneNumber !== true)
     {
         document.getElementById('fos_user_registration_form_phone').style.color = "red";
         document.getElementById('fos_user_registration_form_phone').style.border = "2px solid red";
         errorfield.style.display = "block";
         phonefield.style.display = "block";
-        phonefield.innerHTML = "<br/> - Le code numéro de téléphone doit comporter 10 chiffres";
+        phonefield.innerHTML = "<br/> - Le code numéro de téléphone doit comporter 10 chiffres et commencer par 06 ou 07";
     }
     else
     {

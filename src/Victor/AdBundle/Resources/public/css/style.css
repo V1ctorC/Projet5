@@ -244,7 +244,8 @@ th
 
 #banner
 {
-    width: 100%;
+    width: 90%;
+    margin: auto;
     position: relative;
 }
 
@@ -255,8 +256,8 @@ th
     font-size: 4vw;
     color: white;
     font-weight: bold;
-    top: 50%; left: 50%; /* à 50%/50% du parent référent */
-    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #choicePhone
@@ -654,4 +655,52 @@ footer
 {
     width: 50%;
     margin: 20px auto 20px auto;
+}
+
+#concept
+{
+    margin: 20px auto 20px auto;
+    width: 90%;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#operation
+{
+    margin: 20px auto 20px auto;
+    width: 90%;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.buysellOperation
+{
+    margin: 20px auto 20px auto;
+    background-color: #E9EBEE;
+    border-radius: 5px;
+}
+
+.buysellOperation li
+{
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.buysellOperation ul
+{
+    padding: 5px;
+}
+.number
+{
+    font-size: 2em;
+}
+
+@media all and (max-width: 1024px)
+{
+    #banner
+    {
+        display: none;
+    }
 }

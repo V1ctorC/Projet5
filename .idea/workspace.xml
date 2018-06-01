@@ -60,12 +60,13 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="841">
-              <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+            <state relative-caret-position="120">
+              <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
               <folding>
+                <element signature="e#560#586#0#HTML" expanded="true" />
                 <element signature="e#561#590#0#HTML" expanded="true" />
                 <element signature="e#693#723#0#HTML" expanded="true" />
-                <element signature="e#1837#1867#0#HTML" expanded="true" />
+                <element signature="e#1754#1785#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -720,12 +721,12 @@
       <workItem from="1527584047012" duration="6416000" />
       <workItem from="1527601509080" duration="429000" />
       <workItem from="1527670498422" duration="7637000" />
-      <workItem from="1527759213976" duration="6868000" />
+      <workItem from="1527759213976" duration="8145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="452382000" />
+    <option name="totallyTimeSpent" value="453659000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -741,7 +742,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37156704" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37156704" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32954547" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50646204" side_tool="true" weight="0.32954547" />
@@ -750,7 +751,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32954547" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24959612" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49353796" visible="true" weight="0.2962963" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49353796" visible="true" weight="0.2962963" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1132,12 +1133,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+        <state relative-caret-position="120">
+          <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
           <folding>
+            <element signature="e#560#586#0#HTML" expanded="true" />
             <element signature="e#561#590#0#HTML" expanded="true" />
             <element signature="e#693#723#0#HTML" expanded="true" />
-            <element signature="e#1837#1867#0#HTML" expanded="true" />
+            <element signature="e#1754#1785#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Victor\AdBundle\Entity\Offer;
 use Victor\AdBundle\Form\OfferType;
 
 class AccountController extends Controller
@@ -59,14 +60,11 @@ class AccountController extends Controller
         return $this->render('@VictorAd/Account/currentoffer.html.twig', array('listCurrentoffer'=>$listCurrentoffer));
     }
 
-    public function ordertrackingAction($id)
+    public function ordertrackingAction(Offer $purchase)
     {
         $order = $this->container->get('victor_ad.ordertracking');
 
         $currentuser = $this->getUser();
-
-        $em = $this->getDoctrine()->getManager();
-        $purchase = $em->getRepository('VictorAdBundle:Offer')->find($id);
 
         $buyer = $purchase->getBuyer();
         $seller = $purchase->getUser();
@@ -183,13 +181,11 @@ class AccountController extends Controller
 
     }
 
-    public function deleteofferAction($id)
+    public function deleteofferAction(Offer $offertodelete)
     {
         $em = $this->getDoctrine()->getManager();
-        $offer = $em->getRepository('VictorAdBundle:Offer');
         $user= $this->getUser();
 
-        $offertodelete = $offer->find($id);
         $author = $offertodelete->getUser();
         $sold = $offertodelete->getSold();
 
@@ -205,16 +201,10 @@ class AccountController extends Controller
         }
     }
 
-    public function editofferAction($id, Request $request)
+    public function editofferAction(Offer $offer, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $offer = $em->getRepository('VictorAdBundle:Offer')->find($id);
         $user = $this->getUser();
-
-        if ($offer == null)
-        {
-            throw new NotFoundHttpException('Cette offre n\'existe pas');
-        }
 
         $author = $offer->getUser();
         $sold = $offer->getSold();

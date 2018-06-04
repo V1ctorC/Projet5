@@ -135,14 +135,12 @@ class AdminController extends Controller
         return $this->render('@VictorAd/Admin/order4.html.twig', array('order4' => $order4));
     }
 
-    public function increaseAction($id)
+    public function increaseAction(Offer $dataorder)
     {
         $em = $this->getDoctrine()->getManager();
-        $order = $em->getRepository('VictorAdBundle:Offer');
         $user = $em->getRepository('VictorUserBundle:User');
         $datetime = new \DateTime();
 
-        $dataorder = $order->find($id);
         $userID = $dataorder->getBuyer();
         $sellerID = $dataorder->getUser();
         $buyer = $user->find($userID);
@@ -199,12 +197,9 @@ class AdminController extends Controller
     }
 
 
-    public function cancelAction($id)
+    public function cancelAction(Offer $orderCancel)
     {
         $em = $this->getDoctrine()->getManager();
-        $offer = $em->getRepository('VictorAdBundle:Offer');
-
-        $orderCancel = $offer->find($id);
 
         $orderCancel->setBuyer(null);
         $orderCancel->setSold(0);
@@ -222,12 +217,10 @@ class AdminController extends Controller
      * @param $id
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
-    public function decreaseAction($id)
+    public function decreaseAction(Offer $dataorder)
     {
         $em = $this->getDoctrine()->getManager();
-        $order = $em->getRepository('VictorAdBundle:Offer');
 
-        $dataorder = $order->find($id);
         $step = $dataorder->getStep();
 
         if ($step > 1)
@@ -258,13 +251,11 @@ class AdminController extends Controller
         return $this->render('@VictorAd/Admin/paymentwaiting.html.twig', array('listPaymentWaiting'=>$listPaymentWaiting));
     }
 
-    public function  paymentsendAction($id)
+    public function  paymentsendAction(Offer $paidoffer)
     {
         $em = $this->getDoctrine()->getManager();
-        $offer = $em->getRepository('VictorAdBundle:Offer');
         $user = $em->getRepository('VictorUserBundle:User');
 
-        $paidoffer = $offer->find($id);
         $userID = $paidoffer->getUser();
         $seller = $user->find($userID);
 

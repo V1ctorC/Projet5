@@ -23,80 +23,82 @@
     <h3>Step4</h3>
 
     {% for order in order4 %}
-        <table class="table table-bordered">
-            <tr>
-                <th scope="col">Commande</th>
-                <th scope="col">Paiement</th>
-                <th scope="col">Reception</th>
-                <th scope="col">Conformité</th>
-                <th scope="col">Envoi</th>
-            </tr>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tr>
+                    <th scope="col">Commande</th>
+                    <th scope="col">Paiement</th>
+                    <th scope="col">Reception</th>
+                    <th scope="col">Conformité</th>
+                    <th scope="col">Envoi</th>
+                </tr>
 
 
-            <tr>
-                <th>{{ order.id }}</th>
-                <th>{{ order.saledate|date('d-m-Y') }}</th>
-                <th>{{ order.receivedate|date('d-m-Y') }}</th>
-                <th>{{ order.conformdate|date('d-m-Y') }}</th>
-                <th>{{ order.sendate|date('d-m-Y') }}</th>
-            </tr>
-            <tr>
-                <th><a data-toggle="modal" href="#cancel{{ order.id }}" class="btn btn-danger">Annuler commande</a></th>
-                <th>Le produit a déjà été reçu</th>
-                <th>Le produit est conforme</th>
-                <th>Le produit a été envoyé</th>
-                <th><a data-toggle="modal" href="#decrease{{ order.id }}" class="btn btn-warning">Revenir à l'étape précédente</a></th>
-            </tr>
+                <tr>
+                    <th>{{ order.id }}</th>
+                    <th>{{ order.saledate|date('d-m-Y') }}</th>
+                    <th>{{ order.receivedate|date('d-m-Y') }}</th>
+                    <th>{{ order.conformdate|date('d-m-Y') }}</th>
+                    <th>{{ order.sendate|date('d-m-Y') }}</th>
+                </tr>
+                <tr>
+                    <th><a data-toggle="modal" href="#cancel{{ order.id }}" class="btn btn-danger">Annuler commande</a></th>
+                    <th>Le produit a déjà été reçu</th>
+                    <th>Le produit est conforme</th>
+                    <th>Le produit a été envoyé</th>
+                    <th><a data-toggle="modal" href="#decrease{{ order.id }}" class="btn btn-warning">Revenir à l'étape précédente</a></th>
+                </tr>
 
-        </table>
+            </table>
 
-        <div class="modal fade" id="increase{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Envoi</h4>
-                    </div>
-                    <div class="modal-body">
-                        Le téléphone ({{ order.phone.model }}) concernant la commande <b>{{ order.id }}</b> a-t-il été expédié ?
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                        <a href="{{ path('victor_ad_increase', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Envoyé"></a>
+            <div class="modal fade" id="increase{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Envoi</h4>
+                        </div>
+                        <div class="modal-body">
+                            Le téléphone ({{ order.phone.model }}) concernant la commande <b>{{ order.id }}</b> a-t-il été expédié ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                            <a href="{{ path('victor_ad_increase', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Envoyé"></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="modal fade" id="cancel{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Annuler</h4>
-                    </div>
-                    <div class="modal-body">
-                        Voulez-vous annuler la commande numéro <b>{{ order.id }}</b> ?
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                        <a href="{{ path('victor_ad_cancel', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Confirmer"></a>
+            <div class="modal fade" id="cancel{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Annuler</h4>
+                        </div>
+                        <div class="modal-body">
+                            Voulez-vous annuler la commande numéro <b>{{ order.id }}</b> ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                            <a href="{{ path('victor_ad_cancel', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Confirmer"></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="modal fade" id="decrease{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Envoi</h4>
-                    </div>
-                    <div class="modal-body">
-                        Vous avez fait une erreur et voulez que la commande <b>{{ order.id }}</b> retourne a l'étape précédente ?
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                        <a href="{{ path('victor_ad_decrease', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Confirmer"></a>
+            <div class="modal fade" id="decrease{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Envoi</h4>
+                        </div>
+                        <div class="modal-body">
+                            Vous avez fait une erreur et voulez que la commande <b>{{ order.id }}</b> retourne a l'étape précédente ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                            <a href="{{ path('victor_ad_decrease', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Confirmer"></a>
+                        </div>
                     </div>
                 </div>
             </div>

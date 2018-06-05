@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="af6761b9-47cf-4f15-8481-960258f01b61" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/wwa.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/wwa.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/bundles/victorad/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/bundles/victorad/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,8 +48,17 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/bundles/victorad/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="760" column="26" selection-start-line="760" selection-start-column="26" selection-end-line="760" selection-end-column="26" />
+            <state relative-caret-position="384">
+              <caret line="776" column="26" selection-start-line="776" selection-start-column="26" selection-end-line="776" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wwa.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/wwa.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="77" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -94,7 +104,6 @@
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/GTU.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/PP.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/WhoWeAre.html.twig" />
-        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/wwa.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Controller/LegalController.php" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/TOS.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Advert/selloffer.html.twig" />
@@ -128,6 +137,7 @@
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order2.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order3.html.twig" />
         <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Admin/order4.html.twig" />
+        <option value="$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/wwa.html.twig" />
         <option value="$PROJECT_DIR$/web/bundles/victorad/css/style.css" />
       </list>
     </option>
@@ -600,12 +610,12 @@
       <workItem from="1527856056634" duration="2924000" />
       <workItem from="1528100109359" duration="2824000" />
       <workItem from="1528133117347" duration="101000" />
-      <workItem from="1528189444470" duration="7919000" />
+      <workItem from="1528189444470" duration="8403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="476756000" />
+    <option name="totallyTimeSpent" value="477240000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -621,7 +631,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32552505" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32552505" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32954547" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50646204" side_tool="true" weight="0.32954547" />
@@ -630,7 +640,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32954547" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24959612" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49353796" visible="true" weight="0.32193732" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49353796" visible="true" weight="0.32193732" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -665,13 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1500">
           <caret line="100" column="14" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/wwa.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
         </state>
       </provider>
     </entry>
@@ -1010,10 +1013,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Victor/AdBundle/Resources/views/Legal/wwa.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="77" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/bundles/victorad/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="760" column="26" selection-start-line="760" selection-start-column="26" selection-end-line="760" selection-end-column="26" />
+        <state relative-caret-position="384">
+          <caret line="776" column="26" selection-start-line="776" selection-start-column="26" selection-end-line="776" selection-end-column="26" />
         </state>
       </provider>
     </entry>

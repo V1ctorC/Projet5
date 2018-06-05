@@ -713,6 +713,11 @@ footer
     font-size: 2em;
 }
 
+#OCImage
+{
+    height: 200px;
+}
+
 @media all and (max-width: 1024px)
 {
     #banner
@@ -759,5 +764,16 @@ footer
         margin-top: 10px;
         padding: 2px;
         border-radius: 5px;
+    }
+
+    #OCImage
+    {
+        height: 200px;
+        border: 3px solid red;
+    }
+
+    #OCBloc
+    {
+        text-align: center;
     }
 }

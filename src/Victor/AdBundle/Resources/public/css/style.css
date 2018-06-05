@@ -753,4 +753,11 @@ footer
         flex-direction: row;
         justify-content: space-around;
     }
+
+    #summary
+    {
+        margin-top: 10px;
+        padding: 2px;
+        border-radius: 5px;
+    }
 }

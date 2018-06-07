@@ -14,24 +14,18 @@ class AdvertController extends Controller
 {
     public function indexAction()
     {
-        $content = $this->render('VictorAdBundle:Advert:index.html.twig', array('nom' => ''));
-
-        return new Response($content);
+        return $this->render('VictorAdBundle:Advert:index.html.twig', array('nom' => ''));
 
     }
 
     public function sellAction()
     {
-        $content = $this->render('@VictorAd/Advert/sell.html.twig');
-
-        return new Response($content);
+        return $this->render('@VictorAd/Advert/sell.html.twig');
     }
 
     public function buyAction()
     {
-        $content = $this->render('@VictorAd/Advert/buy.html.twig');
-
-        return new Response($content);
+        return $this->render('@VictorAd/Advert/buy.html.twig');
     }
 
     public function buyviewAction($phone)

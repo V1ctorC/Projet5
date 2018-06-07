@@ -103,6 +103,9 @@
             <div class="footer-copyright text-center" style="background-color: #409D9B">
                 OpenClassrooms 2018 - Projet 5
             </div>
+
+            <script>document.addEventListener('DOMContentLoaded', function(event){cookieChoices.showCookieConsentBar('Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l’utilisation des cookies.', 'J’accepte', 'En savoir plus', 'https://projet5.vetudes.com/privacy');});</script>
+
         </footer>
     </div>
 
@@ -111,7 +114,7 @@
                 integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
                 crossorigin="anonymous"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
+        <script src="{{ asset('bundles/victorad/js/cookiechoices.js') }}"></script>
     {% endblock %}
 </div>
 </body>

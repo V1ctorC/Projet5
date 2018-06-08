@@ -39,7 +39,6 @@ document.getElementById('fos_user_profile_form_phone').addEventListener("blur", 
     var phoneNumber = regexPhone.test(phone);
     if (phoneNumber !== true)
     {
-        alert(phoneNumber);
         document.getElementById('fos_user_profile_form_phone').style.color = "red";
         document.getElementById('fos_user_profile_form_phone').style.border = "2px solid red";
         errorfield.style.display = "block";
@@ -48,7 +47,6 @@ document.getElementById('fos_user_profile_form_phone').addEventListener("blur", 
     }
     else
     {
-        alert(phoneNumber);
         document.getElementById('fos_user_profile_form_phone').style.color = "inherit";
         document.getElementById('fos_user_profile_form_phone').style.border = "1px solid #ccc";
         phonefield.style.display = "none";

@@ -19,7 +19,7 @@
         <img src="{{ phone.image.url }}" class="imgPhone">
         <hr>
 
-        <p>L'offre que vous avez selectionné est à <span id="offerview">{{ offer.price }}€</span>,
+        <p id="summaryText">L'offre que vous avez selectionnée est à <span id="offerview">{{ offer.price }}€</span>,
         si cela vous convient, nous pouvons passer au paiement :)</p>
         <div id="paiementButton">
             <form action="{{ path('victor_ad_ordercheckout',{'offerid': offer.id} ) }}" method="POST" id="payform">
@@ -27,10 +27,10 @@
                         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                         data-key="pk_test_9y2iO8ZCIEg06ONKLxjJ9qvb"
                         data-amount="{{ offer.price * 100}}"
-                        data-label="Passer au paiement"
+                        data-label="Paiement"
                         data-name="iVente"
                         data-description="Merci de votre achat :)"
-                        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                        data-image="{{ asset('bundles/victorad/images/Mobile.png') }}"
                         data-locale="auto"
                         data-zip-code="true"
                         data-allow-remember-me="false"

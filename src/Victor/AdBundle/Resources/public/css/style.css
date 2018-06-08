@@ -291,6 +291,11 @@ th
     text-align: center;
 }
 
+#summaryText
+{
+    text-align: center;
+}
+
 #offerview
 {
     font-size: 1.5em;

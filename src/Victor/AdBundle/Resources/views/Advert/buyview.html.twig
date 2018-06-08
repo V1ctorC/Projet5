@@ -13,7 +13,7 @@
                 <span id="brand">{{ phone.brand }} </span><br />
                 <span id="model">{{ phone.model }} </span><br />
                 Couleur : {{ phone.color }} <br />
-                Capacité : {{ phone.capacity }} Go
+                Capacité : {{ phone.capacity }} Go <br />
                 <img src="{{ phone.image.url }}" class="imgPhone">
                 <hr />
                 <a href="{{ path('victor_ad_buyviewphone', {'phone': phone.model, 'id': phone.id}) }}"><input type="button" class="persoButton centerButton" value="Voir les offres"></a>

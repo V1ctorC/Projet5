@@ -19,7 +19,7 @@
         <img src="{{ phone.image.url }}" class="imgPhone">
         <hr>
 
-        <p id="summaryText">L'offre que vous avez selectionnée est à <span id="offerview">{{ offer.price }}€</span>,
+        <p id="summaryText">L'offre que vous avez selectionnée est à <span id="offerview">{{ offer.price }}€</span>,<br />
         si cela vous convient, nous pouvons passer au paiement :)</p>
         <div id="paiementButton">
             <form action="{{ path('victor_ad_ordercheckout',{'offerid': offer.id} ) }}" method="POST" id="payform">

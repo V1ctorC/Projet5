@@ -256,6 +256,7 @@ th
 
 #choiceHomePage
 {
+    width: 55%;
     position: absolute;
     text-align: center;
     font-size: 4vw;

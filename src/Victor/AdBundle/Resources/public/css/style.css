@@ -724,6 +724,36 @@ footer
     height: 200px;
 }
 
+#confirmWallet
+{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#textConfirmWallet
+{
+    background-color: #4FB783;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#priceConfirmWallet
+{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#buttonConfirmWallet
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 @media all and (max-width: 1024px)
 {
     #banner

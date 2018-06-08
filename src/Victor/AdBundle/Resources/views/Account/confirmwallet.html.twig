@@ -6,26 +6,32 @@
 
     <h2>Votre résumé avant le paiement</h2>
 
-    <p>Vous souhaitez recevoir la somme de : <b>{{ sum }}€</b></p>
+    <div id="confirmWallet" class="col-md-6 col-md-offset-3">
+        <div id="textConfirmWallet">
+            <p>Vous souhaitez recevoir la somme de : <span id="priceConfirmWallet">{{ sum }}€</span></p>
 
-    <p>Nous allons vous envoyer un chèque à l'adresse renseignée.
-    Nous vous prions de vérifier que les informations sont correctes.</p>
+            <p>Nous allons vous envoyer un chèque à l'adresse renseignée.
+                Nous vous prions de vérifier que les informations sont correctes.</p>
+        </div>
 
-    <div class="container-fluid">
-        <h3>Vos infos</h3>
-        <ul>
-            <li>{{ user.email }}</li>
-            <li>{{ user.firstname }}</li>
-            <li>{{ user.lastname }}</li>
-            <li>{{ user.address }}</li>
-            <li>{{ user.zipcode }}</li>
-            <li>{{ user.city }}</li>
-            <li>{{ user.country }}</li>
-            <li>{{ user.phone }}</li>
-        </ul>
+        <hr />
+
+        <div class="container-fluid">
+            <h3>Vos infos</h3>
+            <p>Adresse e-mail: {{ user.email }}</p>
+            <p>Prénom: {{ user.firstname }}</p>
+            <p>Nom: {{ user.lastname }}</p>
+            <p>Adresse: {{ user.address }}</p>
+            <p>Code postal: {{ user.zipcode }}</p>
+            <p>Ville: {{ user.city }}</p>
+            <p>Pays: {{ user.country }}</p>
+            <p>Téléphone: {{ user.phone }}</p>
+        </div>
+
+    </div> <br/>
+    <div id="buttonConfirmWallet" class="col-md-6 col-md-offset-3">
+        <a href="{{ path('fos_user_profile_edit') }}"><input type="button" class="persoButton" value="Modifier mes infos"></a>
+        <a href="{{ path('victor_ad_payrequest') }}"><input type="button" class="persoButton" value="Confirmer la demande de paiement"></a>
     </div>
-
-    <a href="{{ path('fos_user_profile_edit') }}"><input type="button" class="persoButton" value="Modifier mes infos"></a>
-    <a href="{{ path('victor_ad_payrequest') }}"><input type="button" class="persoButton" value="Confirmer la demande de paiement"></a>
 
 {% endblock %}

@@ -51,23 +51,6 @@
 
             </table>
 
-            <div class="modal fade" id="increase{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title">Envoi</h4>
-                        </div>
-                        <div class="modal-body">
-                            Le téléphone ({{ order.phone.model }}) concernant la commande <b>{{ order.id }}</b> a-t-il été expédié ?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                            <a href="{{ path('victor_ad_increase', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Envoyé"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="modal fade" id="cancel{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -80,7 +63,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                            <a href="{{ path('victor_ad_cancel', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Confirmer"></a>
+                            <a class="btn btn-danger" href="{{ path('victor_ad_cancel', {'id': order.id}) }}">Confirmer</a>
                         </div>
                     </div>
                 </div>
@@ -97,7 +80,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                            <a href="{{ path('victor_ad_decrease', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Confirmer"></a>
+                            <a class="btn btn-primary" href="{{ path('victor_ad_decrease', {'id': order.id}) }}">Confirmer</a>
                         </div>
                     </div>
                 </div>

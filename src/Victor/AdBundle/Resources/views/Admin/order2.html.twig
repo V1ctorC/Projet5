@@ -64,7 +64,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                            <a href="{{ path('victor_ad_increase', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Envoyé"></a>
+                            <a class="btn btn-primary" href="{{ path('victor_ad_increase', {'id': order.id}) }}">Envoyé</a>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                            <a href="{{ path('victor_ad_cancel', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Confirmer"></a>
+                            <a class="btn btn-danger" href="{{ path('victor_ad_cancel', {'id': order.id}) }}">Confirmer</a>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                            <a href="{{ path('victor_ad_decrease', {'id': order.id}) }}"><input type="button" class="btn btn-primary" value="Confirmer"></a>
+                            <a class="btn btn-primary" href="{{ path('victor_ad_decrease', {'id': order.id}) }}">Confirmer</a>
                         </div>
                     </div>
                 </div>

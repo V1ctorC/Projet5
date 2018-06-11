@@ -98,9 +98,15 @@ body
 {
     background-color: #4FB783;
     border: 2px solid #4FB783;
+    padding: 8px;
     border-radius: 10px;
     color: #FEEB97;
     box-shadow: 0 9px 0 #409D9B;
+}
+
+.button-home:hover
+{
+    color: #FEEB97;
 }
 
 .button-home:active

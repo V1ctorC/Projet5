@@ -1,14 +1,14 @@
 {% block victorad_body %}
 
     <div id="banner">
-        <img src="{{ asset('bundles/victorad/images/desk.jpg') }}" id="deskImage" />
+        <img src="{{ asset('bundles/victorad/images/desk.jpg') }}" id="deskImage" alt="Macbook bureau"/>
 
         <div id="choiceHomePage">
             <p>Il va falloir faire un choix souhaitez-vous <br />
 
-                <a href="{{ path('victor_ad_buy') }}"><input type="button" class="button-home" value="Acheter"></a>
+                <a href="{{ path('victor_ad_buy') }}" class="button-home">Acheter</a>
 
-                <a href="{{ path('victor_ad_sell') }}"><input type="button" class="button-home" value="Vendre"></a>
+                <a href="{{ path('victor_ad_sell') }}" class="button-home">Vendre</a>
 
             </p>
         </div>
@@ -16,15 +16,15 @@
 
     <div id="mobileHeader">
         <div id="mobileBanner">
-            <img src="{{ asset('bundles/victorad/images/banner2.jpg') }}" id="banner2">
+            <img src="{{ asset('bundles/victorad/images/banner2.jpg') }}" id="banner2" alt="image iPhone">
         </div>
 
         <div id="mobileChoice">
             <h2>Que souhaitez vous faire aujourd'hui ?</h2>
             <div id="mobileChoiceButton">
-                <a href="{{ path('victor_ad_buy') }}"><input type="button" class="button-home" value="Acheter"></a>
+                <a href="{{ path('victor_ad_buy') }}" class="button-home">Acheter</a>
 
-                <a href="{{ path('victor_ad_sell') }}"><input type="button" class="button-home" value="Vendre"></a>
+                <a href="{{ path('victor_ad_sell') }}" class="button-home">Vendre</a>
             </div>
         </div>
     </div>

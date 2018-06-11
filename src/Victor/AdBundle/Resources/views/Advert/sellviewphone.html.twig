@@ -2,16 +2,16 @@
 
 {% block victorad_body %}
 
-    <a href="{{ path('victor_core_home') }}"><input type="button" class="persoButtonReturn" value="Revenir à l'accueil"></a>
+    <a class="persoButtonReturn" href="{{ path('victor_core_home') }}">Revenir à l'accueil</a>
 
 <h2>Votre choix :</h2>
     <div class="phoneSelect center-block">
 
-        <span id="brand">{{ phone.brand }} </span><br />
-        <span id="model">{{ phone.model }} </span><br />
+        <span class="brand">{{ phone.brand }} </span><br />
+        <span class="model">{{ phone.model }} </span><br />
         Couleur : {{ phone.color }} <br />
         Capacité : {{ phone.capacity }} Go <br />
-        <img src="{{ phone.image.url }}" class="imgPhone">
+        <img src="{{ phone.image.url }}" alt="{{ phone.image.alt }}" class="imgPhone">
 
     </div>
 

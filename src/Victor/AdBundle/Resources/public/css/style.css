@@ -128,12 +128,6 @@ body
 
 }
 
-.phoneButton
-{
-    display: block;
-    margin: auto;
-}
-
 #allPhones
 {
     display: flex;
@@ -151,6 +145,7 @@ body
     padding: 10px;
     font-weight: bold;
     text-align: center;
+    width: 150px;
 }
 
 .linksAccount
@@ -232,12 +227,12 @@ th
     width: 50%;
 }
 
-#brand
+.brand
 {
     font-size: 2em;
 }
 
-#model
+.model
 {
     font-size: 1.2em;
 }

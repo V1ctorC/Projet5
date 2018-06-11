@@ -2,7 +2,7 @@
 
 {% block body %}
 
-    <a href="{{ path('victor_ad_account') }}"><input type="button" class="persoButtonReturn" value="Revenir sur le compte"></a>
+    <a class="persoButtonReturn" href="{{ path('victor_ad_account') }}">Revenir sur le compte</a>
 
     <h2>Votre résumé avant le paiement</h2>
 
@@ -30,8 +30,8 @@
 
     </div> <br/>
     <div id="buttonConfirmWallet" class="col-md-6 col-md-offset-3">
-        <a href="{{ path('fos_user_profile_edit') }}"><input type="button" class="persoButton" value="Modifier mes infos"></a>
-        <a href="{{ path('victor_ad_payrequest') }}"><input type="button" class="persoButton" value="Confirmer la demande de paiement"></a>
+        <a class="persoButton" href="{{ path('fos_user_profile_edit') }}">Modifier mes infos</a>
+        <a class="persoButton" href="{{ path('victor_ad_payrequest') }}">Confirmer la demande de paiement</a>
     </div>
 
 {% endblock %}

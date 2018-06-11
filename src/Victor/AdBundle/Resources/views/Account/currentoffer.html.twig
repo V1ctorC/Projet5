@@ -2,7 +2,7 @@
 
 {% block body %}
 
-    <a href="{{ path('victor_ad_account') }}"><input type="button" class="persoButtonReturn" value="Revenir sur le compte"></a>
+    <a class="persoButtonReturn" href="{{ path('victor_ad_account') }}">Revenir sur le compte</a>
 
     <h2>Vos offres en cours :</h2>
 
@@ -35,8 +35,8 @@
                         <td>{{ currentoffer.phone.capacity }}Go</td>
                         <td>{{ currentoffer.phone.color }}</td>
                         <td>{{ currentoffer.price }}€</td>
-                        <td><a href="{{ path('victor_ad_editoffer', {'id': currentoffer.id}) }}"><input type="button" class="persoButton centerButton" value="Modifier l'offre"></a></td>
-                        <td><a data-toggle="modal" href="#delete{{ currentoffer.id }}"><input type="button" class="persoButton centerButton" value="Supprimer cette offre"></a></td>
+                        <td><a class="persoButton centerButton" href="{{ path('victor_ad_editoffer', {'id': currentoffer.id}) }}">Modifier l'offre</a></td>
+                        <td><a data-toggle="modal" class="persoButton centerButton" href="#delete{{ currentoffer.id }}">Supprimer l'offre</a></td>
                     </tr>
 
                     <div class="modal fade" id="delete{{ currentoffer.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -51,7 +51,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-                                    <a href="{{ path('victor_ad_deleteoffer', {'id': currentoffer.id}) }}"><input type="button" class="btn btn-danger" style="margin: auto" value="Supprimer cette offre"></a></td>
+                                    <a class="btn btn-danger centerButton" href="{{ path('victor_ad_deleteoffer', {'id': currentoffer.id}) }}">Supprimer l'offre</a></td>
                                 </div>
                             </div>
                         </div>

@@ -2,7 +2,7 @@
 
 {% block body %}
 
-    <a href="{{ path('victor_ad_account') }}"><input type="button" class="persoButtonReturn" value="Revenir sur le compte"></a>
+    <a class="persoButtonReturn" href="{{ path('victor_ad_account') }}">Revenir sur le compte</a>
 
     <h3>Vous avez changé d'avis ?</h3>
 
@@ -26,7 +26,7 @@
             <span id="model">{{ purchase.phone.model }} </span><br />
             Couleur : {{ purchase.phone.color }} <br />
             Capacité : {{ purchase.phone.capacity }} Go <br />
-            <img src="{{ purchase.phone.image.url }}" class="imgPhone">
+            <img src="{{ purchase.phone.image.url }}" alt="{{ purchase.phone.image.alt }}" class="imgPhone">
 
             <hr />
             Prix : {{ purchase.price }}€ <br />

@@ -2,13 +2,13 @@
 
 {% block body %}
 
-    <a href="{{ path('victor_ad_account') }}"><input type="button" class="persoButtonReturn" value="Revenir sur le compte"></a>
+    <a class="persoButtonReturn" href="{{ path('victor_ad_account') }}">Revenir sur le compte</a>
 
 
     <div class="container-fluid wallet-block">
         <h2 style="text-align: center">Mon porte-feuille</h2>
         <div id="wallet-img">
-            <img src="{{ asset('bundles/victorad/images/wallet.png') }}"><br />
+            <img src="{{ asset('bundles/victorad/images/wallet.png') }}" alt="portefeuille"><br />
         </div>
         <div id="wallet-explain">
             <p>Vous trouverez ici le contenu de votre porte-feuille avant de le transférer sur votre compte</p>
@@ -20,7 +20,7 @@
 
         {% if sum > 0 %}
         <div id="wallet-button">
-            <a href="{{ path('victor_ad_confirmwallet') }}"><input type="button" class="persoButton centerButton" value="Retirer mon argent"></a>
+            <a class="persoButton centerButton" href="{{ path('victor_ad_confirmwallet') }}">Retirer mon argent</a>
         </div>
         {% endif %}
     </div>

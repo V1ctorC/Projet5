@@ -160,9 +160,14 @@ class AdvertController extends Controller
 
         $offer = $em->getRepository('VictorAdBundle:Offer')->find($offerid);
 
-
-
-        return $this->render('@VictorAd/Advert/summarybuy.html.twig', array('phone'=>$phone, 'offer'=>$offer));
+        if ($offer == null || $offer->getSold() == 1)
+        {
+            throw new NotFoundHttpException('L\'offre que vous avez selectionné n\'est pas disponible');
+        }
+        else
+        {
+            return $this->render('@VictorAd/Advert/summarybuy.html.twig', array('phone'=>$phone, 'offer'=>$offer));
+        }
     }
 
     /**

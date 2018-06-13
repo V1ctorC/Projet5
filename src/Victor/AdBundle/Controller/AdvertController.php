@@ -193,6 +193,7 @@ class AdvertController extends Controller
         $sellerSubscribe = $seller->getSubscribe();
         $phoneID = $offer->getPhone();
         $phoneModel = $phone->find($phoneID)->getModel();
+
         $offer->setBuyer($buyer);
         $offer->setSold(true);
         $offer->setStep(1);

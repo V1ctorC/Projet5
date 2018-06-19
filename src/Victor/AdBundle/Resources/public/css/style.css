@@ -799,6 +799,27 @@ footer
     color: white;
 }
 
+#choicePrice
+{
+    text-align: center;
+}
+
+.inputPrice
+{
+    color: inherit;
+    text-align: center;
+    font-size: 2em;
+    margin: 5px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#validPriceForm
+{
+    margin: 15px auto 15px auto;
+}
+
 @media all and (max-width: 1024px)
 {
     #banner

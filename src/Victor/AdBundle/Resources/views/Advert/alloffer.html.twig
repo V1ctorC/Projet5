@@ -2,11 +2,22 @@
 
 {% block body %}
 
-    <form action="{{ path('victor_ad_alloffer') }}" method="post">
-        <input type="text" name="min" placeholder="prix min">
-        <input type="text" name="max" placeholder="prix max">
-        <input type="submit">
-    </form>
+    <h2>Liste des offres en cours</h2>
+
+    <div id="choicePrice">
+        <h3>Selon mon budget</h3>
+        <form action="{{ path('victor_ad_alloffer') }}" method="post">
+            <input type="text" class="inputPrice" name="min" placeholder="Prix min" required="required"> <br />
+            <input type="text" class="inputPrice" name="max" placeholder="Prix max" required="required"> <br />
+            <input type="submit" class="persoButton" id="validPriceForm">
+        </form>
+    </div>
+
+    {% if alloffer == null %}
+
+        <p>Aucune offre ne correspond à vos critères ...</p>
+
+    {% else %}
 
     <div class="table-responsive">
         <table class="table table-bordered table-hover">
@@ -22,11 +33,13 @@
                     <td>{{ offer.phone.brand}}</td>
                     <td>{{ offer.phone.model }}</td>
                     <td>{{ offer.phone.capacity }} Go</td>
-                    <td>{{ offer.price }}</td>
+                    <td>{{ offer.price }}€</td>
                     <td><a href="{{ path('victor_ad_buyviewphone', {'phone': offer.phone.model, 'id': offer.phone.id}) }}">Offre</a></td>
                 </tr>
             {% endfor %}
         </table>
     </div>
+
+    {% endif %}
 
 {% endblock %}

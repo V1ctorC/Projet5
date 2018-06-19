@@ -754,6 +754,51 @@ footer
     flex-direction: row;
 }
 
+#stylecapacity16
+{
+    border: 2px solid #63F2DF;
+    border-radius: 15px;
+    padding: 3px;
+    background-color: #63F2DF;
+    color: white;
+}
+
+#stylecapacity32
+{
+    border: 2px solid #3BF22E;
+    border-radius: 15px;
+    padding: 3px;
+    background-color: #3BF22E;
+    color: white;
+}
+
+#stylecapacity64
+{
+    border: 2px solid #ED9511;
+    border-radius: 15px;
+    padding: 3px;
+    background-color: #ED9511;
+    color: white;
+}
+
+#stylecapacity128
+{
+    border: 2px solid #B55FEF;
+    border-radius: 15px;
+    padding: 3px;
+    background-color: #B55FEF;
+    color: white;
+}
+
+#stylecapacity256
+{
+    border: 2px solid #FE1E1E;
+    border-radius: 15px;
+    padding: 3px;
+    background-color: #FE1E1E;
+    color: white;
+}
+
 @media all and (max-width: 1024px)
 {
     #banner

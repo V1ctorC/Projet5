@@ -185,3 +185,7 @@ victor_ad_wwa:
 victor_ad_tos:
     path: /conditions_de_vente
     defaults: { _controller: VictorAdBundle:Legal:tos}
+
+victor_ad_alloffer:
+    path: /toutes_les_offres
+    defaults: { _controller: VictorAdBundle:Advert:alloffer}

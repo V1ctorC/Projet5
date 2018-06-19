@@ -167,7 +167,7 @@ class AdvertController extends Controller
         }
         elseif ($phone != $phoneOfferID)
         {
-            throw new NotFoundHttpException('L\'offre que vous avez selectionné n\'est pas disponible');
+            throw new NotFoundHttpException('L\'offre que vous avez selectionné ne concerne pas ce téléphone');
         }
         else
         {
@@ -274,6 +274,29 @@ class AdvertController extends Controller
             header('HTTP/1.1 500 Internal Server Error');
 
         }
+    }
+
+    public function allofferAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $offer = $em->getRepository('VictorAdBundle:Offer');
+
+        $min = $request->request->get('min');
+        $max = $request->request->get('max');
+
+        if ($min == null)
+        {
+            $alloffer = $offer->findBy(
+                array('sold' => 0),
+                array('price' => 'asc')
+            );
+        }
+        else
+        {
+            $alloffer = $offer->FindByPrice($min, $max);
+        }
+
+        return $this->render('@VictorAd/Advert/alloffer.html.twig', array('alloffer' => $alloffer));
     }
 
 }

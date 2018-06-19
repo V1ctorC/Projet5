@@ -159,8 +159,13 @@ class AdvertController extends Controller
         $phone = $em->getRepository('VictorAdBundle:Phone')->find($id);
 
         $offer = $em->getRepository('VictorAdBundle:Offer')->find($offerid);
+        $phoneOfferID = $offer->getPhone();
 
         if ($offer == null || $offer->getSold() == 1)
+        {
+            throw new NotFoundHttpException('L\'offre que vous avez selectionné n\'est pas disponible');
+        }
+        elseif ($phone != $phoneOfferID)
         {
             throw new NotFoundHttpException('L\'offre que vous avez selectionné n\'est pas disponible');
         }

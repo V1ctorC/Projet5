@@ -820,6 +820,14 @@ footer
     margin: 15px auto 15px auto;
 }
 
+#realPrice
+{
+    display: none;
+    color: darkgrey;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
 @media all and (max-width: 1024px)
 {
     #banner

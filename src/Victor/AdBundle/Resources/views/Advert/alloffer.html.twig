@@ -2,6 +2,8 @@
 
 {% block body %}
 
+    <a class="persoButtonReturn" href="{{ path('victor_core_home') }}">Revenir à l'accueil</a>
+
     <h2>Liste des offres en cours</h2>
 
     <div id="choicePrice">
@@ -22,16 +24,16 @@
     <div class="table-responsive">
         <table class="table table-bordered table-hover">
             <tr>
-                <th scope="col">Marque</th>
                 <th scope="col">Modèle</th>
+                <th scope="col">Couleur</th>
                 <th scope="col">Capacité</th>
                 <th scope="col">Prix</th>
                 <th scope="col">URL</th>
             </tr>
             {% for offer in alloffer %}
                 <tr>
-                    <td>{{ offer.phone.brand}}</td>
-                    <td>{{ offer.phone.model }}</td>
+                    <td>{{ offer.phone.model}}</td>
+                    <td>{{ offer.phone.color }}</td>
                     <td>{{ offer.phone.capacity }} Go</td>
                     <td>{{ offer.price }}€</td>
                     <td><a href="{{ path('victor_ad_buyviewphone', {'phone': offer.phone.model, 'id': offer.phone.id}) }}">Offre</a></td>

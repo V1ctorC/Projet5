@@ -13,6 +13,7 @@
     <div class="container block-register">
         <h3>Mon offre</h3>
         {{ form_row(form.price) }}
+        <div id="realPrice">test</div>
 
         {{ form_row(form.status) }}
 
@@ -23,5 +24,27 @@
     {{ form_rest(form) }}
 
     {{ form_end(form) }}
+
+    <script>
+
+        var sum = document.getElementById('victor_adbundle_offer_price');
+        sum.addEventListener('blur', function (e) {
+
+            var field = e.target.value;
+            var realpricebloc = document.getElementById('realPrice');
+            var realSum = (field*0.9);
+
+            if (field !== "")
+            {
+                realpricebloc.style.display = 'block';
+                var roundedsum = realSum.toFixed(2);
+                realpricebloc.innerHTML = 'Votre montant perçu après la vente : ' + roundedsum + '€';
+            }
+            else
+            {
+                realpricebloc.style.display = 'none';
+            }
+        })
+    </script>
 
 {% endblock %}

@@ -15,9 +15,9 @@ class OfferRepository extends \Doctrine\ORM\EntityRepository
     {
         $qb = $this->createQueryBuilder('o');
 
-        $qb->where('o.price > :min')
+        $qb->where('o.price >= :min')
                 ->setParameter('min', $min)
-            ->andWhere('o.price < :max')
+            ->andWhere('o.price <= :max')
                 ->setParameter('max', $max)
             ->andWhere('o.sold = 0')
             ->orderBy('o.price', 'ASC')

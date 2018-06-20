@@ -35,8 +35,13 @@
         {% endif %}
         <img src="{{ phone.image.url }}" alt="{{ phone.image.alt }}" class="imgPhone">
         <hr />
-        <p><b>Acheteur :</b> {{ buyer.firstname }} {{ buyer.lastname | slice(0,1) | upper}}.</p>
-        <p><b>Vendeur :</b> {{ seller.firstname }} {{ seller.lastname | slice(0,1) |upper}}.</p>
+        {% if is_granted('ROLE_ADMIN') %}
+            <p><b>Acheteur :</b> {{ buyer.firstname | capitalize }} {{ buyer.lastname | capitalize}}.</p>
+            <p><b>Vendeur :</b> {{ seller.firstname | capitalize }} {{ seller.lastname | capitalize}}.</p>
+        {% else %}
+            <p><b>Acheteur :</b> {{ buyer.firstname | capitalize }} {{ buyer.lastname | slice(0,1) | upper}}.</p>
+            <p><b>Vendeur :</b> {{ seller.firstname | capitalize }} {{ seller.lastname | slice(0,1) |upper}}.</p>
+        {% endif %}
     </div>
 
     <div class="table-responsive">

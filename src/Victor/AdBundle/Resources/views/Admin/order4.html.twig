@@ -35,7 +35,7 @@
 
 
                 <tr>
-                    <th>{{ order.id }}</th>
+                    <th><a href="{{ path('victor_ad_ordertracking', {'id': order.id}) }}">{{ order.id }}</a></th>
                     <th>{{ order.saledate|date('d-m-Y') }}</th>
                     <th>{{ order.receivedate|date('d-m-Y') }}</th>
                     <th>{{ order.conformdate|date('d-m-Y') }}</th>

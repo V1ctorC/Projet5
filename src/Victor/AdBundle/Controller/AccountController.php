@@ -63,18 +63,23 @@ class AccountController extends Controller
     public function ordertrackingAction(Offer $purchase)
     {
         $order = $this->container->get('victor_ad.ordertracking');
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository('VictorUserBundle:User');
 
         $currentuser = $this->getUser();
 
-        $buyer = $purchase->getBuyer();
-        $seller = $purchase->getUser();
+        $buyerID = $purchase->getBuyer();
+        $buyer = $user->find($buyerID);
+        $sellerID = $purchase->getUser();
+        $seller = $user->find($sellerID);
+        $phone = $em->getRepository('VictorAdBundle:Phone')->find($purchase->getPhone());
         $ordernumber = $purchase->getId();
         $paydate = $purchase->getSaledate();
         $recepdate = $purchase->getReceivedate();
         $coformdate = $purchase->getConformdate();
         $sendate = $purchase->getSendate();
 
-        if ($buyer == $currentuser OR $seller == $currentuser)
+        if ($buyerID == $currentuser OR $sellerID == $currentuser OR $this->get('security.authorization_checker')->isGranted('ROLE_ADMIN'))
         {
             $step = $purchase->getStep();
 
@@ -82,7 +87,7 @@ class AccountController extends Controller
             $progress = $step * 25;
 
             return $this->render('@VictorAd/Account/ordertracking.html.twig', array(
-                'progress'=>$progress, 'infos'=>$infos, 'ordernumber'=>$ordernumber, 'paydate'=>$paydate, 'recepdate'=>$recepdate, 'conformdate'=>$coformdate, 'sendate'=>$sendate));
+                'progress'=>$progress, 'buyer'=>$buyer, 'seller'=>$seller, 'phone'=>$phone, 'infos'=>$infos, 'ordernumber'=>$ordernumber, 'paydate'=>$paydate, 'recepdate'=>$recepdate, 'conformdate'=>$coformdate, 'sendate'=>$sendate));
         }
 
         else

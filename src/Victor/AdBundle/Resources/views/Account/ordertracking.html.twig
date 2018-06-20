@@ -16,6 +16,29 @@
         <p>{{ infos }}</p>
     </div>
 
+    <div class="phoneSelect" id="phoneOrderTracking">
+
+        <span class="brand">{{ phone.brand }} </span><br />
+        <span class="model">{{ phone.model }} </span><br />
+        Couleur : {{ phone.color }} <br />
+        Capacité :
+        {% if phone.capacity == 16 %}
+            <span id="stylecapacity16"> {{ phone.capacity }} Go</span> <br />
+        {% elseif phone.capacity == 32 %}
+            <span id="stylecapacity32"> {{ phone.capacity }} Go</span> <br />
+        {% elseif phone.capacity == 64 %}
+            <span id="stylecapacity64"> {{ phone.capacity }} Go</span> <br />
+        {% elseif phone.capacity == 128 %}
+            <span id="stylecapacity128"> {{ phone.capacity }} Go</span> <br />
+        {% elseif phone.capacity == 256 %}
+            <span id="stylecapacity256"> {{ phone.capacity }} Go</span> <br />
+        {% endif %}
+        <img src="{{ phone.image.url }}" alt="{{ phone.image.alt }}" class="imgPhone">
+        <hr />
+        <p><b>Acheteur :</b> {{ buyer.firstname }} {{ buyer.lastname | slice(0,1) | upper}}.</p>
+        <p><b>Vendeur :</b> {{ seller.firstname }} {{ seller.lastname | slice(0,1) |upper}}.</p>
+    </div>
+
     <div class="table-responsive">
 
         <table class="table table-bordered">

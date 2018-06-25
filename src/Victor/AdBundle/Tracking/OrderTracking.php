@@ -18,7 +18,7 @@ class OrderTracking
     {
         if ($step == 1)
         {
-            $messages = "Nous avons reçu le paiement, le vendeur va nous envoyer le produit";
+            $messages = "Nous avons reçu le paiement, nous attendons la réception du téléphone";
             return $messages;
         }
         elseif ($step == 2)
@@ -28,11 +28,11 @@ class OrderTracking
         }
         elseif ($step == 3)
         {
-            return $messages = "Le téléphone est conforme, nous allons donc l'envoyer ! :)";
+            return $messages = "Le téléphone est conforme, nous allons l'envoyer prochainement !";
         }
         elseif ($step == 4)
         {
-            return $messages = "Le téléphone est parti vers sa nouvelle maison ;)";
+            return $messages = "Le téléphone a été confié au transporteur";
         }
         else
         {
